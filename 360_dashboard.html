@@ -72,6 +72,7 @@ tr:hover td { background: #1e2e3e; }
   <div id="quadrant-section"></div>
   <div id="pub-flagged-section"></div>
   <div id="good-channel-section"></div>
+  <div id="suspend-section"></div>
   <div id="adv-top-section"></div>
   <div class="table-box">
     <h3>Campaign 明细</h3>
@@ -101,7 +102,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=20260527l"></script>
+<script src="360_dashboard_data.js?v=20260527m"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
@@ -112,6 +113,7 @@ let filteredData = [];
 let goodChannelRows = [];
 let advTopRows = [];
 let flaggedRows = [];
+let suspendRows = [];
 let sortCol = 'revenue';
 let sortDir = -1;
 let page = 1;
@@ -679,6 +681,73 @@ function renderAdvTopPkgs() {
     </div>
   `;
   renderAdvTopTable();
+
+  // 9. 需关停渠道：publisher × campaign, 日均收入<$100 且 作弊率>30%
+  suspendRows = [];
+  PUBS.forEach(p => {
+    const grouped = {};
+    data.forEach(d => {
+      const rev = d.pub_rev?.[p] || 0;
+      if (rev <= 0) return;
+      const key = d.campaign_id;
+      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: d.advertiser, totalRev: 0, fraudNum: 0, blockNum: 0, paNum: 0, convSum: 0 };
+      const g = grouped[key];
+      g.totalRev += rev;
+      g.fraudNum += (d.pub_fraud?.[p] || 0) * d.conversions;
+      g.blockNum += (d.overall_block || 0) * d.conversions;
+      g.paNum += (d.overall_pa || 0) * d.conversions;
+      g.convSum += d.conversions;
+    });
+    Object.values(grouped).forEach(g => {
+      const avgRev = g.totalRev / numDays;
+      const fraud = g.convSum > 0 ? g.fraudNum / g.convSum : 0;
+      const block = g.convSum > 0 ? g.blockNum / g.convSum : 0;
+      const pa = g.convSum > 0 ? g.paNum / g.convSum : 0;
+      if (avgRev >= 100 || fraud <= 0.3) return;
+      suspendRows.push({
+        publisher: PUB_SHORT[PUBS.indexOf(p)],
+        package_name: g.package_name,
+        campaign_id: g.campaign_id,
+        advertiser: g.advertiser,
+        revenue: avgRev,
+        fraud,
+        block,
+        pa
+      });
+    });
+  });
+  suspendRows.sort((a,b) => b.fraud - a.fraud);
+
+  const suspendAdvs = [...new Set(suspendRows.map(r => r.advertiser).filter(Boolean))].sort();
+
+  document.getElementById('suspend-section').innerHTML = `
+    <div class="table-box">
+      <h3>需关停渠道 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入<$100 且 作弊率>30%，共${suspendRows.length}条）</span></h3>
+      <div class="table-controls">
+        <select id="suspendAdvFilter" onchange="renderSuspendTable()">
+          <option value="all">全部广告主</option>
+          ${suspendAdvs.map(a => `<option value="${a}">${a}</option>`).join('')}
+        </select>
+        <button onclick="exportSuspendCSV()" style="padding:6px 14px;background:#1a2a3a;border:1px solid #3a4a5a;color:#4fc3f7;border-radius:4px;cursor:pointer;font-size:13px">导出CSV</button>
+      </div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead><tr>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">渠道</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">包名</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">Campaign</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">广告主</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">日均收入</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">作弊率</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">Block率</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">PA率</th>
+          </tr></thead>
+          <tbody id="suspend-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  `;
+  renderSuspendTable();
 }
 
 function renderAdvTopTable() {
@@ -717,6 +786,46 @@ function renderAdvTopTable() {
       container.innerHTML = '';
     }
   }
+}
+
+function renderSuspendTable() {
+  const advFilter = document.getElementById('suspendAdvFilter')?.value || 'all';
+  const filtered = suspendRows.filter(r => {
+    if (advFilter !== 'all' && r.advertiser !== advFilter) return false;
+    return true;
+  });
+  const tbody = document.getElementById('suspend-tbody');
+  if (!tbody) return;
+  tbody.innerHTML = filtered.map(r => {
+    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
+    return `<tr>
+      <td><span class="pub-tag flagged">${r.publisher}</span></td>
+      <td>${r.package_name}</td>
+      <td style="color:#b0bec5">${r.campaign_id}</td>
+      <td>${r.advertiser}</td>
+      <td>${fmt$(r.revenue)}</td>
+      <td class="${fClass}">${fmtPct(r.fraud)}</td>
+      <td>${fmtPct(r.block)}</td>
+      <td>${fmtPct(r.pa)}</td>
+    </tr>`;
+  }).join('');
+}
+
+function exportSuspendCSV() {
+  const advFilter = document.getElementById('suspendAdvFilter')?.value || 'all';
+  const filtered = suspendRows.filter(r => {
+    if (advFilter !== 'all' && r.advertiser !== advFilter) return false;
+    return true;
+  });
+  const headers = ['渠道','包名','Campaign','广告主','日均收入','作弊率','Block率','PA率'];
+  const rows = filtered.map(r => [r.publisher, r.package_name, r.campaign_id, r.advertiser, r.revenue.toFixed(2), (r.fraud*100).toFixed(2)+'%', (r.block*100).toFixed(2)+'%', (r.pa*100).toFixed(2)+'%']);
+  const csvRows = [headers.join(',')].concat(rows.map(r => r.map(v => '"' + String(v).replace(/"/g,'""') + '"').join(',')));
+  const csv = '﻿' + csvRows.join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = '需关停渠道_' + (currentPeriod === 'all' ? '全部' : currentPeriod) + '.csv';
+  a.click();
 }
 
 function renderTable() {
