@@ -102,7 +102,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=20260527q"></script>
+<script src="360_dashboard_data.js?v=20260527s"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
@@ -141,9 +141,9 @@ function aggregateData(rawData) {
         overall_block: 0, overall_pa: 0,
         pub_fraud: {}, pub_rev: {},
         _convForFraud: 0, _blockForFraud: 0, _paForFraud: 0,
-        _pubFraudNum: {}, _pubRevSum: {}
+        _pubConv: {}
       };
-      PUBS.forEach(p => { map[key].pub_fraud[p] = 0; map[key].pub_rev[p] = 0; map[key]._pubFraudNum[p] = 0; map[key]._pubRevSum[p] = 0; });
+      PUBS.forEach(p => { map[key].pub_fraud[p] = 0; map[key].pub_rev[p] = 0; map[key]._pubConv[p] = 0; });
     }
     const e = map[key];
     e.revenue += d.revenue;
@@ -155,8 +155,8 @@ function aggregateData(rawData) {
       const rev = d.pub_rev?.[p] || 0;
       const f = d.pub_fraud?.[p] || 0;
       e.pub_rev[p] += rev;
-      e._pubFraudNum[p] += f * rev;
-      e._pubRevSum[p] += rev;
+      e.pub_fraud[p] += f * (d.conversions || 0);
+      e._pubConv[p] += d.conversions || 0;
     });
   });
   return Object.values(map).map(e => {
@@ -165,9 +165,9 @@ function aggregateData(rawData) {
     e.overall_block = e._blockForFraud / conv;
     e.overall_pa = e._paForFraud / conv;
     PUBS.forEach(p => {
-      e.pub_fraud[p] = e._pubRevSum[p] > 0 ? e._pubFraudNum[p] / e._pubRevSum[p] : 0;
+      e.pub_fraud[p] = e._pubConv[p] > 0 ? e.pub_fraud[p] / e._pubConv[p] : 0;
     });
-    delete e._convForFraud; delete e._blockForFraud; delete e._paForFraud; delete e._pubFraudNum; delete e._pubRevSum;
+    delete e._convForFraud; delete e._blockForFraud; delete e._paForFraud; delete e._pubConv;
     return e;
   }).sort((a,b) => b.revenue - a.revenue);
 }
@@ -714,7 +714,7 @@ function renderAdvTopPkgs() {
 
   document.getElementById('suspend-section').innerHTML = `
     <div class="table-box">
-      <h3>需关停渠道 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入<$100 且 作弊率>30%，共${suspendRows.length}条）</span></h3>
+      <h3>需关停渠道 <span id="suspend-count" style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入<$100 且 作弊率>30%，共${suspendRows.length}条）</span></h3>
       <div class="table-controls">
         <select id="suspendPubFilter" onchange="renderSuspendTable()">
           <option value="all">全部渠道</option>
@@ -794,6 +794,8 @@ function renderSuspendTable() {
   });
   const tbody = document.getElementById('suspend-tbody');
   if (!tbody) return;
+  const countEl = document.getElementById('suspend-count');
+  if (countEl) countEl.textContent = `（日均收入<$100 且 作弊率>30%，共${filtered.length}条）`;
   tbody.innerHTML = filtered.map(r => {
     const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
     return `<tr>
