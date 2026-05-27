@@ -102,7 +102,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=20260527o"></script>
+<script src="360_dashboard_data.js?v=20260527p"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
@@ -686,37 +686,27 @@ function renderAdvTopPkgs() {
   `;
   renderAdvTopTable();
 
-  // 9. 需关停渠道：publisher × campaign, 日均收入<$100 且 作弊率>30%
+  // 9. 需关停渠道：campaign整体作弊率>30% 且 日均收入<$100 → 列出有收入的渠道
   suspendRows = [];
-  PUBS.forEach(p => {
-    const grouped = {};
-    data.forEach(d => {
+  data.forEach(d => {
+    const totalRev = PUBS.reduce((s, p) => s + (d.pub_rev?.[p] || 0), 0);
+    const avgRev = totalRev / numDays;
+    const overallFraud = d.overall_fraud || 0;
+    const overallBlock = d.overall_block || 0;
+    const overallPa = d.overall_pa || 0;
+    if (avgRev >= 100 || overallFraud <= 0.3) return;
+    PUBS.forEach((p, i) => {
       const rev = d.pub_rev?.[p] || 0;
       if (rev <= 0) return;
-      const key = d.campaign_id;
-      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: d.advertiser, totalRev: 0, fraudNum: 0, blockNum: 0, paNum: 0, convSum: 0 };
-      const g = grouped[key];
-      g.totalRev += rev;
-      g.fraudNum += (d.pub_fraud?.[p] || 0) * d.conversions;
-      g.blockNum += (d.overall_block || 0) * d.conversions;
-      g.paNum += (d.overall_pa || 0) * d.conversions;
-      g.convSum += d.conversions;
-    });
-    Object.values(grouped).forEach(g => {
-      const avgRev = g.totalRev / numDays;
-      const fraud = g.convSum > 0 ? g.fraudNum / g.convSum : 0;
-      const block = g.convSum > 0 ? g.blockNum / g.convSum : 0;
-      const pa = g.convSum > 0 ? g.paNum / g.convSum : 0;
-      if (avgRev >= 100 || fraud <= 0.3) return;
       suspendRows.push({
-        publisher: PUB_SHORT[PUBS.indexOf(p)],
-        package_name: g.package_name,
-        campaign_id: g.campaign_id,
-        advertiser: g.advertiser,
-        revenue: avgRev,
-        fraud,
-        block,
-        pa
+        publisher: PUB_SHORT[i],
+        package_name: d.package_name,
+        campaign_id: d.campaign_id,
+        advertiser: d.advertiser,
+        revenue: rev / numDays,
+        fraud: overallFraud,
+        block: overallBlock,
+        pa: overallPa
       });
     });
   });
