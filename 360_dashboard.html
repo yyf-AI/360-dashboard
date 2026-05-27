@@ -71,6 +71,8 @@ tr:hover td { background: #1e2e3e; }
   </div>
   <div id="quadrant-section"></div>
   <div id="pub-flagged-section"></div>
+  <div id="good-channel-section"></div>
+  <div id="adv-top-section"></div>
   <div class="table-box">
     <h3>Campaign 明细</h3>
     <div class="table-controls">
@@ -98,7 +100,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=20260522"></script>
+<script src="360_dashboard_data.js?v=20260527k"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
@@ -106,6 +108,9 @@ const COLORS = ['#42a5f5','#66bb6a','#ffa726','#ef5350','#ab47bc','#26c6da','#ff
 
 let currentPeriod = 'all';
 let filteredData = [];
+let goodChannelRows = [];
+let advTopRows = [];
+let flaggedRows = [];
 let sortCol = 'revenue';
 let sortDir = -1;
 let page = 1;
@@ -390,24 +395,20 @@ function renderCharts() {
     });
   });
   pubDetailRows.sort((a,b) => b.revenue - a.revenue);
+  flaggedRows = pubDetailRows;
 
-  const pubRowsHtml = pubDetailRows.map(r => {
-    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
-    return `<tr>
-      <td style="font-weight:600;color:#4fc3f7">${r.publisher}</td>
-      <td>${r.package_name}</td>
-      <td style="color:#b0bec5">${r.campaign_id}</td>
-      <td>${r.advertiser||''}</td>
-      <td>${fmt$(r.revenue)}</td>
-      <td class="${fClass}">${fmtPct(r.fraud)}</td>
-      <td>${fmtPct(r.block)}</td>
-      <td>${fmtPct(r.pa)}</td>
-    </tr>`;
-  }).join('');
+  // Collect unique advertisers for filter
+  const flaggedAdvs = [...new Set(pubDetailRows.map(r => r.advertiser).filter(Boolean))].sort();
 
   document.getElementById('pub-flagged-section').innerHTML = `
     <div class="table-box">
-      <h3>高收入高作弊渠道明细 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入≥$100 且 作弊率>20%，共${pubDetailRows.length}条）</span></h3>
+      <h3>高收入高作弊渠道明细 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入≥$100 且 作弊率>20%，共${flaggedRows.length}条）</span></h3>
+      <div class="table-controls">
+        <select id="flaggedAdvFilter" onchange="renderFlaggedTable()">
+          <option value="all">全部广告主</option>
+          ${flaggedAdvs.map(a => `<option value="${a}">${a}</option>`).join('')}
+        </select>
+      </div>
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:13px">
           <thead><tr>
@@ -420,11 +421,267 @@ function renderCharts() {
             <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">Block率</th>
             <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">PA率</th>
           </tr></thead>
-          <tbody>${pubRowsHtml}</tbody>
+          <tbody id="flagged-tbody"></tbody>
         </table>
       </div>
     </div>
   `;
+  renderFlaggedTable();
+
+  // 7. 优化渠道明细: same packages as 高收入高作弊 → show channels with fraud < 20%
+  goodChannelRows = [];
+  const flaggedPkgs = new Set(pubDetailRows.map(r => r.package_name));
+
+  PUBS.forEach(p => {
+    const grouped = {};
+    data.forEach(d => {
+      if (!flaggedPkgs.has(d.package_name)) return;
+      const rev = d.pub_rev?.[p] || 0;
+      if (rev <= 0) return;
+      const key = d.campaign_id;
+      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: d.advertiser, totalRev: 0, fraudNum: 0, blockNum: 0, paNum: 0, convSum: 0 };
+      const g = grouped[key];
+      g.totalRev += rev;
+      g.fraudNum += (d.pub_fraud?.[p] || 0) * d.conversions;
+      g.blockNum += (d.overall_block || 0) * d.conversions;
+      g.paNum += (d.overall_pa || 0) * d.conversions;
+      g.convSum += d.conversions;
+    });
+    Object.values(grouped).forEach(g => {
+      const avgRev = g.totalRev / numDays;
+      const fraud = g.convSum > 0 ? g.fraudNum / g.convSum : 0;
+      const block = g.convSum > 0 ? g.blockNum / g.convSum : 0;
+      const pa = g.convSum > 0 ? g.paNum / g.convSum : 0;
+      if (fraud >= 0.2) return;
+      goodChannelRows.push({
+        publisher: PUB_SHORT[PUBS.indexOf(p)],
+        package_name: g.package_name,
+        campaign_id: g.campaign_id,
+        advertiser: g.advertiser,
+        revenue: avgRev,
+        fraud,
+        block,
+        pa
+      });
+    });
+  });
+  goodChannelRows.sort((a,b) => b.revenue - a.revenue);
+
+  document.getElementById('good-channel-section').innerHTML = `
+    <div class="table-box">
+      <h3>优化渠道明细 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（高收入包中作弊率<20%的渠道，共${goodChannelRows.length}条）</span></h3>
+      <div class="table-controls">
+        <select id="goodRevFilter" onchange="renderGoodTable()">
+          <option value="100">日均收入 >= $100</option>
+          <option value="200">日均收入 >= $200</option>
+          <option value="500">日均收入 >= $500</option>
+          <option value="1000">日均收入 >= $1000</option>
+        </select>
+        <select id="goodFraudFilter" onchange="renderGoodTable()">
+          <option value="20">作弊率 < 20%</option>
+          <option value="15">作弊率 < 15%</option>
+          <option value="10">作弊率 < 10%</option>
+          <option value="5">作弊率 < 5%</option>
+        </select>
+        <select id="goodPubFilter" onchange="renderGoodTable()">
+          <option value="all">全部渠道</option>
+          ${PUBS.map((p,i) => `<option value="${PUB_SHORT[i]}">${PUB_SHORT[i]}</option>`).join('')}
+        </select>
+        <input id="goodSearchFilter" type="text" placeholder="搜索 campaign / 包名 / 广告主..." oninput="renderGoodTable()" style="width:260px;background:#0f1923;border:1px solid #3a4a5a;color:#e0e0e0;padding:6px 12px;border-radius:4px;font-size:13px">
+      </div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead><tr>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">渠道</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">包名</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">Campaign</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">广告主</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">日均收入</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">作弊率</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">Block率</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">PA率</th>
+          </tr></thead>
+          <tbody id="good-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  `;
+  renderGoodTable();
+  renderAdvTopPkgs();
+}
+
+function renderFlaggedTable() {
+  const advFilter = document.getElementById('flaggedAdvFilter')?.value || 'all';
+  const filtered = flaggedRows.filter(r => {
+    if (advFilter !== 'all' && r.advertiser !== advFilter) return false;
+    return true;
+  });
+  const tbody = document.getElementById('flagged-tbody');
+  if (!tbody) return;
+  tbody.innerHTML = filtered.map(r => {
+    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
+    return `<tr>
+      <td style="font-weight:600;color:#4fc3f7">${r.publisher}</td>
+      <td>${r.package_name}</td>
+      <td style="color:#b0bec5">${r.campaign_id}</td>
+      <td>${r.advertiser||''}</td>
+      <td>${fmt$(r.revenue)}</td>
+      <td class="${fClass}">${fmtPct(r.fraud)}</td>
+      <td>${fmtPct(r.block)}</td>
+      <td>${fmtPct(r.pa)}</td>
+    </tr>`;
+  }).join('');
+  const h3 = document.querySelector('#pub-flagged-section h3 span');
+  if (h3) h3.textContent = `（日均收入≥$100 且 作弊率>20%，共${filtered.length}条）`;
+}
+
+function renderGoodTable() {
+  const revThresh = parseFloat(document.getElementById('goodRevFilter')?.value || 100);
+  const fraudThresh = parseFloat(document.getElementById('goodFraudFilter')?.value || 20) / 100;
+  const pubFilter = document.getElementById('goodPubFilter')?.value || 'all';
+  const search = (document.getElementById('goodSearchFilter')?.value || '').toLowerCase();
+
+  const filtered = goodChannelRows.filter(r => {
+    if (r.revenue < revThresh) return false;
+    if (r.fraud >= fraudThresh) return false;
+    if (pubFilter !== 'all' && r.publisher !== pubFilter) return false;
+    if (search && !String(r.campaign_id).includes(search) && !(r.package_name||'').toLowerCase().includes(search) && !(r.advertiser||'').toLowerCase().includes(search)) return false;
+    return true;
+  });
+
+  const tbody = document.getElementById('good-tbody');
+  if (!tbody) return;
+  tbody.innerHTML = filtered.map(r => {
+    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
+    return `<tr>
+      <td style="font-weight:600;color:#66bb6a">${r.publisher}</td>
+      <td>${r.package_name}</td>
+      <td style="color:#b0bec5">${r.campaign_id}</td>
+      <td>${r.advertiser||''}</td>
+      <td>${fmt$(r.revenue)}</td>
+      <td class="${fClass}">${fmtPct(r.fraud)}</td>
+      <td>${fmtPct(r.block)}</td>
+      <td>${fmtPct(r.pa)}</td>
+    </tr>`;
+  }).join('');
+
+  // Update count in header
+  const h3 = document.querySelector('#good-channel-section h3 span');
+  if (h3) h3.textContent = `（高收入包中作弊率<${fraudThresh*100}%的渠道，共${filtered.length}条）`;
+}
+
+function renderAdvTopPkgs() {
+  const data = getData();
+  const numDays = currentPeriod === 'all' ? getDayPeriods().length : 1;
+
+  // Group by advertiser → campaign_id
+  const advGroups = {};
+  data.forEach(d => {
+    const adv = d.advertiser || '';
+    if (!adv) return;
+    if (!advGroups[adv]) advGroups[adv] = {};
+    const cid = d.campaign_id;
+    if (!advGroups[adv][cid]) advGroups[adv][cid] = { package_name: d.package_name, totalRev: 0, fraudNum: 0, blockNum: 0, paNum: 0, convSum: 0, pubs: {} };
+    const g = advGroups[adv][cid];
+    g.totalRev += d.revenue;
+    g.fraudNum += d.overall_fraud * d.conversions;
+    g.blockNum += d.overall_block * d.conversions;
+    g.paNum += d.overall_pa * d.conversions;
+    g.convSum += d.conversions;
+    PUBS.forEach(p => {
+      const rev = d.pub_rev?.[p] || 0;
+      if (rev > 0) {
+        const ps = PUB_SHORT[PUBS.indexOf(p)];
+        if (!g.pubs[ps]) g.pubs[ps] = { fraudNum: 0, convSum: 0 };
+        g.pubs[ps].fraudNum += (d.pub_fraud?.[p] || 0) * d.conversions;
+        g.pubs[ps].convSum += d.conversions;
+      }
+    });
+  });
+
+  // Build rows: top 10 per advertiser
+  advTopRows = [];
+  Object.entries(advGroups).forEach(([adv, campaigns]) => {
+    const list = Object.entries(campaigns).map(([cid, g]) => ({
+      advertiser: adv,
+      campaign_id: cid,
+      package_name: g.package_name,
+      revenue: g.totalRev / numDays,
+      fraud: g.convSum > 0 ? g.fraudNum / g.convSum : 0,
+      block: g.convSum > 0 ? g.blockNum / g.convSum : 0,
+      pa: g.convSum > 0 ? g.paNum / g.convSum : 0,
+      pubs: Object.entries(g.pubs).map(([p, v]) => ({ name: p, fraud: v.convSum > 0 ? v.fraudNum / v.convSum : 0 })).sort((a,b) => a.name.localeCompare(b.name))
+    }));
+    list.sort((a, b) => b.revenue - a.revenue);
+    list.slice(0, 10).forEach(r => advTopRows.push(r));
+  });
+
+  document.getElementById('adv-top-section').innerHTML = `
+    <div class="table-box">
+      <h3>广告主Top10包 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（每个广告主按日均收入取前10，共${advTopRows.length}条）</span></h3>
+      <div class="table-controls">
+        <select id="advTopAdvFilter" onchange="window._advTopShowAll=false;renderAdvTopTable()">
+          <option value="all">全部广告主</option>
+          ${[...new Set(advTopRows.map(r => r.advertiser).filter(Boolean))].sort().map(a => `<option value="${a}">${a}</option>`).join('')}
+        </select>
+      </div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead><tr>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">广告主</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">Campaign</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">包名</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">日均收入</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">作弊率</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">Block率</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">PA率</th>
+            <th style="background:#152535;color:#7a9ab5;padding:8px 10px;text-align:left;border-bottom:2px solid #2a3a4a">渠道</th>
+          </tr></thead>
+          <tbody id="adv-top-tbody"></tbody>
+        </table>
+        <div id="adv-top-more"></div>
+      </div>
+    </div>
+  `;
+  renderAdvTopTable();
+}
+
+function renderAdvTopTable() {
+  const advFilter = document.getElementById('advTopAdvFilter')?.value || 'all';
+  const filtered = advTopRows.filter(r => {
+    if (advFilter !== 'all' && r.advertiser !== advFilter) return false;
+    return true;
+  });
+  const tbody = document.getElementById('adv-top-tbody');
+  if (!tbody) return;
+  const INITIAL = 30;
+  const showAll = window._advTopShowAll || false;
+  const visible = showAll ? filtered : filtered.slice(0, INITIAL);
+
+  tbody.innerHTML = visible.map(r => {
+    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
+    return `<tr>
+      <td style="font-weight:600">${r.advertiser}</td>
+      <td style="color:#b0bec5">${r.campaign_id}</td>
+      <td>${r.package_name}</td>
+      <td>${fmt$(r.revenue)}</td>
+      <td class="${fClass}">${fmtPct(r.fraud)}</td>
+      <td>${fmtPct(r.block)}</td>
+      <td>${fmtPct(r.pa)}</td>
+      <td>${r.pubs.map(p => '<span class="pub-tag">' + p.name + ':' + (p.fraud*100).toFixed(1) + '%</span>').join('')}</td>
+    </tr>`;
+  }).join('');
+
+  const container = document.getElementById('adv-top-more');
+  if (container) {
+    if (filtered.length > INITIAL && !showAll) {
+      container.innerHTML = `<button onclick="window._advTopShowAll=true;renderAdvTopTable()" style="display:block;margin:12px auto;padding:6px 20px;background:#1a2a3a;border:1px solid #3a4a5a;color:#4fc3f7;border-radius:4px;cursor:pointer;font-size:13px">展开剩余 ${filtered.length - INITIAL} 条</button>`;
+    } else if (showAll && filtered.length > INITIAL) {
+      container.innerHTML = `<button onclick="window._advTopShowAll=false;renderAdvTopTable()" style="display:block;margin:12px auto;padding:6px 20px;background:#1a2a3a;border:1px solid #3a4a5a;color:#aaa;border-radius:4px;cursor:pointer;font-size:13px">收起</button>`;
+    } else {
+      container.innerHTML = '';
+    }
+  }
 }
 
 function renderTable() {
