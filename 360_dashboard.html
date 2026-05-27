@@ -89,6 +89,7 @@ tr:hover td { background: #1e2e3e; }
         <option value="500">收入 >= $500</option>
         <option value="1000">收入 >= $1000</option>
       </select>
+      <button onclick="exportCSV()" style="padding:6px 14px;background:#1a2a3a;border:1px solid #3a4a5a;color:#4fc3f7;border-radius:4px;cursor:pointer;font-size:13px">导出CSV</button>
     </div>
     <div style="overflow-x:auto;">
       <table id="dataTable">
@@ -100,7 +101,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=20260527k"></script>
+<script src="360_dashboard_data.js?v=20260527l"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
@@ -180,6 +181,40 @@ function getData() {
 
 function fmt$(v) { return '$' + v.toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0}); }
 function fmtPct(v) { return (v * 100).toFixed(1) + '%'; }
+
+function exportCSV() {
+  const rows = filteredData;
+  if (!rows.length) { alert('没有可导出的数据'); return; }
+  const headers = ['Campaign', '包名', '广告主', '收入', '转化', '作弊率', 'Block率', 'PA率', ...PUBS.map(p => PUB_SHORT[PUBS.indexOf(p)] + '_收入'), ...PUBS.map(p => PUB_SHORT[PUBS.indexOf(p)] + '_作弊率')];
+  const csvRows = [headers.join(',')];
+  rows.forEach(r => {
+    const fraud = r.overall_fraud;
+    const block = r.overall_block;
+    const pa = r.overall_pa;
+    const vals = [
+      r.campaign_id,
+      '"' + (r.package_name||'').replace(/"/g,'""') + '"',
+      '"' + (r.advertiser||'').replace(/"/g,'""') + '"',
+      r.revenue,
+      r.conversions,
+      (fraud*100).toFixed(1),
+      (block*100).toFixed(1),
+      (pa*100).toFixed(1),
+      ...PUBS.map(p => ((r.pub_rev||{})[p]||0).toFixed(2)),
+      ...PUBS.map(p => (((r.pub_fraud||{})[p]||0)*100).toFixed(1))
+    ];
+    csvRows.push(vals.join(','));
+  });
+  const csv = '﻿' + csvRows.join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  const period = currentPeriod === 'all' ? 'all' : currentPeriod;
+  a.download = '360_campaign_' + period + '.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+}
 
 function renderCards() {
   const data = getData();
