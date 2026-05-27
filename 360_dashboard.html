@@ -102,7 +102,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=20260527m"></script>
+<script src="360_dashboard_data.js?v=20260527n"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
@@ -719,11 +719,16 @@ function renderAdvTopPkgs() {
   suspendRows.sort((a,b) => b.fraud - a.fraud);
 
   const suspendAdvs = [...new Set(suspendRows.map(r => r.advertiser).filter(Boolean))].sort();
+  const suspendPubs = [...new Set(suspendRows.map(r => r.publisher))].sort();
 
   document.getElementById('suspend-section').innerHTML = `
     <div class="table-box">
       <h3>需关停渠道 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入<$100 且 作弊率>30%，共${suspendRows.length}条）</span></h3>
       <div class="table-controls">
+        <select id="suspendPubFilter" onchange="renderSuspendTable()">
+          <option value="all">全部渠道</option>
+          ${suspendPubs.map(p => `<option value="${p}">${p}</option>`).join('')}
+        </select>
         <select id="suspendAdvFilter" onchange="renderSuspendTable()">
           <option value="all">全部广告主</option>
           ${suspendAdvs.map(a => `<option value="${a}">${a}</option>`).join('')}
@@ -789,8 +794,10 @@ function renderAdvTopTable() {
 }
 
 function renderSuspendTable() {
+  const pubFilter = document.getElementById('suspendPubFilter')?.value || 'all';
   const advFilter = document.getElementById('suspendAdvFilter')?.value || 'all';
   const filtered = suspendRows.filter(r => {
+    if (pubFilter !== 'all' && r.publisher !== pubFilter) return false;
     if (advFilter !== 'all' && r.advertiser !== advFilter) return false;
     return true;
   });
@@ -812,8 +819,10 @@ function renderSuspendTable() {
 }
 
 function exportSuspendCSV() {
+  const pubFilter = document.getElementById('suspendPubFilter')?.value || 'all';
   const advFilter = document.getElementById('suspendAdvFilter')?.value || 'all';
   const filtered = suspendRows.filter(r => {
+    if (pubFilter !== 'all' && r.publisher !== pubFilter) return false;
     if (advFilter !== 'all' && r.advertiser !== advFilter) return false;
     return true;
   });
