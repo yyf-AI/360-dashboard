@@ -102,13 +102,13 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=20260527n"></script>
+<script src="360_dashboard_data.js?v=20260527o"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
 const COLORS = ['#42a5f5','#66bb6a','#ffa726','#ef5350','#ab47bc','#26c6da','#ff7043','#8d6e63','#78909c','#d4e157'];
 
-let currentPeriod = 'all';
+let currentPeriod = new Set(['all']);
 let filteredData = [];
 let goodChannelRows = [];
 let advTopRows = [];
@@ -173,16 +173,20 @@ function aggregateData(rawData) {
 }
 
 function getData() {
-  if (currentPeriod === 'all') {
-    const days = getDayPeriods();
-    const rawData = DATA.filter(d => days.includes(d.period));
-    return aggregateData(rawData);
-  }
-  return DATA.filter(d => d.period === currentPeriod);
+  const days = getDayPeriods();
+  const selected = currentPeriod.has('all') ? days : days.filter(d => currentPeriod.has(d));
+  if (selected.length === 0) return [];
+  if (selected.length === 1) return DATA.filter(d => d.period === selected[0]);
+  const rawData = DATA.filter(d => selected.includes(d.period));
+  return aggregateData(rawData);
 }
 
 function fmt$(v) { return '$' + v.toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0}); }
 function fmtPct(v) { return (v * 100).toFixed(1) + '%'; }
+function getSelectedDays() {
+  const all = getDayPeriods();
+  return currentPeriod.has('all') ? all : all.filter(d => currentPeriod.has(d));
+}
 
 function exportCSV() {
   const rows = filteredData;
@@ -212,7 +216,7 @@ function exportCSV() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  const period = currentPeriod === 'all' ? 'all' : currentPeriod;
+  const period = currentPeriod.has('all') ? 'all' : [...currentPeriod].sort().join('-');
   a.download = '360_campaign_' + period + '.csv';
   a.click();
   URL.revokeObjectURL(url);
@@ -226,7 +230,7 @@ function renderCards() {
   const flagged = data.filter(d => {
     return PUBS.some(p => (d.pub_fraud[p] || 0) >= 0.3);
   }).length;
-  const days = currentPeriod === 'all' ? getDayPeriods().length : 1;
+  const days = getSelectedDays().length;
 
   document.getElementById('summary-cards').innerHTML = `
     <div class="card blue"><div class="label">总收入</div><div class="value">${fmt$(totalRev)}</div><div class="sub">${data.length} 个campaign</div></div>
@@ -241,7 +245,7 @@ function renderCharts() {
   Object.values(charts).forEach(c => c.destroy());
   charts = {};
   const data = getData();
-  const days = currentPeriod === 'all' ? getDayPeriods().length : 1;
+  const days = getSelectedDays().length;
 
   // 1. Revenue by Publisher
   const pubRev = PUBS.map((p,i) => data.reduce((s,d) => s + (d.pub_rev?.[p] || 0), 0));
@@ -397,7 +401,7 @@ function renderCharts() {
   });
 
   // Build flat list: one row per publisher×campaign (aggregate across days)
-  const numDays = currentPeriod === 'all' ? getDayPeriods().length : 1;
+  const numDays = getSelectedDays().length;
   const pubDetailRows = [];
   PUBS.forEach(p => {
     const grouped = {};
@@ -609,7 +613,7 @@ function renderGoodTable() {
 
 function renderAdvTopPkgs() {
   const data = getData();
-  const numDays = currentPeriod === 'all' ? getDayPeriods().length : 1;
+  const numDays = getSelectedDays().length;
 
   // Group by advertiser → campaign_id
   const advGroups = {};
@@ -833,7 +837,7 @@ function exportSuspendCSV() {
   const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = '需关停渠道_' + (currentPeriod === 'all' ? '全部' : currentPeriod) + '.csv';
+  a.download = '需关停渠道_' + (currentPeriod.has('all') ? '全部' : [...currentPeriod].sort().join('-')) + '.csv';
   a.click();
 }
 
@@ -939,9 +943,27 @@ function renderPeriodButtons() {
   sel.onclick = (e) => {
     const btn = e.target.closest('.period-btn');
     if (!btn) return;
-    sel.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentPeriod = btn.dataset.period;
+    const val = btn.dataset.period;
+    if (val === 'all') {
+      // Toggle all: if all already selected, deselect all; otherwise select all
+      if (currentPeriod.has('all') || currentPeriod.size === dayPeriods.length) {
+        currentPeriod = new Set([dayPeriods[dayPeriods.length - 1]]);
+      } else {
+        currentPeriod = new Set(['all']);
+      }
+    } else {
+      currentPeriod.delete('all');
+      if (currentPeriod.has(val)) {
+        currentPeriod.delete(val);
+        if (currentPeriod.size === 0) currentPeriod = new Set(['all']);
+      } else {
+        currentPeriod.add(val);
+      }
+    }
+    // Update button styles
+    sel.querySelectorAll('.period-btn').forEach(b => {
+      b.classList.toggle('active', currentPeriod.has(b.dataset.period));
+    });
     page = 1;
     renderCards();
     renderCharts();
