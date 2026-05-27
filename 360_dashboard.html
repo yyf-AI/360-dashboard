@@ -102,7 +102,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=20260527p"></script>
+<script src="360_dashboard_data.js?v=20260527q"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
@@ -141,9 +141,9 @@ function aggregateData(rawData) {
         overall_block: 0, overall_pa: 0,
         pub_fraud: {}, pub_rev: {},
         _convForFraud: 0, _blockForFraud: 0, _paForFraud: 0,
-        _pubConv: {}
+        _pubFraudNum: {}, _pubRevSum: {}
       };
-      PUBS.forEach(p => { map[key].pub_fraud[p] = 0; map[key].pub_rev[p] = 0; map[key]._pubConv[p] = 0; });
+      PUBS.forEach(p => { map[key].pub_fraud[p] = 0; map[key].pub_rev[p] = 0; map[key]._pubFraudNum[p] = 0; map[key]._pubRevSum[p] = 0; });
     }
     const e = map[key];
     e.revenue += d.revenue;
@@ -155,8 +155,8 @@ function aggregateData(rawData) {
       const rev = d.pub_rev?.[p] || 0;
       const f = d.pub_fraud?.[p] || 0;
       e.pub_rev[p] += rev;
-      e.pub_fraud[p] += f * (d.conversions || 0);
-      e._pubConv[p] += d.conversions || 0;
+      e._pubFraudNum[p] += f * rev;
+      e._pubRevSum[p] += rev;
     });
   });
   return Object.values(map).map(e => {
@@ -165,9 +165,9 @@ function aggregateData(rawData) {
     e.overall_block = e._blockForFraud / conv;
     e.overall_pa = e._paForFraud / conv;
     PUBS.forEach(p => {
-      e.pub_fraud[p] = e._pubConv[p] > 0 ? e.pub_fraud[p] / e._pubConv[p] : 0;
+      e.pub_fraud[p] = e._pubRevSum[p] > 0 ? e._pubFraudNum[p] / e._pubRevSum[p] : 0;
     });
-    delete e._convForFraud; delete e._blockForFraud; delete e._paForFraud; delete e._pubConv;
+    delete e._convForFraud; delete e._blockForFraud; delete e._paForFraud; delete e._pubFraudNum; delete e._pubRevSum;
     return e;
   }).sort((a,b) => b.revenue - a.revenue);
 }
@@ -686,27 +686,24 @@ function renderAdvTopPkgs() {
   `;
   renderAdvTopTable();
 
-  // 9. 需关停渠道：campaign整体作弊率>30% 且 日均收入<$100 → 列出有收入的渠道
+  // 9. 需关停渠道：渠道级作弊率>30% 且 该渠道日均收入<$100
   suspendRows = [];
-  data.forEach(d => {
-    const totalRev = PUBS.reduce((s, p) => s + (d.pub_rev?.[p] || 0), 0);
-    const avgRev = totalRev / numDays;
-    const overallFraud = d.overall_fraud || 0;
-    const overallBlock = d.overall_block || 0;
-    const overallPa = d.overall_pa || 0;
-    if (avgRev >= 100 || overallFraud <= 0.3) return;
-    PUBS.forEach((p, i) => {
+  PUBS.forEach((p, pi) => {
+    data.forEach(d => {
       const rev = d.pub_rev?.[p] || 0;
       if (rev <= 0) return;
+      const avgRev = rev / numDays;
+      const fraud = d.pub_fraud?.[p] || 0;
+      if (avgRev >= 100 || fraud <= 0.3) return;
       suspendRows.push({
-        publisher: PUB_SHORT[i],
+        publisher: PUB_SHORT[pi],
         package_name: d.package_name,
         campaign_id: d.campaign_id,
         advertiser: d.advertiser,
-        revenue: rev / numDays,
-        fraud: overallFraud,
-        block: overallBlock,
-        pa: overallPa
+        revenue: avgRev,
+        fraud,
+        block: d.overall_block || 0,
+        pa: d.overall_pa || 0
       });
     });
   });
