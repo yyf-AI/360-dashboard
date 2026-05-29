@@ -459,11 +459,15 @@ function renderCharts() {
   document.getElementById('pub-flagged-section').innerHTML = `
     <div class="table-box">
       <h3>高收入高作弊渠道明细 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入≥$100 且 作弊率>20%，共${flaggedRows.length}条）</span></h3>
-      <div class="table-controls">
-        <select id="flaggedAdvFilter" onchange="renderFlaggedTable()">
-          <option value="all">全部广告主</option>
-          ${flaggedAdvs.map(a => `<option value="${a}">${a}</option>`).join('')}
-        </select>
+      <div class="table-controls" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div style="position:relative">
+          <div id="flaggedAdvDropdown" onclick="toggleMultiSelect('flaggedAdv')" style="padding:6px 28px 6px 10px;border:1px solid #3a4a5a;border-radius:4px;background:#1a2a3a;color:#cfd8dc;font-size:13px;cursor:pointer;min-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">全部广告主 ▾</div>
+          <div id="flaggedAdvMenu" style="display:none;position:absolute;top:100%;left:0;max-height:300px;overflow-y:auto;background:#1a2a3a;border:1px solid #3a4a5a;border-radius:4px;z-index:100;min-width:260px;padding:4px 0">
+            <label style="display:block;padding:4px 10px;cursor:pointer;font-size:12px;color:#7a9ab5;border-bottom:1px solid #2a3a4a" onmouseover="this.style.background='#2a3a4a'" onmouseout="this.style.background=''"><input type="checkbox" checked onchange="toggleAllFlaggedAdvs(this)"> 全选/全不选</label>
+            ${flaggedAdvs.map(a => `<label style="display:block;padding:4px 10px;cursor:pointer;font-size:12px;color:#cfd8dc" onmouseover="this.style.background='#2a3a4a'" onmouseout="this.style.background=''"><input type="checkbox" class="flagged-adv-cb" value="${a}" onchange="renderFlaggedTable()"> ${a}</label>`).join('')}
+          </div>
+        </div>
+        <input id="flaggedCidFilter" type="text" placeholder="搜索 Campaign ID..." oninput="renderFlaggedTable()" style="padding:6px 10px;border:1px solid #3a4a5a;border-radius:4px;background:#1a2a3a;color:#cfd8dc;font-size:13px;width:180px">
       </div>
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:13px">
@@ -624,10 +628,30 @@ function renderCharts() {
   renderSuspendTable();
 }
 
+function toggleMultiSelect(prefix) {
+  const menu = document.getElementById(prefix + 'Menu');
+  if (menu) menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+}
+function toggleAllFlaggedAdvs(el) {
+  document.querySelectorAll('.flagged-adv-cb').forEach(cb => cb.checked = el.checked);
+  renderFlaggedTable();
+}
+function getSelectedFlaggedAdvs() {
+  const cbs = document.querySelectorAll('.flagged-adv-cb:checked');
+  return [...cbs].map(cb => cb.value);
+}
 function renderFlaggedTable() {
-  const advFilter = document.getElementById('flaggedAdvFilter')?.value || 'all';
+  const selectedAdvs = getSelectedFlaggedAdvs();
+  const allCbs = document.querySelectorAll('.flagged-adv-cb');
+  const allChecked = selectedAdvs.length === allCbs.length;
+  const selectAllCb = document.querySelector('#flaggedAdvMenu label input[type=checkbox]');
+  if (selectAllCb) selectAllCb.checked = allChecked;
+  const dropdown = document.getElementById('flaggedAdvDropdown');
+  if (dropdown) dropdown.textContent = allChecked || selectedAdvs.length === 0 ? '全部广告主 ▾' : selectedAdvs.length > 2 ? `已选${selectedAdvs.length}项 ▾` : selectedAdvs[0] + ' ▾';
+  const cidFilter = (document.getElementById('flaggedCidFilter')?.value || '').trim();
   const filtered = flaggedRows.filter(r => {
-    if (advFilter !== 'all' && r.advertiser !== advFilter) return false;
+    if (selectedAdvs.length > 0 && !selectedAdvs.includes(r.advertiser)) return false;
+    if (cidFilter && !r.campaign_id.includes(cidFilter)) return false;
     return true;
   });
   const tbody = document.getElementById('flagged-tbody');
@@ -868,6 +892,13 @@ document.getElementById('revFilter').onchange = () => { page = 1; renderTable();
 renderCards();
 renderCharts();
 renderTable();
+document.addEventListener('click', function(e) {
+  ['flaggedAdv'].forEach(prefix => {
+    const dd = document.getElementById(prefix + 'Dropdown');
+    const menu = document.getElementById(prefix + 'Menu');
+    if (dd && menu && !dd.contains(e.target) && !menu.contains(e.target)) menu.style.display = 'none';
+  });
+});
 </script>
 </body>
 </html>
