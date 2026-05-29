@@ -179,7 +179,8 @@ def process_data(rows):
             pub_rev = row[5] or 0
             denom = pub_block + pub_conv
             pub_fraud = (pub_pa + pub_block) / denom if denom > 0 else 0
-            c["pub_data"][pub_id] = {"fraud": pub_fraud, "revenue": pub_rev}
+            c["pub_data"][pub_id] = {"fraud": pub_fraud, "revenue": pub_rev,
+                                      "conv": pub_conv, "block": pub_block, "pa": pub_pa}
 
     result = []
     for cid, c in campaigns.items():
@@ -194,13 +195,22 @@ def process_data(rows):
 
         pub_fraud = {}
         pub_rev = {}
+        pub_conv = {}
+        pub_block_cnt = {}
+        pub_pa_cnt = {}
         for p in PUBS:
             if p in c["pub_data"]:
                 pub_fraud[p] = c["pub_data"][p]["fraud"]
                 pub_rev[p] = c["pub_data"][p]["revenue"]
+                pub_conv[p] = int(c["pub_data"][p]["conv"])
+                pub_block_cnt[p] = int(c["pub_data"][p]["block"])
+                pub_pa_cnt[p] = int(c["pub_data"][p]["pa"])
             else:
                 pub_fraud[p] = 0
                 pub_rev[p] = 0
+                pub_conv[p] = 0
+                pub_block_cnt[p] = 0
+                pub_pa_cnt[p] = 0
 
         result.append({
             "campaign_id": cid,
@@ -214,6 +224,9 @@ def process_data(rows):
             "pub_fraud": pub_fraud,
             "pub_revenue": pub_rev,
             "pub_rev": pub_rev,
+            "pub_conv": pub_conv,
+            "pub_block": pub_block_cnt,
+            "pub_pa": pub_pa_cnt,
             "period": "",  # filled later
             "days": 1,
         })
