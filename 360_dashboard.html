@@ -416,7 +416,7 @@ function renderCharts() {
     Object.values(grouped).forEach(g => {
       const denom = g.convSum + g.blockSum;
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
-      if (g.totalRev < 100 || fraud <= 0.2) return;
+      if (g.totalRev / numDays < 100 || fraud <= 0.2) return;
       totalRev += g.totalRev;
       totalConv += g.convSum;
       totalBlock += g.blockSum;
@@ -453,7 +453,7 @@ function renderCharts() {
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
       const block = denom > 0 ? g.blockSum / denom : 0;
       const pa = denom > 0 ? g.paSum / denom : 0;
-      if (g.totalRev < 100 || fraud <= 0.2) return;
+      if (g.totalRev / numDays < 100 || fraud <= 0.2) return;
       pubDetailRows.push({
         publisher: PUB_SHORT[PUBS.indexOf(p)],
         package_name: g.package_name,
