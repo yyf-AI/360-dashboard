@@ -244,7 +244,7 @@ function renderCards() {
   const totalConv = data.reduce((s,d) => s + d.conversions, 0);
   const avgFraud = data.reduce((s,d) => s + d.overall_fraud, 0) / data.length;
   const flagged = data.filter(d => {
-    return PUBS.some(p => (d.pub_fraud[p] || 0) >= 0.3);
+    return PUBS.some(p => (d.pub_fraud[p] || 0) >= 0.2);
   }).length;
   const days = getSelectedDays().length;
 
@@ -252,7 +252,7 @@ function renderCards() {
     <div class="card blue"><div class="label">总收入</div><div class="value">${fmt$(totalRev)}</div><div class="sub">${data.length} 个campaign</div></div>
     <div class="card green"><div class="label">总安装量</div><div class="value">${totalConv.toLocaleString()}</div><div class="sub">均价 $${(totalRev/totalConv).toFixed(2)}/install</div></div>
     <div class="card orange"><div class="label">平均作弊率</div><div class="value">${fmtPct(avgFraud)}</div><div class="sub">整体加权</div></div>
-    <div class="card red"><div class="label">高危 (>=30%)</div><div class="value">${flagged}</div><div class="sub">占比 ${(flagged/data.length*100).toFixed(1)}%</div></div>
+    <div class="card red"><div class="label">高危 (>=20%)</div><div class="value">${flagged}</div><div class="sub">占比 ${(flagged/data.length*100).toFixed(1)}%</div></div>
     <div class="card purple"><div class="label">360日均收入</div><div class="value">${fmt$(totalRev / days)}</div><div class="sub">${days}天周期</div></div>
   `;
 }
