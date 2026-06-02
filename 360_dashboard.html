@@ -71,8 +71,8 @@ tr:hover td { background: #1e2e3e; }
   </div>
   <div id="quadrant-section"></div>
   <div id="pub-flagged-section"></div>
-  <div id="good-channel-section"></div>
   <div id="suspend-section"></div>
+  <div id="good-channel-section"></div>
   <div class="table-box">
     <h3>Campaign 明细</h3>
     <div class="table-controls">
@@ -101,7 +101,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=20260529a"></script>
+<script src="360_dashboard_data.js?v=20260601"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
@@ -111,7 +111,7 @@ let currentPeriod = new Set(['all']);
 let filteredData = [];
 let goodChannelRows = [];
 let flaggedRows = [];
-let suspendRows = [];
+let suspendDetailRows = [];
 let sortCol = 'revenue';
 let sortDir = -1;
 let page = 1;
@@ -139,7 +139,7 @@ function aggregateData(rawData) {
     if (!map[key]) {
       map[key] = {
         campaign_id: d.campaign_id,
-        advertiser: d.advertiser,
+        advertiser: normAdv(d.advertiser),
         package_name: pkg,
         revenue: 0, conversions: 0,
         overall_block: 0, overall_pa: 0,
@@ -198,6 +198,7 @@ function getRawData() {
 
 function fmt$(v) { return '$' + v.toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0}); }
 function fmtPct(v) { return (v * 100).toFixed(1) + '%'; }
+function normAdv(name) { return (name || '').replace(/\(\d+\)$/, '').trim(); }
 function getSelectedDays() {
   const all = getDayPeriods();
   return currentPeriod.has('all') ? all : all.filter(d => currentPeriod.has(d));
@@ -398,21 +399,36 @@ function renderCharts() {
   // 6. High-revenue high-fraud publisher details
   const pubData = {};
   PUBS.forEach(p => {
-    const rows = data.filter(d => {
+    // Sum-based: aggregate all days per campaign, then check thresholds
+    const grouped = {};
+    data.forEach(d => {
       const rev = d.pub_rev?.[p] || 0;
-      const fraud = d.pub_fraud?.[p] || 0;
-      return rev / days >= 100 && fraud > 0.2;
+      if (rev <= 0) return;
+      const key = d.campaign_id;
+      if (!grouped[key]) grouped[key] = { totalRev: 0, convSum: 0, blockSum: 0, paSum: 0 };
+      const g = grouped[key];
+      g.totalRev += rev;
+      g.convSum += d.pub_conv?.[p] || 0;
+      g.blockSum += d.pub_block?.[p] || 0;
+      g.paSum += d.pub_pa?.[p] || 0;
     });
-    if (!rows.length) return;
-    const totalRev = rows.reduce((s,d) => s + (d.pub_rev?.[p] || 0), 0);
-    const totalConv = rows.reduce((s,d) => s + (d.pub_conv?.[p] || 0), 0);
-    const totalBlock = rows.reduce((s,d) => s + (d.pub_block?.[p] || 0), 0);
-    const totalPA = rows.reduce((s,d) => s + (d.pub_pa?.[p] || 0), 0);
+    let totalRev = 0, totalConv = 0, totalBlock = 0, totalPA = 0, count = 0;
+    Object.values(grouped).forEach(g => {
+      const denom = g.convSum + g.blockSum;
+      const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
+      if (g.totalRev < 100 || fraud <= 0.2) return;
+      totalRev += g.totalRev;
+      totalConv += g.convSum;
+      totalBlock += g.blockSum;
+      totalPA += g.paSum;
+      count++;
+    });
+    if (count === 0) return;
     const denom = totalConv + totalBlock;
     const fraud = denom > 0 ? (totalPA + totalBlock) / denom : 0;
     const block = denom > 0 ? totalBlock / denom : 0;
     const pa = denom > 0 ? totalPA / denom : 0;
-    pubData[p] = { revenue: totalRev, fraud, block, pa, count: rows.length };
+    pubData[p] = { revenue: totalRev, fraud, block, pa, count };
   });
 
   // Build flat list: one row per publisher×campaign (aggregate across days)
@@ -424,7 +440,7 @@ function renderCharts() {
       const rev = d.pub_rev?.[p] || 0;
       if (rev <= 0) return;
       const key = d.campaign_id;
-      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: d.advertiser, totalRev: 0, convSum: 0, blockSum: 0, paSum: 0 };
+      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: normAdv(d.advertiser), totalRev: 0, convSum: 0, blockSum: 0, paSum: 0 };
       const g = grouped[key];
       g.totalRev += rev;
       g.convSum += d.pub_conv?.[p] || 0;
@@ -432,18 +448,18 @@ function renderCharts() {
       g.paSum += d.pub_pa?.[p] || 0;
     });
     Object.values(grouped).forEach(g => {
-      const avgRev = g.totalRev / numDays;
+      // Sum-based: aggregate across all days, then check thresholds
       const denom = g.convSum + g.blockSum;
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
       const block = denom > 0 ? g.blockSum / denom : 0;
       const pa = denom > 0 ? g.paSum / denom : 0;
-      if (avgRev < 100 || fraud <= 0.2) return;
+      if (g.totalRev < 100 || fraud <= 0.2) return;
       pubDetailRows.push({
         publisher: PUB_SHORT[PUBS.indexOf(p)],
         package_name: g.package_name,
         campaign_id: g.campaign_id,
         advertiser: g.advertiser,
-        revenue: avgRev,
+        revenue: g.totalRev / numDays,
         fraud,
         block,
         pa
@@ -458,7 +474,7 @@ function renderCharts() {
 
   document.getElementById('pub-flagged-section').innerHTML = `
     <div class="table-box">
-      <h3>高收入高作弊渠道明细 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入≥$100 且 作弊率>20%，共${flaggedRows.length}条）</span></h3>
+      <h3>收入100以上关停渠道 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入≥$100 且 作弊率>20%，共${flaggedRows.length}条）</span></h3>
       <div class="table-controls" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
         <div style="position:relative">
           <div id="flaggedAdvDropdown" onclick="toggleMultiSelect('flaggedAdv')" style="padding:6px 28px 6px 10px;border:1px solid #3a4a5a;border-radius:4px;background:#1a2a3a;color:#cfd8dc;font-size:13px;cursor:pointer;min-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">全部广告主 ▾</div>
@@ -467,7 +483,10 @@ function renderCharts() {
             ${flaggedAdvs.map(a => `<label style="display:block;padding:4px 10px;cursor:pointer;font-size:12px;color:#cfd8dc" onmouseover="this.style.background='#2a3a4a'" onmouseout="this.style.background=''"><input type="checkbox" class="flagged-adv-cb" value="${a}" onchange="renderFlaggedTable()"> ${a}</label>`).join('')}
           </div>
         </div>
-        <input id="flaggedCidFilter" type="text" placeholder="搜索 Campaign ID..." oninput="renderFlaggedTable()" style="padding:6px 10px;border:1px solid #3a4a5a;border-radius:4px;background:#1a2a3a;color:#cfd8dc;font-size:13px;width:180px">
+        <select id="flaggedCidFilter" onchange="renderFlaggedTable()">
+          <option value="">全部Campaign</option>
+          ${[...new Set(pubDetailRows.map(r => r.campaign_id))].sort().map(c => `<option value="${c}">${c}</option>`).join('')}
+        </select>
       </div>
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:13px">
@@ -499,7 +518,7 @@ function renderCharts() {
       const rev = d.pub_rev?.[p] || 0;
       if (rev <= 0) return;
       const key = d.campaign_id;
-      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: d.advertiser, totalRev: 0, convSum: 0, blockSum: 0, paSum: 0 };
+      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: normAdv(d.advertiser), totalRev: 0, convSum: 0, blockSum: 0, paSum: 0 };
       const g = grouped[key];
       g.totalRev += rev;
       g.convSum += d.pub_conv?.[p] || 0;
@@ -507,7 +526,6 @@ function renderCharts() {
       g.paSum += d.pub_pa?.[p] || 0;
     });
     Object.values(grouped).forEach(g => {
-      const avgRev = g.totalRev / numDays;
       const denom = g.convSum + g.blockSum;
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
       const block = denom > 0 ? g.blockSum / denom : 0;
@@ -518,7 +536,7 @@ function renderCharts() {
         package_name: g.package_name,
         campaign_id: g.campaign_id,
         advertiser: g.advertiser,
-        revenue: avgRev,
+        revenue: g.totalRev / numDays,
         fraud,
         block,
         pa
@@ -568,35 +586,37 @@ function renderCharts() {
   `;
   renderGoodTable();
 
-  // 8. 需关停渠道：渠道级作弊率>20% 且 该渠道日均收入<$100
-  suspendRows = [];
+  // 8. 收入100以下关停渠道：campaign粒度，日均收入<$100 且 作弊率>20%
+  suspendDetailRows = [];
   PUBS.forEach((p, pi) => {
     data.forEach(d => {
       const rev = d.pub_rev?.[p] || 0;
-      if (rev <= 0) return;
+      if (rev < 0) return;
+      const conv = d.pub_conv?.[p] || 0;
+      const block = d.pub_block?.[p] || 0;
+      const pa = d.pub_pa?.[p] || 0;
+      const denom = conv + block;
+      const fraud = denom > 0 ? (pa + block) / denom : 0;
       const avgRev = rev / numDays;
-      const fraud = d.pub_fraud?.[p] || 0;
       if (avgRev >= 100 || fraud <= 0.2) return;
-      suspendRows.push({
+      suspendDetailRows.push({
         publisher: PUB_SHORT[pi],
         package_name: d.package_name,
         campaign_id: d.campaign_id,
-        advertiser: d.advertiser,
+        advertiser: normAdv(d.advertiser),
         revenue: avgRev,
-        fraud,
-        block: d.overall_block || 0,
-        pa: d.overall_pa || 0
+        fraud, block: denom > 0 ? block / denom : 0, pa: denom > 0 ? pa / denom : 0
       });
     });
   });
-  suspendRows.sort((a,b) => b.fraud - a.fraud);
 
-  const suspendAdvs = [...new Set(suspendRows.map(r => r.advertiser).filter(Boolean))].sort();
-  const suspendPubs = [...new Set(suspendRows.map(r => r.publisher))].sort();
+  const suspendPubs = [...new Set(suspendDetailRows.map(r => r.publisher))].sort();
+  const suspendAdvs = [...new Set(suspendDetailRows.map(r => r.advertiser).filter(Boolean))].sort();
+  const suspendCids = [...new Set(suspendDetailRows.map(r => r.campaign_id))].sort();
 
   document.getElementById('suspend-section').innerHTML = `
     <div class="table-box">
-      <h3>需关停渠道 <span id="suspend-count" style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入<$100 且 作弊率>20%，共${suspendRows.length}条）</span></h3>
+      <h3>收入100以下关停渠道 <span id="suspend-count" style="color:#6a7a8a;font-size:12px;font-weight:400">（渠道日均收入<$100 且 作弊率>20%，共${suspendDetailRows.length}条）</span></h3>
       <div class="table-controls">
         <select id="suspendPubFilter" onchange="renderSuspendTable()">
           <option value="all">全部渠道</option>
@@ -606,6 +626,11 @@ function renderCharts() {
           <option value="all">全部广告主</option>
           ${suspendAdvs.map(a => `<option value="${a}">${a}</option>`).join('')}
         </select>
+        <select id="suspendCidFilter" onchange="renderSuspendTable()">
+          <option value="">全部Campaign</option>
+          ${suspendCids.map(c => `<option value="${c}">${c}</option>`).join('')}
+        </select>
+        <input id="suspendSearchFilter" type="text" placeholder="搜索 campaign / 包名 / 广告主..." oninput="renderSuspendTable()" style="width:220px;background:#0f1923;border:1px solid #3a4a5a;color:#e0e0e0;padding:6px 12px;border-radius:4px;font-size:13px">
         <button onclick="exportSuspendCSV()" style="padding:6px 14px;background:#1a2a3a;border:1px solid #3a4a5a;color:#4fc3f7;border-radius:4px;cursor:pointer;font-size:13px">导出CSV</button>
       </div>
       <div style="overflow-x:auto">
@@ -648,7 +673,22 @@ function renderFlaggedTable() {
   if (selectAllCb) selectAllCb.checked = allChecked;
   const dropdown = document.getElementById('flaggedAdvDropdown');
   if (dropdown) dropdown.textContent = allChecked || selectedAdvs.length === 0 ? '全部广告主 ▾' : selectedAdvs.length > 2 ? `已选${selectedAdvs.length}项 ▾` : selectedAdvs[0] + ' ▾';
-  const cidFilter = (document.getElementById('flaggedCidFilter')?.value || '').trim();
+
+  // Rebuild campaign dropdown based on selected advertisers
+  const cidSelect = document.getElementById('flaggedCidFilter');
+  if (cidSelect) {
+    const prevVal = cidSelect.value;
+    const advFilteredRows = selectedAdvs.length > 0
+      ? flaggedRows.filter(r => selectedAdvs.includes(r.advertiser))
+      : flaggedRows;
+    const cids = [...new Set(advFilteredRows.map(r => r.campaign_id))].sort();
+    cidSelect.innerHTML = '<option value="">全部Campaign</option>' + cids.map(c => `<option value="${c}">${c}</option>`).join('');
+    // Keep previous selection if still valid
+    if (prevVal && cids.includes(prevVal)) cidSelect.value = prevVal;
+    else cidSelect.value = '';
+  }
+
+  const cidFilter = (cidSelect?.value || '').trim();
   const filtered = flaggedRows.filter(r => {
     if (selectedAdvs.length > 0 && !selectedAdvs.includes(r.advertiser)) return false;
     if (cidFilter && !r.campaign_id.includes(cidFilter)) return false;
@@ -710,15 +750,39 @@ function renderGoodTable() {
 function renderSuspendTable() {
   const pubFilter = document.getElementById('suspendPubFilter')?.value || 'all';
   const advFilter = document.getElementById('suspendAdvFilter')?.value || 'all';
-  const filtered = suspendRows.filter(r => {
+
+  // Step 1: filter by publisher + advertiser
+  const preFiltered = suspendDetailRows.filter(r => {
     if (pubFilter !== 'all' && r.publisher !== pubFilter) return false;
     if (advFilter !== 'all' && r.advertiser !== advFilter) return false;
     return true;
   });
+
+  // Step 2: rebuild campaign dropdown based on filtered data
+  const cidSelect = document.getElementById('suspendCidFilter');
+  if (cidSelect) {
+    const prevVal = cidSelect.value;
+    const cids = [...new Set(preFiltered.map(r => r.campaign_id))].sort();
+    cidSelect.innerHTML = '<option value="">全部Campaign</option>' + cids.map(c => `<option value="${c}">${c}</option>`).join('');
+    if (prevVal && cids.includes(prevVal)) cidSelect.value = prevVal;
+    else cidSelect.value = '';
+  }
+
+  const cidFilter = (cidSelect?.value || '').trim();
+  const search = (document.getElementById('suspendSearchFilter')?.value || '').trim().toLowerCase();
+
+  // Step 3: filter by campaign + search and render detail rows
+  const filtered = preFiltered.filter(r => {
+    if (cidFilter && r.campaign_id !== cidFilter) return false;
+    if (search && !String(r.campaign_id).includes(search) && !(r.package_name||'').toLowerCase().includes(search) && !(r.advertiser||'').toLowerCase().includes(search)) return false;
+    return true;
+  });
+  filtered.sort((a, b) => a.publisher.localeCompare(b.publisher) || b.revenue - a.revenue);
+
   const tbody = document.getElementById('suspend-tbody');
   if (!tbody) return;
   const countEl = document.getElementById('suspend-count');
-  if (countEl) countEl.textContent = `（日均收入<$100 且 作弊率>20%，共${filtered.length}条）`;
+  if (countEl) countEl.textContent = `（渠道日均收入<$100 且 作弊率>20%，共${filtered.length}条）`;
   tbody.innerHTML = filtered.map(r => {
     const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
     return `<tr>
@@ -737,9 +801,11 @@ function renderSuspendTable() {
 function exportSuspendCSV() {
   const pubFilter = document.getElementById('suspendPubFilter')?.value || 'all';
   const advFilter = document.getElementById('suspendAdvFilter')?.value || 'all';
-  const filtered = suspendRows.filter(r => {
+  const cidFilter = (document.getElementById('suspendCidFilter')?.value || '').trim();
+  const filtered = suspendDetailRows.filter(r => {
     if (pubFilter !== 'all' && r.publisher !== pubFilter) return false;
     if (advFilter !== 'all' && r.advertiser !== advFilter) return false;
+    if (cidFilter && r.campaign_id !== cidFilter) return false;
     return true;
   });
   const headers = ['渠道','包名','Campaign','广告主','日均收入','作弊率','Block率','PA率'];
@@ -749,7 +815,7 @@ function exportSuspendCSV() {
   const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = '需关停渠道_' + (currentPeriod.has('all') ? '全部' : [...currentPeriod].sort().join('-')) + '.csv';
+  a.download = '收入100以下关停渠道_' + (currentPeriod.has('all') ? '全部' : [...currentPeriod].sort().join('-')) + '.csv';
   a.click();
 }
 

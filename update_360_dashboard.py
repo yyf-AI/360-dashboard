@@ -9,6 +9,7 @@ import time
 import sys
 import logging
 import subprocess
+import os
 from datetime import datetime, timedelta
 from pathlib import Path
 import requests
@@ -36,7 +37,7 @@ FROM (
     SELECT campaign_id, publisher_id, SUM(revenue) AS revenue, SUM(conversions) AS conversions,
            SUM(block) AS block, SUM(pa_cnt) AS pa_cnt
     FROM iceberg_alsgprc_hadoop.miuiads.ads_offline_pb_pa_1d
-    WHERE date = '{date}'
+    WHERE date = '{date}' AND dsp_level1 IN ('milengine')
     GROUP BY campaign_id, publisher_id
 ) a
 LEFT JOIN (
@@ -489,7 +490,22 @@ def push_to_github():
 
 
 # ============ 主流程 ============
+LOCK_FILE = _DIR / ".update_lock"
+
 def main():
+    # Prevent concurrent execution
+    if LOCK_FILE.exists():
+        log.warning("Another update is running (lock file exists), skipping.")
+        return
+    LOCK_FILE.write_text(str(os.getpid()), encoding="utf-8")
+    try:
+        _main_impl()
+    finally:
+        if LOCK_FILE.exists():
+            LOCK_FILE.unlink()
+
+
+def _main_impl():
     # T-2 date
     today = datetime.now()
     t2 = today - timedelta(days=2)
