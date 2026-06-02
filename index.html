@@ -417,7 +417,7 @@ function renderCharts() {
     Object.values(grouped).forEach(g => {
       const denom = g.convSum + g.blockSum;
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
-      if (g.totalRev / numDays < 100 || fraud <= 0.2) return;
+      if (g.totalRev < 100 || fraud <= 0.2) return;
       totalRev += g.totalRev;
       totalConv += g.convSum;
       totalBlock += g.blockSum;
@@ -453,7 +453,7 @@ function renderCharts() {
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
       const block = denom > 0 ? g.blockSum / denom : 0;
       const pa = denom > 0 ? g.paSum / denom : 0;
-      if (g.totalRev / numDays < 100 || fraud <= 0.2) return;
+      if (g.totalRev < 100 || fraud <= 0.2) return;
       pubDetailRows.push({
         publisher: PUB_SHORT[PUBS.indexOf(p)],
         package_name: g.package_name,
@@ -474,7 +474,7 @@ function renderCharts() {
 
   document.getElementById('pub-flagged-section').innerHTML = `
     <div class="table-box">
-      <h3>收入100以上关停渠道 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（日均收入≥$100 且 作弊率>20%，共${flaggedRows.length}条）</span></h3>
+      <h3>收入100以上关停渠道 <span style="color:#6a7a8a;font-size:12px;font-weight:400">（总收入≥$100 且 作弊率>20%，显示日均收入，共${flaggedRows.length}条）</span></h3>
       <div class="table-controls" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
         <div style="position:relative">
           <div id="flaggedAdvDropdown" onclick="toggleMultiSelect('flaggedAdv')" style="padding:6px 28px 6px 10px;border:1px solid #3a4a5a;border-radius:4px;background:#1a2a3a;color:#cfd8dc;font-size:13px;cursor:pointer;min-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">全部广告主 ▾</div>
