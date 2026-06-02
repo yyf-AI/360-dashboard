@@ -1,0 +1,143 @@
+2026-05-20 11:23:54,785 [INFO] === Update started: T-2 = 20260518, period = 0518 ===
+2026-05-20 11:23:54,802 [INFO] Submitting SQL for date=20260518...
+2026-05-20 11:23:55,634 [INFO] Query submitted, id=/v1/statement/queued/20260520_032355_02745_sg_public01_uw56z/yc8abbcaa79b5b59d0c4a7df2063c51e5684a3e17/2;0298e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1779247434739:1779247435214:false:TRINO:RUNNING:29337a602f1fab4f4064879915ebcfc0:436a1bf05202c4bc
+2026-05-20 11:24:01,315 [INFO] Query finished, fetching results...
+2026-05-20 11:24:01,984 [INFO] Fetched 8411 rows
+2026-05-20 11:24:02,002 [INFO] Processed 1191 campaigns
+2026-05-20 11:24:02,046 [INFO] Appended 1191 records, period=0518
+2026-05-20 11:24:02,049 [INFO] === Update complete: 1191 records added for 0518 ===
+2026-05-21 11:00:03,394 [INFO] === Update started: T-2 = 20260519, period = 0519 ===
+2026-05-21 11:00:03,446 [INFO] Submitting SQL for date=20260519...
+2026-05-21 11:00:04,056 [INFO] Query submitted, id=/v1/statement/queued/20260521_030003_02667_sg_public02_mjc2s/y0426afb959e38993b5237b657721c31bfadeb32e/2;3458e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1779332402907:1779332403322:false:TRINO:RUNNING:3f9e8ede89d4ad65efcccbd253761074:b295d2383ccb8a86
+2026-05-21 11:00:09,701 [INFO] Query finished, fetching results...
+2026-05-21 11:00:10,358 [INFO] Fetched 8567 rows
+2026-05-21 11:00:10,378 [INFO] Processed 1195 campaigns
+2026-05-21 11:00:10,435 [INFO] Appended 1195 records, period=0519
+2026-05-21 11:00:10,439 [INFO] === Update complete: 1195 records added for 0519 ===
+2026-05-22 13:20:03,371 [INFO] === Update started: T-2 = 20260520, period = 0520 ===
+2026-05-22 13:20:03,707 [INFO] Submitting SQL for date=20260520...
+2026-05-22 13:20:04,342 [INFO] Query submitted, id=/v1/statement/queued/20260522_052003_04332_sg_public02_mjc2s/y6fabcdf60e334866e18d6f781e2b094cb10c73ba/2;5398e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1779427203141:1779427203604:false:TRINO:RUNNING:fb2b15e3c298ef39a673fa8199862eb2:b8d0c8070f9669a2
+2026-05-22 13:20:13,105 [INFO] Query finished, fetching results...
+2026-05-22 13:20:13,761 [INFO] Fetched 8527 rows
+2026-05-22 13:20:13,779 [INFO] Processed 1216 campaigns
+2026-05-22 13:20:13,908 [INFO] Appended 1216 records, period=0520
+2026-05-22 13:20:13,913 [INFO] === Update complete: 1216 records added for 0520 ===
+2026-05-22 13:20:15,100 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-22 13:20:57,996 [INFO] === Update started: T-2 = 20260520, period = 0520 ===
+2026-05-22 13:20:58,024 [INFO] Period 0520 already exists in data file, skipping query.
+2026-05-22 13:20:58,610 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-25 11:00:03,334 [INFO] === Update started: T-2 = 20260523, period = 0523 ===
+2026-05-25 11:00:03,688 [INFO] Submitting SQL for date=20260523...
+2026-05-25 11:00:04,295 [INFO] Query submitted, id=/v1/statement/queued/20260525_030002_03687_sg_public02_mjc2s/y82fbc4a8ff9cddabf2e39dcc23967ba758848ace/2;4318e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1779678002398:1779678002817:false:TRINO:RUNNING:2e710c040d45a271bd1366d5ad60be4e:5d8ed7855d817ac2
+2026-05-25 11:00:16,217 [INFO] Query finished, fetching results...
+2026-05-25 11:00:16,881 [INFO] Fetched 8503 rows
+2026-05-25 11:00:16,899 [INFO] Processed 1230 campaigns
+2026-05-25 11:00:16,957 [INFO] Appended 1230 records, period=0523
+2026-05-25 11:00:16,959 [INFO] === Update complete: 1230 records added for 0523 ===
+2026-05-25 11:00:18,174 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-27 11:00:03,999 [INFO] === Update started: T-2 = 20260525, period = 0525 ===
+2026-05-27 11:00:04,353 [INFO] Submitting SQL for date=20260525...
+2026-05-27 11:00:05,024 [INFO] Query submitted, id=/v1/statement/queued/20260527_030004_02468_sg_public01_5khdp/y834e6b721082477f3584b47d756a437aaa331148/2;5948e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1779850804485:1779850804972:false:TRINO:RUNNING:87467e10fd416daa5cf41ccb9440016a:b5572fe1a0d4c625
+2026-05-27 11:00:05,170 [INFO] Query submitted, id=/v1/statement/queued/20260527_030005_02469_sg_public01_5khdp/y6599b54fcdd24d7380a29954f94365f5ec27fcba/2;8568e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1779850804496:1779850805105:false:TRINO:RUNNING:0e802610ce3784a4b7d86ca0a71475b0:dd32e09d30c860cb
+2026-05-27 11:00:17,186 [INFO] Query finished, fetching results...
+2026-05-27 11:00:17,835 [INFO] Fetched 8497 rows
+2026-05-27 11:00:17,855 [INFO] Processed 1218 campaigns
+2026-05-27 11:00:17,934 [INFO] Appended 1218 records, period=0525
+2026-05-27 11:00:17,936 [INFO] === Update complete: 1218 records added for 0525 ===
+2026-05-27 11:00:19,319 [INFO] Query finished, fetching results...
+2026-05-27 11:00:20,806 [INFO] Webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-05-27 11:00:21,018 [INFO] Fetched 8497 rows
+2026-05-27 11:00:21,040 [INFO] Processed 1218 campaigns
+2026-05-27 11:00:26,035 [INFO] Pushed to GitHub successfully
+2026-05-27 17:37:19,794 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-27 17:37:20,511 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-27 17:40:24,130 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-27 17:40:24,813 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-27 17:44:25,951 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-27 17:44:50,504 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-27 17:44:51,197 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-28 11:00:03,363 [INFO] === Update started: T-2 = 20260526, period = 0526 ===
+2026-05-28 11:00:03,776 [INFO] Submitting SQL for date=20260526...
+2026-05-28 11:00:04,343 [INFO] Query submitted, id=/v1/statement/queued/20260528_030003_02494_sg_public02_behpf/y54bc57f7a1e14d2f411d9a63ca94e837241b4875/2;8198e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1779937203271:1779937203675:false:TRINO:RUNNING:8443b45086f3d1621dd9f4a24a83b04b:689c19b433d7c2a3
+2026-05-28 11:00:04,395 [INFO] Query submitted, id=/v1/statement/queued/20260528_030003_02496_sg_public02_behpf/y9f179d218f4d6f8624e238745a63708d83b793b6/2;0258e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1779937203281:1779937203727:false:TRINO:RUNNING:89c57d0aa10f0242aa5f1cd21494308d:454b784b8c064863
+2026-05-28 11:00:12,153 [INFO] Query finished, fetching results...
+2026-05-28 11:00:12,844 [INFO] Fetched 8766 rows
+2026-05-28 11:00:12,862 [INFO] Processed 1247 campaigns
+2026-05-28 11:00:12,929 [INFO] Appended 1247 records, period=0526
+2026-05-28 11:00:12,931 [INFO] === Update complete: 1247 records added for 0526 ===
+2026-05-28 11:00:13,141 [INFO] Query finished, fetching results...
+2026-05-28 11:00:13,762 [INFO] Fetched 8766 rows
+2026-05-28 11:00:13,802 [INFO] Processed 1247 campaigns
+2026-05-28 11:00:14,003 [INFO] Appended 1247 records, period=0526
+2026-05-28 11:00:14,008 [INFO] === Update complete: 1247 records added for 0526 ===
+2026-05-28 11:00:14,233 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-28 11:00:15,455 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-28 11:00:15,644 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-28 11:00:16,647 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-28 11:00:16,797 [INFO] No changes to push
+2026-05-28 11:00:22,209 [INFO] Pushed to GitHub successfully
+2026-05-29 11:00:03,069 [INFO] === Update started: T-2 = 20260527, period = 0527 ===
+2026-05-29 11:00:04,233 [INFO] Submitting SQL for date=20260527...
+2026-05-29 11:00:04,880 [INFO] Query submitted, id=/v1/statement/queued/20260529_030004_02729_sg_public01_5khdp/y44435bb8ebc9db7c09e27fc1e231779be6153ec7/2;2508e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1780023604358:1780023604821:false:TRINO:RUNNING:da120162b6350e71ee352ce032fc5cbc:6b0ac284966ed77f
+2026-05-29 11:00:04,880 [INFO] Query submitted, id=/v1/statement/queued/20260529_030004_02730_sg_public01_5khdp/yc7d56b1124f8cd872cc76b479474864e194ead9e/2;1308e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1780023604357:1780023604816:false:TRINO:RUNNING:0eb6817334460ce3d8c48abae98172ef:135e79d9cf01833a
+2026-05-29 11:00:10,494 [INFO] Query finished, fetching results...
+2026-05-29 11:00:10,706 [INFO] Query finished, fetching results...
+2026-05-29 11:00:11,231 [INFO] Fetched 8676 rows
+2026-05-29 11:00:11,257 [INFO] Processed 1259 campaigns
+2026-05-29 11:00:11,367 [INFO] Fetched 8676 rows
+2026-05-29 11:00:11,402 [INFO] Processed 1259 campaigns
+2026-05-29 11:00:11,468 [INFO] Appended 1259 records, period=0527
+2026-05-29 11:00:11,478 [INFO] === Update complete: 1259 records added for 0527 ===
+2026-05-29 11:00:13,907 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-05-29 11:00:15,789 [INFO] Optimize channel webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-05-29 11:00:24,632 [INFO] Pushed to GitHub successfully
+2026-05-29 11:44:04,461 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-01 10:19:14,261 [INFO] === Update started: T-2 = 20260530, period = 0530 ===
+2026-06-01 10:19:14,448 [INFO] Submitting SQL for date=20260530...
+2026-06-01 10:19:14,453 [INFO] Submitting SQL for date=20260530...
+2026-06-01 10:19:15,290 [INFO] Query submitted, id=/v1/statement/queued/20260601_021915_01979_sg_public01_5khdp/y906bcaef31b085203c482cd932551c201a20c0a3/2;8058e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1780280354723:1780280355188:false:TRINO:RUNNING:b8618205e85832062eb37ec81634282a:a3522be6e20ce4b3
+2026-06-01 10:19:15,299 [INFO] Query submitted, id=/v1/statement/queued/20260601_021915_01998_sg_public02_behpf/y220d656a94649f503bf994129cc0bc9157e4b9d2/2;8958e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1780280354741:1780280355270:false:TRINO:RUNNING:cdc081d130cc209571b9b4fafcad3440:cc873b29ed085f2d
+2026-06-01 10:19:18,125 [INFO] Query finished, fetching results...
+2026-06-01 10:19:18,778 [INFO] Fetched 8434 rows
+2026-06-01 10:19:18,818 [INFO] Processed 1297 campaigns
+2026-06-01 10:19:19,096 [INFO] Appended 1297 records, period=0530
+2026-06-01 10:19:19,106 [INFO] === Update complete: 1297 records added for 0530 ===
+2026-06-01 10:19:19,871 [INFO] Query finished, fetching results...
+2026-06-01 10:19:20,532 [INFO] Fetched 8434 rows
+2026-06-01 10:19:20,555 [INFO] Processed 1297 campaigns
+2026-06-01 10:19:21,921 [INFO] Appended 1297 records, period=0530
+2026-06-01 10:19:21,931 [INFO] === Update complete: 1297 records added for 0530 ===
+2026-06-01 10:19:48,109 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-01 10:19:50,761 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-01 10:19:51,594 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-01 10:19:52,539 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-01 10:19:52,698 [ERROR] Git error: fatal: Unable to create 'C:/Users/Mi/360_dashboard/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+2026-06-01 10:20:06,507 [INFO] Pushed to GitHub successfully
+2026-06-01 11:00:03,524 [INFO] === Update started: T-2 = 20260530, period = 0530 ===
+2026-06-01 11:00:03,651 [INFO] Period 0530 already exists in data file, skipping query.
+2026-06-01 11:00:03,654 [INFO] Period 0530 already exists in data file, skipping query.
+2026-06-01 11:00:06,013 [INFO] Webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-06-01 11:00:06,466 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-01 11:00:07,762 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-01 11:00:08,031 [INFO] Optimize channel webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-06-01 11:00:08,190 [ERROR] Git error: fatal: Unable to create 'C:/Users/Mi/360_dashboard/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+2026-06-01 11:00:17,477 [INFO] Pushed to GitHub successfully
+2026-06-02 11:00:02,133 [INFO] === Update started: T-2 = 20260531, period = 0531 ===
+2026-06-02 11:00:02,276 [INFO] Period 0531 already exists in data file, skipping query.
+2026-06-02 11:00:04,801 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-02 11:00:07,469 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-02 11:00:19,678 [INFO] Pushed to GitHub successfully

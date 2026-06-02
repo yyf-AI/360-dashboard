@@ -1,0 +1,8114 @@
+{
+  "app.bachatt.customer": {},
+  "app.kids360.parent": {
+    "1000222": {
+      "clicks": 29194,
+      "installs": 556,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 2276,
+      "installs": 237,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 36,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 32,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 24,
+      "installs": 10,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 12,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 12,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 10,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 10,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "asrtum.ent.domovyata": {
+    "1000255": {
+      "clicks": 116594,
+      "installs": 2012,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 89994,
+      "installs": 280,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 19234,
+      "installs": 22,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 18444,
+      "installs": 561,
+      "revenue": 0
+    }
+  },
+  "banter.toki.android": {},
+  "biz.growapp.winline": {},
+  "br.bet.reidopitaco": {},
+  "br.com.jeitto.meujeitto": {
+    "1000224": {
+      "clicks": 19750,
+      "installs": 29,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 2851,
+      "installs": 164,
+      "revenue": 0
+    },
+    "AdGroup_name": {
+      "clicks": 20,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 2,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 2,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "br.com.mobile.market4u": {},
+  "br.com.mynt": {
+    "1000220": {
+      "clicks": 9880,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 7753,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 7685,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 892,
+      "installs": 45,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 107,
+      "installs": 54,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 34,
+      "installs": 20,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 13,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "br.com.uol.ps.myaccount": {
+    "1000224": {
+      "clicks": 69594,
+      "installs": 139,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 32272,
+      "installs": 1191,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 29621,
+      "installs": 48,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 9991,
+      "installs": 103,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 8940,
+      "installs": 46,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "cards.uni.app.credit": {
+    "1000224": {
+      "clicks": 10052,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 9336,
+      "installs": 43,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 9290,
+      "installs": 37,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 8980,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 7234,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 877,
+      "installs": 64,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 220,
+      "installs": 20,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 183,
+      "installs": 27,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 158,
+      "installs": 22,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 11,
+      "installs": 2,
+      "revenue": 0
+    }
+  },
+  "cash.efectivo.okredito.prestamos.tala.credito.oxxo": {
+    "1000224": {
+      "clicks": 19856,
+      "installs": 70,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 19808,
+      "installs": 79,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 14023,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 10844,
+      "installs": 118,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 10014,
+      "installs": 19,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 157,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 145,
+      "installs": 28,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 140,
+      "installs": 26,
+      "revenue": 0
+    },
+    "1000300": {
+      "clicks": 118,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 43,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "cash.meprestamo.tala.credito.oxxo.efectivo.okreditopeso.cashcash.prestamo": {},
+  "cn.com.vau": {},
+  "co.bitx.android.wallet": {},
+  "co.id.lumbungdana.android": {},
+  "co.tide.tideplatform.in": {},
+  "coches.net": {},
+  "com.aavelo.flowfund": {},
+  "com.adakami.dana.kredit.pinjaman": {
+    "1000201": {
+      "clicks": 95286,
+      "installs": 301,
+      "revenue": 0
+    },
+    "75212": {
+      "clicks": 9281,
+      "installs": 45,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 6802,
+      "installs": 505,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 6784,
+      "installs": 458,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 4678,
+      "installs": 920,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.adityabirlacapitaldigital.OneApp": {},
+  "com.airwaycrash.aerorush": {},
+  "com.amazon.avod.thirdpartyclient": {},
+  "com.amazon.mShop.android.shopping": {},
+  "com.anytimerupee": {
+    "1000224": {
+      "clicks": 9232,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "{af_adset}_01": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.apegroup.mcdonaldsrussia": {},
+  "com.app.alright": {},
+  "com.app.web_zaim": {
+    "1000224": {
+      "clicks": 9998,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9996,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 42,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 38,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 24,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 24,
+      "installs": 3,
+      "revenue": 0
+    }
+  },
+  "com.applications.max": {},
+  "com.appteka.lapy": {},
+  "com.arenaplus.sport": {
+    "1000253": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "Native_PH": {
+      "clicks": 0,
+      "installs": 16,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "banner_PH": {
+      "clicks": 0,
+      "installs": 20,
+      "revenue": 0
+    },
+    "interstitial_PH": {
+      "clicks": 0,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    }
+  },
+  "com.arvanix.credit_calculator": {
+    "1000226": {
+      "clicks": 9905,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9601,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 13,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 8,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.avito.android": {},
+  "com.bestmoney.credit.loan": {},
+  "com.big.ludocafe": {
+    "1000254": {
+      "clicks": 407731,
+      "installs": 138,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 399987,
+      "installs": 159,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 162929,
+      "installs": 437,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 153718,
+      "installs": 524,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 137204,
+      "installs": 1173,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 52098,
+      "installs": 205,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 46750,
+      "installs": 222,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 19632,
+      "installs": 812,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 18416,
+      "installs": 1545,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 4,
+      "installs": 54,
+      "revenue": 0
+    }
+  },
+  "com.bigcake.android.mahjongmatch": {
+    "1000255": {
+      "clicks": 51916,
+      "installs": 64,
+      "revenue": 198.03851357596255
+    },
+    "1000253": {
+      "clicks": 35659,
+      "installs": 19,
+      "revenue": 37.478009796144484
+    },
+    "1000260": {
+      "clicks": 31867,
+      "installs": 518,
+      "revenue": 482.1350790275114
+    },
+    "1000220": {
+      "clicks": 27230,
+      "installs": 339,
+      "revenue": 1326.9150659139843
+    },
+    "1000226": {
+      "clicks": 27068,
+      "installs": 71,
+      "revenue": 54.94330196570581
+    },
+    "1000222": {
+      "clicks": 20304,
+      "installs": 45,
+      "revenue": 426.7635554645486
+    },
+    "1000224": {
+      "clicks": 17376,
+      "installs": 34,
+      "revenue": 1.8616956158658486
+    },
+    "1000254": {
+      "clicks": 17016,
+      "installs": 13,
+      "revenue": 4.120737362550145
+    },
+    "1000218": {
+      "clicks": 6009,
+      "installs": 83,
+      "revenue": 818.3888706701141
+    },
+    "1000223": {
+      "clicks": 2653,
+      "installs": 79,
+      "revenue": 889.784817866068
+    },
+    "1000177": {
+      "clicks": 204,
+      "installs": 9,
+      "revenue": 27.23758136682203
+    },
+    "1000127": {
+      "clicks": 21,
+      "installs": 5,
+      "revenue": 0.22646805137127848
+    }
+  },
+  "com.binance.dev": {
+    "1000224": {
+      "clicks": 74213,
+      "installs": 681,
+      "revenue": 362.54408462000004
+    },
+    "1000226": {
+      "clicks": 57614,
+      "installs": 821,
+      "revenue": 6.32093597
+    },
+    "1000222": {
+      "clicks": 38522,
+      "installs": 731,
+      "revenue": 2.55112892
+    },
+    "1000220": {
+      "clicks": 31427,
+      "installs": 453,
+      "revenue": 5.01797036
+    },
+    "1000254": {
+      "clicks": 12385,
+      "installs": 476,
+      "revenue": 2.8242024199999998
+    },
+    "1000260": {
+      "clicks": 6891,
+      "installs": 141,
+      "revenue": 0.0286
+    },
+    "siteName": {
+      "clicks": 1645,
+      "installs": 59,
+      "revenue": 0
+    },
+    "{siteName_": {
+      "clicks": 22,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 10,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 2,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 278,
+      "revenue": 1.5214765499999998
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 310,
+      "revenue": 1.09401563
+    }
+  },
+  "com.bingoplus.scatterslots": {},
+  "com.bingoplus.superace": {
+    "1000224": {
+      "clicks": 44230,
+      "installs": 260,
+      "revenue": 1398.0
+    },
+    "1000218": {
+      "clicks": 18169,
+      "installs": 332,
+      "revenue": 4780.0
+    },
+    "1000255": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.bitget.exchange": {
+    "1000255": {
+      "clicks": 205748,
+      "installs": 234,
+      "revenue": 563.0
+    },
+    "1000226": {
+      "clicks": 141002,
+      "installs": 32,
+      "revenue": 130.0
+    },
+    "1000224": {
+      "clicks": 136399,
+      "installs": 21,
+      "revenue": 600.0
+    },
+    "1000253": {
+      "clicks": 71539,
+      "installs": 38,
+      "revenue": 151.0
+    },
+    "1000220": {
+      "clicks": 38009,
+      "installs": 18,
+      "revenue": 31.0
+    },
+    "1000254": {
+      "clicks": 38005,
+      "installs": 39,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1871,
+      "installs": 92,
+      "revenue": 1230.0
+    },
+    "1000222": {
+      "clicks": 1641,
+      "installs": 104,
+      "revenue": 260.0
+    },
+    "1000218": {
+      "clicks": 1348,
+      "installs": 75,
+      "revenue": 363.0
+    },
+    "1000260": {
+      "clicks": 391,
+      "installs": 43,
+      "revenue": 200.0
+    }
+  },
+  "com.block.juggle": {
+    "1000253": {
+      "clicks": 5882610,
+      "installs": 29140,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2308354,
+      "installs": 5433,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 325271,
+      "installs": 3899,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 208307,
+      "installs": 7169,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 200807,
+      "installs": 7136,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 148098,
+      "installs": 187,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 59535,
+      "installs": 5882,
+      "revenue": 0
+    },
+    "1000311": {
+      "clicks": 375,
+      "installs": 6,
+      "revenue": 0
+    },
+    "{sitName}": {
+      "clicks": 214,
+      "installs": 0,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 104,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000317": {
+      "clicks": 26,
+      "installs": 2,
+      "revenue": 0
+    },
+    "{siteName_": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.bossgame.domino": {
+    "1000226": {
+      "clicks": 52278,
+      "installs": 866,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 44203,
+      "installs": 50,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 28893,
+      "installs": 247,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 11148,
+      "installs": 313,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 3519,
+      "installs": 192,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 326,
+      "installs": 15,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 14,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.btse.finance": {
+    "1000226": {
+      "clicks": 42863,
+      "installs": 83,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 28853,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 315,
+      "installs": 63,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 125,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 95,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 79,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 72,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 41,
+      "installs": 3,
+      "revenue": 0
+    }
+  },
+  "com.carshering": {
+    "icon": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "icon_new_2": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.chatchill.app": {},
+  "com.cheq.retail": {
+    "1000253": {
+      "clicks": 10020,
+      "installs": 54,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 10002,
+      "installs": 19,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 8174,
+      "installs": 76,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 7886,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 285,
+      "installs": 37,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 246,
+      "installs": 86,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 120,
+      "installs": 67,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 116,
+      "installs": 60,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 110,
+      "installs": 47,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 97,
+      "installs": 36,
+      "revenue": 0
+    }
+  },
+  "com.cloud.thailand": {
+    "1000218": {
+      "clicks": 19119,
+      "installs": 158,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 19058,
+      "installs": 160,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1065,
+      "installs": 151,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 747,
+      "installs": 48,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 690,
+      "installs": 59,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 618,
+      "installs": 61,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.cloud.tr": {
+    "1000224": {
+      "clicks": 73279,
+      "installs": 77,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 36979,
+      "installs": 63,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 14931,
+      "installs": 13,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 12947,
+      "installs": 260,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 11323,
+      "installs": 213,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 0,
+      "installs": 9,
+      "revenue": 0
+    }
+  },
+  "com.cloudtradetech.sky": {
+    "1000255": {
+      "clicks": 19617,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 154,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 21,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.coinswitch.kuber": {},
+  "com.cozmo.mx": {
+    "1000226": {
+      "clicks": 29514,
+      "installs": 18,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 19763,
+      "installs": 27,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 10139,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 9831,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 53,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 25,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 24,
+      "installs": 14,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 18,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 15,
+      "installs": 4,
+      "revenue": 0
+    }
+  },
+  "com.creditcat.tech.app": {
+    "Exceeded_AdSet_Limit": {
+      "clicks": 76529,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 29,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 16,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 15,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 81,
+      "revenue": 0
+    }
+  },
+  "com.creditdirectmobile.ng.cdlMobileApp": {
+    "1000224": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.cutting.point.loan": {},
+  "com.dbs.in.digital.bank": {},
+  "com.ddgcorp.loverepublicmfg": {},
+  "com.deltaexchangeindia": {
+    "1000253": {
+      "clicks": 34758,
+      "installs": 16,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 22262,
+      "installs": 330,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 22260,
+      "installs": 327,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 21536,
+      "installs": 71,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 12681,
+      "installs": 162,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9516,
+      "installs": 16,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2509,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 2155,
+      "installs": 36,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1241,
+      "installs": 39,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 567,
+      "installs": 41,
+      "revenue": 0
+    }
+  },
+  "com.devaashishcapitals.bls": {
+    "1000255": {
+      "clicks": 4110,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 80,
+      "installs": 21,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 60,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 5,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.dhgate.buyermob": {
+    "Exceeded_AdSet_Limit": {
+      "clicks": 4755,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 8,
+      "revenue": 0
+    }
+  },
+  "com.didiglobal.cashloan": {
+    "1000224": {
+      "clicks": 17550,
+      "installs": 369,
+      "revenue": 66152.3252988786
+    },
+    "1000226": {
+      "clicks": 15364,
+      "installs": 321,
+      "revenue": 59184.07132653713
+    },
+    "1000220": {
+      "clicks": 10184,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 6591,
+      "installs": 336,
+      "revenue": 49663.74837382112
+    },
+    "1000254": {
+      "clicks": 3570,
+      "installs": 221,
+      "revenue": 45543.92183685675
+    },
+    "1000222": {
+      "clicks": 2060,
+      "installs": 181,
+      "revenue": 36741.37273780175
+    },
+    "1000255": {
+      "clicks": 331,
+      "installs": 114,
+      "revenue": 21870.207985895486
+    },
+    "siteName": {
+      "clicks": 161,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 107,
+      "installs": 27,
+      "revenue": 2773.3946320055584
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 26,
+      "revenue": 1127.92
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.dinero.fd.mx.loan": {},
+  "com.divum.MoneyControl": {},
+  "com.drivee.taxi.rides": {
+    "1000254": {
+      "clicks": 111163,
+      "installs": 118,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 10109,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 10038,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9804,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 8893,
+      "installs": 278,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 3899,
+      "installs": 109,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 862,
+      "installs": 27,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 152,
+      "installs": 2,
+      "revenue": 0
+    },
+    "b2_p5_s1200x628_tVZ_dDR-2SDnjdxKRbo": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "icon8": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "b1_2SDnjcoQ8WX": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "icon14": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "b3_p5_s1200x628_tVZ_dDR-2SDnjeuAy2Z": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.earlysalary.android": {
+    "1000222": {
+      "clicks": 1675,
+      "installs": 47,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.easydiner": {},
+  "com.elaworld.mexloan": {},
+  "com.esprit.rpg.cntrctfft": {
+    "1000218": {
+      "clicks": 124,
+      "installs": 56,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 120,
+      "installs": 46,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 5,
+      "revenue": 0
+    }
+  },
+  "com.espritgames.rpg.dragon.egg": {
+    "1000224": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.espritgames.rpg.hoc": {
+    "1000226": {
+      "clicks": 9555,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9489,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 1127,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 927,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 115,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 83,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "LC_gomobile_CPI_RF_160124_gp_preferred_ocpc": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "LC_gomobile_CPI_RF_170124_gp_icon_cpi": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.espritgames.rpg.ncntgds2": {},
+  "com.espritgames.rpg.sky.trick": {
+    "1000218": {
+      "clicks": 266,
+      "installs": 10,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 256,
+      "installs": 30,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 85,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 59,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 25,
+      "installs": 15,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 3,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.espritgames.rpg.thdrgndyssy": {
+    "1000226": {
+      "clicks": 9215,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 84,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 11,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 10,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 7,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.falabella.falabellaApp": {
+    "1000255": {
+      "clicks": 64018,
+      "installs": 71,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 59692,
+      "installs": 161,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 57483,
+      "installs": 137,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 30596,
+      "installs": 109,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 30264,
+      "installs": 47,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 28177,
+      "installs": 178,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 28091,
+      "installs": 14,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 27946,
+      "installs": 17,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 27329,
+      "installs": 134,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1012,
+      "installs": 69,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 320,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.fastmore.gold.loan.ph": {
+    "1000218": {
+      "clicks": 113606,
+      "installs": 58,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 101072,
+      "installs": 156,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 21652,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 19790,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 18488,
+      "installs": 177,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 9996,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 5268,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1292,
+      "installs": 96,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 549,
+      "installs": 64,
+      "revenue": 0
+    }
+  },
+  "com.fastringgit.official": {},
+  "com.fatakpay": {
+    "1000222": {
+      "clicks": 3295,
+      "installs": 344,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    }
+  },
+  "com.finaccel.android": {
+    "AdGroup_name": {
+      "clicks": 259,
+      "installs": 1,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 42,
+      "installs": 0,
+      "revenue": 0
+    },
+    "XIA": {
+      "clicks": 6,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 12,
+      "revenue": 0
+    }
+  },
+  "com.finex.trading": {},
+  "com.fintopia.mxcredmex": {
+    "1000224": {
+      "clicks": 12049,
+      "installs": 343,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 11926,
+      "installs": 340,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 6181,
+      "installs": 11,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1805,
+      "installs": 186,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 654,
+      "installs": 65,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 296,
+      "installs": 37,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 192,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 105,
+      "installs": 11,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    }
+  },
+  "com.fivepaisa.trade": {
+    "1000253": {
+      "clicks": 12723,
+      "installs": 63,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 5501,
+      "installs": 88,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 5447,
+      "installs": 93,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 2508,
+      "installs": 196,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2436,
+      "installs": 289,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 7,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.flexsalary": {},
+  "com.fnoplay": {},
+  "com.ftlending.fast.cash.loan": {
+    "1000255": {
+      "clicks": 19901,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 7269,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 1998,
+      "installs": 125,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 74,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 33,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 5,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.fugo.wow": {
+    "1000224": {
+      "clicks": 1286805,
+      "installs": 2362,
+      "revenue": 38.51487175443937
+    },
+    "1000226": {
+      "clicks": 1133884,
+      "installs": 2626,
+      "revenue": 64.72703732159863
+    },
+    "1000218": {
+      "clicks": 325993,
+      "installs": 1414,
+      "revenue": 36.82013933566476
+    },
+    "1000223": {
+      "clicks": 277867,
+      "installs": 1497,
+      "revenue": 34.67154729513905
+    },
+    "1000253": {
+      "clicks": 210210,
+      "installs": 483,
+      "revenue": 7.100449083404676
+    },
+    "1000254": {
+      "clicks": 131148,
+      "installs": 252,
+      "revenue": 21.45889596229768
+    },
+    "1000222": {
+      "clicks": 63430,
+      "installs": 434,
+      "revenue": 212.85179555285538
+    },
+    "1000220": {
+      "clicks": 19893,
+      "installs": 36,
+      "revenue": 0.16435772141056978
+    },
+    "1000260": {
+      "clicks": 19687,
+      "installs": 1898,
+      "revenue": 48.82205877726482
+    },
+    "1000255": {
+      "clicks": 13754,
+      "installs": 23,
+      "revenue": 1.2922063129696753
+    },
+    "ID_gp": {
+      "clicks": 1525,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000243": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000258": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "appvault_gif": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "RU_its_v1": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.game.friends.android": {
+    "1000224": {
+      "clicks": 328200,
+      "installs": 320,
+      "revenue": 0
+    },
+    "1000122": {
+      "clicks": 172245,
+      "installs": 668,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 150991,
+      "installs": 104,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 92426,
+      "installs": 97,
+      "revenue": 0
+    },
+    "1000125": {
+      "clicks": 60109,
+      "installs": 216,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 31804,
+      "installs": 13,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 28559,
+      "installs": 303,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 22746,
+      "installs": 445,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 13553,
+      "installs": 225,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 12529,
+      "installs": 60,
+      "revenue": 0
+    },
+    "1000152": {
+      "clicks": 8469,
+      "installs": 25,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 2481,
+      "installs": 233,
+      "revenue": 0
+    },
+    "1000123": {
+      "clicks": 7,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.game.friends.ru": {
+    "1000255": {
+      "clicks": 362018,
+      "installs": 638,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 176613,
+      "installs": 250,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 11900,
+      "installs": 422,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 8098,
+      "installs": 516,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 7866,
+      "installs": 522,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 4105,
+      "installs": 195,
+      "revenue": 0
+    },
+    "RU_tongtou_GameBox_KOL_official_video": {
+      "clicks": 953,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 891,
+      "installs": 30,
+      "revenue": 0
+    },
+    "RU_tongtou_official_pic": {
+      "clicks": 611,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.gateio.gateio": {
+    "1000224": {
+      "clicks": 13298,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 12273,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 29,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 16,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 16,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 5,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 3,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.gazetki.gazetki": {},
+  "com.gg.yxmys.vn": {},
+  "com.goldenjogos.game": {},
+  "com.gp.hcr.happytime": {
+    "1000224": {
+      "clicks": 23637,
+      "installs": 38,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 14904,
+      "installs": 21,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 7926,
+      "installs": 161,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 3940,
+      "installs": 93,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 3750,
+      "installs": 67,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 421,
+      "installs": 29,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 262,
+      "installs": 85,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 156,
+      "installs": 40,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 58,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 10,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.gz.main.game": {
+    "1000226": {
+      "clicks": 91496,
+      "installs": 171,
+      "revenue": 22.109488256594112
+    },
+    "1000224": {
+      "clicks": 62978,
+      "installs": 63,
+      "revenue": 6.518092944326615
+    },
+    "1000220": {
+      "clicks": 22866,
+      "installs": 114,
+      "revenue": 23.659728426042545
+    },
+    "1000222": {
+      "clicks": 19427,
+      "installs": 245,
+      "revenue": 27.02474367077514
+    },
+    "1000255": {
+      "clicks": 9548,
+      "installs": 40,
+      "revenue": 10.236343521818585
+    },
+    "1000254": {
+      "clicks": 2314,
+      "installs": 10,
+      "revenue": 3.2532999757594423
+    },
+    "1000260": {
+      "clicks": 1387,
+      "installs": 45,
+      "revenue": 6.500956158608202
+    },
+    "1000253": {
+      "clicks": 736,
+      "installs": 53,
+      "revenue": 1.6252256869650206
+    },
+    "siteName": {
+      "clicks": 194,
+      "installs": 6,
+      "revenue": 0
+    },
+    "{siteName_": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.heetch": {},
+  "com.hkfuliao.chamet": {
+    "1000224": {
+      "clicks": 1291031,
+      "installs": 1727,
+      "revenue": 680.07
+    },
+    "1000226": {
+      "clicks": 1093075,
+      "installs": 1978,
+      "revenue": 935.3199999999999
+    },
+    "1000255": {
+      "clicks": 581279,
+      "installs": 3527,
+      "revenue": 1217.52
+    },
+    "1000223": {
+      "clicks": 501964,
+      "installs": 7015,
+      "revenue": 738.9999999999999
+    },
+    "1000254": {
+      "clicks": 442068,
+      "installs": 545,
+      "revenue": 1047.75
+    },
+    "1000253": {
+      "clicks": 319170,
+      "installs": 855,
+      "revenue": 344.5
+    },
+    "1000218": {
+      "clicks": 317424,
+      "installs": 4731,
+      "revenue": 839.96
+    },
+    "1000222": {
+      "clicks": 18312,
+      "installs": 372,
+      "revenue": 158.1
+    },
+    "497243": {
+      "clicks": 424,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 349,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 283,
+      "installs": 63,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 182,
+      "installs": 0,
+      "revenue": 0
+    },
+    "{siteName_": {
+      "clicks": 115,
+      "installs": 1,
+      "revenue": 0
+    },
+    "532939": {
+      "clicks": 32,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000227": {
+      "clicks": 30,
+      "installs": 0,
+      "revenue": 0
+    },
+    "497263": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000250": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "527886": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.hktanwan.gp.xrk": {
+    "1000224": {
+      "clicks": 7392,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 7318,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 271,
+      "installs": 100,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 237,
+      "installs": 95,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 29,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 6,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 5,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 5,
+      "installs": 2,
+      "revenue": 0
+    }
+  },
+  "com.hotforex.www.hotforex": {},
+  "com.hyugalife": {},
+  "com.idamob.tinkoff.android": {
+    "1000226": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "standart_icon": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.ifriend.app": {
+    "1000224": {
+      "clicks": 18552,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 18495,
+      "installs": 26,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 502,
+      "installs": 14,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 218,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 94,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 59,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 54,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 42,
+      "installs": 0,
+      "revenue": 0
+    },
+    "ad2": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "ad1": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "icon": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "icon2": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.immomo.biz.ddoversea": {
+    "1000224": {
+      "clicks": 62569,
+      "installs": 253,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 60930,
+      "installs": 52,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 48444,
+      "installs": 371,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 35947,
+      "installs": 287,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 9295,
+      "installs": 70,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 3252,
+      "installs": 534,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 2786,
+      "installs": 492,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 258,
+      "installs": 66,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.immomo.biz.yaahlan": {
+    "1000253": {
+      "clicks": 86667,
+      "installs": 82,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 61195,
+      "installs": 34,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 45448,
+      "installs": 133,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 8737,
+      "installs": 61,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1225,
+      "installs": 181,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1149,
+      "installs": 171,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 1029,
+      "installs": 148,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 377,
+      "installs": 26,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 327,
+      "installs": 82,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 22,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.incredmoney": {},
+  "com.indosk.sensid": {},
+  "com.innofinsolutions.instamoney": {
+    "1000220": {
+      "clicks": 11596,
+      "installs": 207,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 10578,
+      "installs": 139,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 10082,
+      "installs": 47,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 9926,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 76,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    }
+  },
+  "com.innofinsolutions.lendenclub.lender": {},
+  "com.intech.c66app": {
+    "1.315.4.x": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 200.0
+    }
+  },
+  "com.intellihealth.truemeds": {},
+  "com.ixdigit.hanson": {
+    "1000224": {
+      "clicks": 4934,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 575,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 521,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 212,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 170,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 150,
+      "installs": 93,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 81,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 49,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.jar.app": {
+    "Exceeded_AdSet_Limit": {
+      "clicks": 615,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 11,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 20,
+      "revenue": 0
+    }
+  },
+  "com.juanhand.fast.cash.peso.loan.app": {},
+  "com.kataka.trucoarena": {
+    "1000255": {
+      "clicks": 9944,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 4126,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 100,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 63,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 38,
+      "installs": 10,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 20,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 13,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.king.candycrushsaga": {
+    "1000253": {
+      "clicks": 14535869,
+      "installs": 37039,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 10062042,
+      "installs": 13124,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 6940365,
+      "installs": 22332,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 3632210,
+      "installs": 22047,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 3022720,
+      "installs": 5099,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 982780,
+      "installs": 11562,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 940121,
+      "installs": 9997,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 584553,
+      "installs": 8759,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 520715,
+      "installs": 8132,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 392170,
+      "installs": 11001,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 1966,
+      "installs": 13,
+      "revenue": 0
+    },
+    "{siteName_": {
+      "clicks": 136,
+      "installs": 3,
+      "revenue": 0
+    }
+  },
+  "com.king.candycrushsodasaga": {
+    "1000254": {
+      "clicks": 894622,
+      "installs": 663,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 780083,
+      "installs": 5205,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 753106,
+      "installs": 740,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 741751,
+      "installs": 1555,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 650027,
+      "installs": 1391,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 265910,
+      "installs": 1199,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 251207,
+      "installs": 1154,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 153742,
+      "installs": 456,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 38059,
+      "installs": 927,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 24572,
+      "installs": 1038,
+      "revenue": 0
+    }
+  },
+  "com.kkii": {},
+  "com.klipp.app": {},
+  "com.kms.free": {
+    "1000224": {
+      "clicks": 10460,
+      "installs": 84,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9937,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 8466,
+      "installs": 30,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 3742,
+      "installs": 41,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1870,
+      "installs": 162,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 1291,
+      "installs": 39,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1229,
+      "installs": 27,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 523,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 214,
+      "installs": 4,
+      "revenue": 0
+    }
+  },
+  "com.krom.android": {
+    "1000253": {
+      "clicks": 9965,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9706,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9680,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 8019,
+      "installs": 31,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1677,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 87,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 37,
+      "installs": 2,
+      "revenue": 0
+    }
+  },
+  "com.kubi.kucoin": {
+    "1000224": {
+      "clicks": 71173,
+      "installs": 39,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 68992,
+      "installs": 61,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 14577,
+      "installs": 65,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2468,
+      "installs": 146,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 2230,
+      "installs": 36,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 1490,
+      "installs": 19,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 566,
+      "installs": 18,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 450,
+      "installs": 10,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 161,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 6,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.kuku.smoot.hlykplus.scbmoeny": {},
+  "com.kwai.bulldog": {
+    "1000255": {
+      "clicks": 89129,
+      "installs": 544,
+      "revenue": 83.127370277744
+    },
+    "1000224": {
+      "clicks": 88541,
+      "installs": 2621,
+      "revenue": 2849.415488106609
+    },
+    "1000226": {
+      "clicks": 49286,
+      "installs": 1044,
+      "revenue": 1440.3179930352799
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.lalamove.global.driver.sea": {
+    "1000254": {
+      "clicks": 30908,
+      "installs": 67,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 29602,
+      "installs": 834,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 27204,
+      "installs": 66,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 12967,
+      "installs": 170,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 12430,
+      "installs": 72,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9909,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 2398,
+      "installs": 49,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 339,
+      "installs": 82,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 311,
+      "installs": 75,
+      "revenue": 0
+    }
+  },
+  "com.larus.wolf": {
+    "1000224": {
+      "clicks": 10671,
+      "installs": 1185,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 2734,
+      "installs": 270,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1785,
+      "installs": 250,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1509,
+      "installs": 282,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 601,
+      "installs": 86,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 480,
+      "installs": 63,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 436,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 109,
+      "installs": 32,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 12,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.lemon.lvoverseas": {
+    "1000226": {
+      "clicks": 39665,
+      "installs": 297,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 23949,
+      "installs": 848,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 10687,
+      "installs": 901,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 7042,
+      "installs": 101,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 5393,
+      "installs": 296,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 5068,
+      "installs": 245,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 3201,
+      "installs": 228,
+      "revenue": 0
+    },
+    "Icon": {
+      "clicks": 2273,
+      "installs": 230,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1180,
+      "installs": 55,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 5,
+      "installs": 1,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000248": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.lendingplate": {},
+  "com.licious": {
+    "1000226": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.live.soulchill": {
+    "1000226": {
+      "clicks": 146336,
+      "installs": 381,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 78311,
+      "installs": 352,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 12000,
+      "installs": 128,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 10248,
+      "installs": 442,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 9948,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 8173,
+      "installs": 306,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1457,
+      "installs": 261,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 4,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.loan.bank.cash.aidacredit.nigeria": {
+    "1000226": {
+      "clicks": 9992,
+      "installs": 68,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9985,
+      "installs": 54,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1509,
+      "installs": 103,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1072,
+      "installs": 54,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 23,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 22,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 21,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.loan.cash.credit.easy.kilat.cepat.pinjam.uang.dana.rupiah": {
+    "Exceeded_AdSet_Limit": {
+      "clicks": 49055,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 21,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 0,
+      "installs": 17,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 1262,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 344,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 203,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 0,
+      "installs": 115,
+      "revenue": 0
+    }
+  },
+  "com.loan.cash.credit.okash.nigeria": {},
+  "com.localiza.mobile": {
+    "1000220": {
+      "clicks": 10978,
+      "installs": 282,
+      "revenue": 3395.67426260005
+    },
+    "1000224": {
+      "clicks": 9468,
+      "installs": 13,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9436,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 7078,
+      "installs": 11,
+      "revenue": 14364.665815551913
+    },
+    "1000255": {
+      "clicks": 4424,
+      "installs": 36,
+      "revenue": 114.84766341756126
+    },
+    "1000260": {
+      "clicks": 254,
+      "installs": 14,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 174,
+      "installs": 107,
+      "revenue": 1975.571025830855
+    },
+    "1000223": {
+      "clicks": 160,
+      "installs": 96,
+      "revenue": 2152.108720434258
+    },
+    "1000253": {
+      "clicks": 16,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.localweather.radar.climate": {
+    "1000224": {
+      "clicks": 393044,
+      "installs": 61,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 290920,
+      "installs": 49,
+      "revenue": 0
+    },
+    "LCW_EMEA": {
+      "clicks": 162929,
+      "installs": 696,
+      "revenue": 0
+    },
+    "LCW_EMEA_ROAS": {
+      "clicks": 157098,
+      "installs": 1719,
+      "revenue": 0
+    },
+    "LCW_FR_ROAS": {
+      "clicks": 131495,
+      "installs": 610,
+      "revenue": 0
+    },
+    "LCW_ES_ROAS": {
+      "clicks": 130171,
+      "installs": 1387,
+      "revenue": 0
+    },
+    "LCW_Latam_ROAS": {
+      "clicks": 52248,
+      "installs": 509,
+      "revenue": 0
+    },
+    "LCW_FR_new_ROAS": {
+      "clicks": 45040,
+      "installs": 3052,
+      "revenue": 0
+    },
+    "LCW_Latam": {
+      "clicks": 44378,
+      "installs": 578,
+      "revenue": 0
+    },
+    "LCW_DE_ROAS": {
+      "clicks": 40748,
+      "installs": 203,
+      "revenue": 0
+    },
+    "LCW_IT_ROAS": {
+      "clicks": 17546,
+      "installs": 190,
+      "revenue": 0
+    },
+    "LCW_EMEA_2_ROAS": {
+      "clicks": 15538,
+      "installs": 1435,
+      "revenue": 0
+    },
+    "LCW_DE_New_ROAS": {
+      "clicks": 11662,
+      "installs": 864,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 10132,
+      "installs": 4,
+      "revenue": 0
+    },
+    "LCW_ES_ROASD7": {
+      "clicks": 9295,
+      "installs": 80,
+      "revenue": 0
+    },
+    "LCW_DE": {
+      "clicks": 8802,
+      "installs": 36,
+      "revenue": 0
+    },
+    "LCW_PL_ROAS": {
+      "clicks": 5543,
+      "installs": 54,
+      "revenue": 0
+    },
+    "LCW_ES_ROAS2": {
+      "clicks": 5046,
+      "installs": 363,
+      "revenue": 0
+    },
+    "LCW_BR": {
+      "clicks": 3307,
+      "installs": 6,
+      "revenue": 0
+    },
+    "LCW_IT_ROAS_D7": {
+      "clicks": 3025,
+      "installs": 21,
+      "revenue": 0
+    },
+    "LCW_ES": {
+      "clicks": 2597,
+      "installs": 48,
+      "revenue": 0
+    },
+    "LCW_DE_ROASD7": {
+      "clicks": 2256,
+      "installs": 32,
+      "revenue": 0
+    },
+    "LCW_PL_ROAS_D7": {
+      "clicks": 1450,
+      "installs": 20,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 1262,
+      "installs": 42,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1204,
+      "installs": 20,
+      "revenue": 0
+    },
+    "LCW_MX": {
+      "clicks": 362,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 348,
+      "installs": 57,
+      "revenue": 0
+    },
+    "LCW_FR": {
+      "clicks": 151,
+      "installs": 39,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 140,
+      "installs": 10,
+      "revenue": 0
+    },
+    "LCW_BR_GP": {
+      "clicks": 129,
+      "installs": 4,
+      "revenue": 0
+    },
+    "LCW_DE_GP": {
+      "clicks": 54,
+      "installs": 0,
+      "revenue": 0
+    },
+    "LCW_IT": {
+      "clicks": 41,
+      "installs": 12,
+      "revenue": 0
+    },
+    "LCW_SEA_ROAS": {
+      "clicks": 27,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 17,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 14,
+      "installs": 2,
+      "revenue": 0
+    },
+    "LCW_PL": {
+      "clicks": 7,
+      "installs": 0,
+      "revenue": 0
+    },
+    "LCW_ES_ROA2": {
+      "clicks": 0,
+      "installs": 7,
+      "revenue": 0
+    },
+    "LCW_BR_ROAS": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "LCW_MX_ROAS": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.lucasgame.oxfortune": {},
+  "com.luckycrown.towersprint": {},
+  "com.mahjong.solitaire.tile.pair.match": {
+    "1000255": {
+      "clicks": 2,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.makemytrip": {
+    "1000260": {
+      "clicks": 46848,
+      "installs": 694,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 18902,
+      "installs": 275,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 18524,
+      "installs": 255,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 12080,
+      "installs": 348,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 8621,
+      "installs": 786,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2730,
+      "installs": 199,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 38,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 40,
+      "revenue": 0
+    }
+  },
+  "com.mandir": {},
+  "com.master.learn.ai": {
+    "{bundle_id}": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.mbmobile": {},
+  "com.mercadopago.wallet": {},
+  "com.mexcpro.client": {},
+  "com.mexicash.app": {},
+  "com.mobikwik_new": {},
+  "com.mobile.legends": {},
+  "com.mocamoca": {
+    "Exceeded_AdSet_Limit": {
+      "clicks": 63939,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 233,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 238,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 52,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.mosl.mobile": {
+    "1000254": {
+      "clicks": 10832,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 1739,
+      "installs": 341,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1190,
+      "installs": 191,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 732,
+      "installs": 252,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 650,
+      "installs": 238,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.mosl.research360app": {},
+  "com.msf.angelmobile": {
+    "Exceeded_AdSet_Limit": {
+      "clicks": 18925,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 71,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 41,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 13,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    }
+  },
+  "com.msf.bfsltrade": {},
+  "com.muba.anuncios": {
+    "1000224": {
+      "clicks": 69700,
+      "installs": 60,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 2505,
+      "installs": 112,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1001,
+      "installs": 95,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 418,
+      "installs": 89,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.mxdzzus.google": {
+    "1000226": {
+      "clicks": 13128,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 12835,
+      "installs": 34,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 176,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.n999.landi000": {
+    "1000255": {
+      "clicks": 9925,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9594,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9520,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 1319,
+      "installs": 14,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1017,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 333,
+      "installs": 36,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 102,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 61,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 7,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.national.lottery": {
+    "1000224": {
+      "clicks": 1040,
+      "installs": 52,
+      "revenue": 167.45306663204946
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    }
+  },
+  "com.naviapp": {
+    "{bundle_id}": {
+      "clicks": 10,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 5,
+      "installs": 27,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 5,
+      "installs": 19,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 0,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 110,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 118,
+      "revenue": 0
+    },
+    "MI": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "AdGroup_name": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.navinext.facildin": {
+    "1000224": {
+      "clicks": 20386,
+      "installs": 63,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9914,
+      "installs": 10,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 171,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.neptune.domino": {
+    "1000224": {
+      "clicks": 1338010,
+      "installs": 4192,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 921967,
+      "installs": 2289,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 417894,
+      "installs": 1907,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 397250,
+      "installs": 3446,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 381844,
+      "installs": 3133,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 376121,
+      "installs": 3356,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 280701,
+      "installs": 3004,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 210411,
+      "installs": 1637,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 36715,
+      "installs": 3217,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    },
+    "{siteName_": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 22,
+      "revenue": 0
+    }
+  },
+  "com.netease.newspike": {
+    "1000253": {
+      "clicks": 2519194,
+      "installs": 2217,
+      "revenue": 24.489363268089836
+    },
+    "1000224": {
+      "clicks": 1488608,
+      "installs": 3457,
+      "revenue": 14.747782880373387
+    },
+    "1000254": {
+      "clicks": 1289961,
+      "installs": 1166,
+      "revenue": 3.2974212737969477
+    },
+    "1000226": {
+      "clicks": 1131918,
+      "installs": 2664,
+      "revenue": 6.046748497133349
+    },
+    "1000222": {
+      "clicks": 338483,
+      "installs": 516,
+      "revenue": 0
+    },
+    "1000122": {
+      "clicks": 282578,
+      "installs": 415,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 136221,
+      "installs": 2498,
+      "revenue": 91.31372783908165
+    },
+    "1000223": {
+      "clicks": 115596,
+      "installs": 2028,
+      "revenue": 11.613170447595548
+    },
+    "100122": {
+      "clicks": 29806,
+      "installs": 65,
+      "revenue": 0.9774861930075238
+    },
+    "1000123": {
+      "clicks": 28748,
+      "installs": 152,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 21204,
+      "installs": 220,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 18820,
+      "installs": 198,
+      "revenue": 4.315831433207802
+    },
+    "1000260": {
+      "clicks": 2883,
+      "installs": 399,
+      "revenue": 0.99
+    },
+    "100123": {
+      "clicks": 467,
+      "installs": 8,
+      "revenue": 0
+    },
+    "100125": {
+      "clicks": 26,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000100": {
+      "clicks": 9,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000125": {
+      "clicks": 9,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000252": {
+      "clicks": 6,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000250": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.nexura.lumis.data.flow": {
+    "1000253": {
+      "clicks": 18192,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 17642,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 10114,
+      "installs": 39,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9590,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 804,
+      "installs": 42,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 571,
+      "installs": 47,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 87,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 22,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.nirafinance.customer": {},
+  "com.notissimus.allinstruments.android": {},
+  "com.novanews.android.localnews.ru": {
+    "lnru_RU": {
+      "clicks": 685562,
+      "installs": 6605,
+      "revenue": 0
+    },
+    "lnru_RU_A": {
+      "clicks": 128880,
+      "installs": 6648,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 36536,
+      "installs": 140,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 2566,
+      "installs": 67,
+      "revenue": 0
+    },
+    "lnru_RU_D7": {
+      "clicks": 872,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 182,
+      "installs": 15,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 78,
+      "revenue": 0
+    }
+  },
+  "com.novio.customer": {
+    "1000254": {
+      "clicks": 215,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 56,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.oakever.arrows": {
+    "1000253": {
+      "clicks": 1119964,
+      "installs": 6618,
+      "revenue": 1246.704448843927
+    },
+    "1000254": {
+      "clicks": 940950,
+      "installs": 5111,
+      "revenue": 1158.5087543040622
+    },
+    "1000223": {
+      "clicks": 251926,
+      "installs": 16151,
+      "revenue": 3317.121985268482
+    },
+    "1000218": {
+      "clicks": 251611,
+      "installs": 15656,
+      "revenue": 3532.864811852764
+    },
+    "1000260": {
+      "clicks": 183602,
+      "installs": 15870,
+      "revenue": 3418.7682512811793
+    }
+  },
+  "com.oakever.jigsawcard": {
+    "1000254": {
+      "clicks": 250547,
+      "installs": 441,
+      "revenue": 222.84416361172845
+    },
+    "1000253": {
+      "clicks": 54815,
+      "installs": 1027,
+      "revenue": 406.02790530820226
+    },
+    "1000218": {
+      "clicks": 34331,
+      "installs": 1074,
+      "revenue": 372.0911689015676
+    },
+    "1000223": {
+      "clicks": 34184,
+      "installs": 1122,
+      "revenue": 365.5770388106092
+    },
+    "1000260": {
+      "clicks": 25148,
+      "installs": 2327,
+      "revenue": 785.1765894876453
+    }
+  },
+  "com.oakever.tiletrip": {
+    "1000253": {
+      "clicks": 18214675,
+      "installs": 30026,
+      "revenue": 1609.3527384893155
+    },
+    "1000400": {
+      "clicks": 3483434,
+      "installs": 11550,
+      "revenue": 897.6168585119718
+    },
+    "1000254": {
+      "clicks": 3014463,
+      "installs": 11251,
+      "revenue": 759.4561534593256
+    },
+    "1000224": {
+      "clicks": 1268467,
+      "installs": 3301,
+      "revenue": 303.7769335064171
+    },
+    "1000226": {
+      "clicks": 1048000,
+      "installs": 3927,
+      "revenue": 458.04023475702604
+    },
+    "1000317": {
+      "clicks": 949910,
+      "installs": 28925,
+      "revenue": 580.323784641958
+    },
+    "1000311": {
+      "clicks": 902757,
+      "installs": 17408,
+      "revenue": 316.2016505838052
+    },
+    "1000300": {
+      "clicks": 716934,
+      "installs": 4812,
+      "revenue": 161.413669269736
+    },
+    "1000255": {
+      "clicks": 244617,
+      "installs": 403,
+      "revenue": 106.01109528966761
+    },
+    "1000218": {
+      "clicks": 243708,
+      "installs": 9369,
+      "revenue": 2296.126805891132
+    },
+    "1000223": {
+      "clicks": 240277,
+      "installs": 9347,
+      "revenue": 2504.338736490963
+    },
+    "siteName": {
+      "clicks": 222103,
+      "installs": 3223,
+      "revenue": 22.48762228383344
+    },
+    "1000260": {
+      "clicks": 22205,
+      "installs": 1507,
+      "revenue": 241.90353355311908
+    },
+    "{siteName_": {
+      "clicks": 1400,
+      "installs": 96,
+      "revenue": 0.872598689540397
+    },
+    "1000388": {
+      "clicks": 2,
+      "installs": 3668,
+      "revenue": 76.19997036266903
+    }
+  },
+  "com.octa8": {},
+  "com.officialgroup.duitgini": {},
+  "com.okinc.okex.gp": {
+    "1000226": {
+      "clicks": 178004,
+      "installs": 63,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 151248,
+      "installs": 63,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 91223,
+      "installs": 379,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 56098,
+      "installs": 99,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 53646,
+      "installs": 43,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 21279,
+      "installs": 271,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 11847,
+      "installs": 216,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 11836,
+      "installs": 211,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 7542,
+      "installs": 301,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 3190,
+      "installs": 147,
+      "revenue": 0
+    }
+  },
+  "com.okph.games": {
+    "siteName": {
+      "clicks": 12,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 61,
+      "revenue": 0
+    }
+  },
+  "com.okstudio.okeykafe": {
+    "1000226": {
+      "clicks": 10074,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 13,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.olymptrade.broker": {},
+  "com.palq.thainance": {},
+  "com.party.infriends": {
+    "1000123": {
+      "clicks": 21546,
+      "installs": 31,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 19439,
+      "installs": 145,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 10137,
+      "installs": 13,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 1047,
+      "installs": 31,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 282,
+      "installs": 47,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 178,
+      "installs": 43,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 2,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.paylaju.ex": {},
+  "com.paymaya": {
+    "1000224": {
+      "clicks": 97711,
+      "installs": 286,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 47955,
+      "installs": 75,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 7035,
+      "installs": 123,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2279,
+      "installs": 433,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 160,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 140,
+      "installs": 0,
+      "revenue": 0
+    },
+    "AdGroup_name": {
+      "clicks": 85,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.peramoo": {
+    "1000223": {
+      "clicks": 2168,
+      "installs": 404,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 2161,
+      "installs": 390,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1735,
+      "installs": 178,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 863,
+      "installs": 177,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.personale.credit.carry.cash.loan.paisaya": {},
+  "com.pesohere.fastcash": {
+    "1000222": {
+      "clicks": 96644,
+      "installs": 155,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 43326,
+      "installs": 159,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9370,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9366,
+      "installs": 11,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 9074,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 9073,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 3105,
+      "installs": 151,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 883,
+      "installs": 37,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 269,
+      "installs": 20,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.pesokuwento.lending.olp.ph": {
+    "1000223": {
+      "clicks": 99921,
+      "installs": 18,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 99779,
+      "installs": 17,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 49891,
+      "installs": 22,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 19738,
+      "installs": 104,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9995,
+      "installs": 103,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 9770,
+      "installs": 126,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 2823,
+      "installs": 89,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 185,
+      "installs": 20,
+      "revenue": 0
+    }
+  },
+  "com.ph.pinoy.peso": {
+    "1000218": {
+      "clicks": 109829,
+      "installs": 311,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 108513,
+      "installs": 237,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 50825,
+      "installs": 164,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 11152,
+      "installs": 56,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9415,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 3042,
+      "installs": 212,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 338,
+      "installs": 61,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 146,
+      "installs": 33,
+      "revenue": 0
+    }
+  },
+  "com.picpay": {
+    "1000255": {
+      "clicks": 51635,
+      "installs": 424,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 43264,
+      "installs": 90,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 28411,
+      "installs": 1415,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 21412,
+      "installs": 934,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 19727,
+      "installs": 312,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 19022,
+      "installs": 1826,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 18896,
+      "installs": 1143,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 14894,
+      "installs": 1844,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 6591,
+      "installs": 409,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 6409,
+      "installs": 389,
+      "revenue": 0
+    }
+  },
+  "com.picpay.business": {
+    "1000222": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.pinjoy.game.app": {
+    "1000226": {
+      "clicks": 19557,
+      "installs": 66,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 19416,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 18562,
+      "installs": 23,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 14669,
+      "installs": 144,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 10200,
+      "installs": 31,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 9894,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1113,
+      "installs": 15,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 295,
+      "installs": 72,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 239,
+      "installs": 79,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 234,
+      "installs": 70,
+      "revenue": 0
+    },
+    "1000300": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.playkot.ageofmagic": {},
+  "com.playmate.playzone": {},
+  "com.podrygka.app": {
+    "1000255": {
+      "clicks": 534,
+      "installs": 71,
+      "revenue": 0
+    },
+    "pp1905": {
+      "clicks": 87,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 46,
+      "installs": 21,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    },
+    "icon4": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "icon0105": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.policybazaar": {},
+  "com.poonawallafincorp.loan.emi.payment.card.upi.mf": {},
+  "com.privalia.mex": {},
+  "com.punicapp.whoosh": {},
+  "com.ril.tira": {},
+  "com.rise.mobile": {
+    "1000224": {
+      "clicks": 237,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 173,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 34,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 32,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 26,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 14,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.seatech.bluebird": {},
+  "com.sephora.mobileapp": {
+    "1000220": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.shopeepay.id": {
+    "1000224": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000250": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.snapdeal.main": {
+    "1000222": {
+      "clicks": 2,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 2,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 2,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.ss.android.ttmd.video": {
+    "1000226": {
+      "clicks": 10594,
+      "installs": 133,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 4751,
+      "installs": 1047,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 3577,
+      "installs": 47,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 977,
+      "installs": 92,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 52,
+      "installs": 12,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.storymax.reels.shorts": {
+    "1000223": {
+      "clicks": 19481,
+      "installs": 30,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 19458,
+      "installs": 27,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 8909,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 37,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.taxsee.taxsee": {
+    "1000223": {
+      "clicks": 10982,
+      "installs": 577,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 10606,
+      "installs": 589,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 220,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000250": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "RU_order_promo_code_HYBE_1200x628": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "ID_order_promocode_1200х628": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "RU_order_base_HYBE_1200x628": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "icon": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.tejimandi.android": {},
+  "com.thai.credit.finance.reliable.loan.android": {
+    "1000223": {
+      "clicks": 0,
+      "installs": 61,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 49,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 32,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.ti.live.stream": {},
+  "com.ticno.olymptrade": {
+    "1000260": {
+      "clicks": 63902,
+      "installs": 208,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 59868,
+      "installs": 241,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 46278,
+      "installs": 92,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 35089,
+      "installs": 28,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 27891,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 18916,
+      "installs": 76,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 882,
+      "installs": 10,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 242,
+      "installs": 26,
+      "revenue": 0
+    },
+    "067_01_EN": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.timonemobile": {
+    "1000255": {
+      "clicks": 19567,
+      "installs": 20,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 10235,
+      "installs": 149,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9376,
+      "installs": 66,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1101,
+      "installs": 112,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 357,
+      "installs": 41,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 136,
+      "installs": 47,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 25,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 17,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.traveloka.android": {
+    "1000255": {
+      "clicks": 17626,
+      "installs": 269,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 10355,
+      "installs": 62,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 7979,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 5977,
+      "installs": 116,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 5243,
+      "installs": 95,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 4414,
+      "installs": 48,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 3224,
+      "installs": 521,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 3049,
+      "installs": 697,
+      "revenue": 0
+    },
+    "1000250": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.trivago": {
+    "1000224": {
+      "clicks": 125668,
+      "installs": 259,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 108178,
+      "installs": 255,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 99317,
+      "installs": 419,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 87817,
+      "installs": 737,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 37579,
+      "installs": 22,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 28500,
+      "installs": 162,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 22693,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 14033,
+      "installs": 569,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 7300,
+      "installs": 180,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 6819,
+      "installs": 165,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 6187,
+      "installs": 333,
+      "revenue": 0
+    }
+  },
+  "com.tunaikumobile.app": {},
+  "com.twinby": {},
+  "com.unicostudio.braintest": {},
+  "com.upt.money.transfer.prod": {},
+  "com.vegas.casino.free.lucky.bonus.jackpot.dragon.slots": {
+    "1000224": {
+      "clicks": 38212,
+      "installs": 1,
+      "revenue": 0.37396000139415264
+    },
+    "1000226": {
+      "clicks": 38195,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 751,
+      "installs": 23,
+      "revenue": 6.218186005386087
+    },
+    "1000255": {
+      "clicks": 594,
+      "installs": 255,
+      "revenue": 87.10099547567178
+    },
+    "1000260": {
+      "clicks": 524,
+      "installs": 237,
+      "revenue": 72.9806589611535
+    },
+    "1000254": {
+      "clicks": 23,
+      "installs": 3,
+      "revenue": 0.6477089920081198
+    },
+    "1000222": {
+      "clicks": 7,
+      "installs": 2,
+      "revenue": 0.07849799934774637
+    },
+    "1000220": {
+      "clicks": 5,
+      "installs": 1,
+      "revenue": 0.038037000922486186
+    }
+  },
+  "com.video.welive": {},
+  "com.vintucredit.fastonline.creditapp": {},
+  "com.vipera.ts.starter.MashreqAE": {
+    "1000255": {
+      "clicks": 10008,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 3992,
+      "installs": 17,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 2708,
+      "installs": 17,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 393,
+      "installs": 33,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 85,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 65,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 33,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 2,
+      "revenue": 0
+    }
+  },
+  "com.vitastudio.mahjong": {
+    "1000253": {
+      "clicks": 12837446,
+      "installs": 21976,
+      "revenue": 1672.9359955892805
+    },
+    "1000400": {
+      "clicks": 9492587,
+      "installs": 22418,
+      "revenue": 205.692404363935
+    },
+    "1000300": {
+      "clicks": 6918831,
+      "installs": 43160,
+      "revenue": 1075.0094968319058
+    },
+    "1000224": {
+      "clicks": 6205857,
+      "installs": 10613,
+      "revenue": 1057.8824539929262
+    },
+    "1000226": {
+      "clicks": 5818060,
+      "installs": 9797,
+      "revenue": 695.8330552622399
+    },
+    "1000254": {
+      "clicks": 5093550,
+      "installs": 11373,
+      "revenue": 634.275052993436
+    },
+    "1000255": {
+      "clicks": 1556903,
+      "installs": 3989,
+      "revenue": 649.5239187506661
+    },
+    "1000218": {
+      "clicks": 1030293,
+      "installs": 14671,
+      "revenue": 4297.211193619256
+    },
+    "1000223": {
+      "clicks": 1016967,
+      "installs": 14375,
+      "revenue": 5271.638353529604
+    },
+    "1000311": {
+      "clicks": 912189,
+      "installs": 21859,
+      "revenue": 867.8993039762862
+    },
+    "1000317": {
+      "clicks": 671447,
+      "installs": 9703,
+      "revenue": 604.2418658287202
+    },
+    "1000260": {
+      "clicks": 11014,
+      "installs": 1035,
+      "revenue": 223.09935160795206
+    },
+    "siteName": {
+      "clicks": 176,
+      "installs": 2,
+      "revenue": 0
+    },
+    "{siteName_": {
+      "clicks": 16,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.vivid.bossdomino": {
+    "1000255": {
+      "clicks": 36359,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 25342,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 19297,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 977,
+      "installs": 41,
+      "revenue": 0
+    }
+  },
+  "com.vk.love": {},
+  "com.vlv.aravali.reels": {
+    "1000255": {
+      "clicks": 8498,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 2333,
+      "installs": 577,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1951,
+      "installs": 491,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.voicechat.live.group": {
+    "1000222": {
+      "clicks": 230310,
+      "installs": 183,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 120061,
+      "installs": 354,
+      "revenue": 71.49
+    },
+    "1000220": {
+      "clicks": 40939,
+      "installs": 13,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 16502,
+      "installs": 14,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 15301,
+      "installs": 69,
+      "revenue": 2.97
+    },
+    "1000253": {
+      "clicks": 12167,
+      "installs": 96,
+      "revenue": 11.34
+    },
+    "1000223": {
+      "clicks": 7329,
+      "installs": 227,
+      "revenue": 182.97
+    },
+    "1000224": {
+      "clicks": 5178,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 2688,
+      "installs": 129,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 670,
+      "installs": 170,
+      "revenue": 251.73
+    }
+  },
+  "com.voicemaker.android": {
+    "1000255": {
+      "clicks": 676695,
+      "installs": 1337,
+      "revenue": 3066.6545943742267
+    },
+    "1000226": {
+      "clicks": 363806,
+      "installs": 337,
+      "revenue": 177.47719792870518
+    },
+    "1000224": {
+      "clicks": 253888,
+      "installs": 1005,
+      "revenue": 1884.8768677786645
+    },
+    "1000253": {
+      "clicks": 245524,
+      "installs": 447,
+      "revenue": 853.6095701091455
+    },
+    "1000222": {
+      "clicks": 202039,
+      "installs": 349,
+      "revenue": 793.4636672250123
+    },
+    "1000123": {
+      "clicks": 57076,
+      "installs": 236,
+      "revenue": 19.77
+    },
+    "1000254": {
+      "clicks": 43152,
+      "installs": 72,
+      "revenue": 192.12199999996
+    },
+    "1000223": {
+      "clicks": 31077,
+      "installs": 1634,
+      "revenue": 2945.8479430224215
+    },
+    "1000218": {
+      "clicks": 29987,
+      "installs": 1192,
+      "revenue": 1871.9986642203858
+    },
+    "1000232": {
+      "clicks": 13948,
+      "installs": 55,
+      "revenue": 11.1934289770228
+    },
+    "1000220": {
+      "clicks": 13937,
+      "installs": 32,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 10513,
+      "installs": 692,
+      "revenue": 4442.2438686435125
+    },
+    "1000125": {
+      "clicks": 2417,
+      "installs": 155,
+      "revenue": 0
+    },
+    "1000122": {
+      "clicks": 555,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000233": {
+      "clicks": 69,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.wan.wartuneh5": {},
+  "com.webbankir": {},
+  "com.wejoy.weplay.ru": {
+    "1000254": {
+      "clicks": 10133,
+      "installs": 579,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 8722,
+      "installs": 412,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 2466,
+      "installs": 1349,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 2462,
+      "installs": 1358,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.wejoy.weplay.us": {
+    "1000218": {
+      "clicks": 1955,
+      "installs": 196,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1754,
+      "installs": 187,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 796,
+      "installs": 162,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 6,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 6,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.werent.wfr": {
+    "1000226": {
+      "clicks": 9888,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9875,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 77,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 48,
+      "installs": 14,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 14,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 5,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.wetter.androidclient": {},
+  "com.wheelgames.truco.bora": {},
+  "com.whizdm.moneyview.loans": {
+    "Exceeded_AdSet_Limit": {
+      "clicks": 71,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    }
+  },
+  "com.winaxis.arionplayandroidapp": {},
+  "com.wings.bene.ph": {},
+  "com.worldance.drama": {
+    "1000254": {
+      "clicks": 7959,
+      "installs": 1097,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 3730,
+      "installs": 645,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.xb.car360.app": {},
+  "com.xenalite.androidapp": {},
+  "com.xm.webapp": {},
+  "com.xm.webapp.global": {},
+  "com.xparty.androidapp": {
+    "1000224": {
+      "clicks": 121128,
+      "installs": 554,
+      "revenue": 536865.3192682926
+    },
+    "1000226": {
+      "clicks": 117223,
+      "installs": 272,
+      "revenue": 22026.360731707315
+    },
+    "1000253": {
+      "clicks": 82409,
+      "installs": 74,
+      "revenue": 7292.098536585366
+    },
+    "1000255": {
+      "clicks": 73040,
+      "installs": 790,
+      "revenue": 89734.81292682927
+    },
+    "1000223": {
+      "clicks": 13066,
+      "installs": 574,
+      "revenue": 249645.45975609758
+    },
+    "1000260": {
+      "clicks": 11648,
+      "installs": 1021,
+      "revenue": 88293.81426829268
+    },
+    "1000218": {
+      "clicks": 9078,
+      "installs": 346,
+      "revenue": 432050.772195122
+    },
+    "1000254": {
+      "clicks": 7961,
+      "installs": 57,
+      "revenue": 1545.9948780487798
+    },
+    "1000222": {
+      "clicks": 6323,
+      "installs": 132,
+      "revenue": 72000.81658536586
+    }
+  },
+  "com.xt.retouchoversea": {
+    "1000253": {
+      "clicks": 107862,
+      "installs": 141,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 71649,
+      "installs": 143,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 57300,
+      "installs": 78,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 57262,
+      "installs": 66,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 57173,
+      "installs": 95,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 5943,
+      "installs": 249,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 2739,
+      "installs": 178,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1487,
+      "installs": 102,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 288,
+      "installs": 25,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 253,
+      "installs": 85,
+      "revenue": 0
+    }
+  },
+  "com.xworld.free.welfare.game.app.io": {
+    "1000254": {
+      "clicks": 243783,
+      "installs": 267,
+      "revenue": 95.59621477532666
+    },
+    "1000224": {
+      "clicks": 179190,
+      "installs": 48,
+      "revenue": 21.41917802363032
+    },
+    "1000226": {
+      "clicks": 117282,
+      "installs": 78,
+      "revenue": 19.023858955346842
+    },
+    "1000253": {
+      "clicks": 54014,
+      "installs": 22,
+      "revenue": 4.8
+    },
+    "1000222": {
+      "clicks": 49253,
+      "installs": 149,
+      "revenue": 18.2
+    },
+    "1000223": {
+      "clicks": 34545,
+      "installs": 215,
+      "revenue": 31.74621848739496
+    },
+    "1000255": {
+      "clicks": 30647,
+      "installs": 464,
+      "revenue": 145.30349508809869
+    },
+    "1000260": {
+      "clicks": 9149,
+      "installs": 16,
+      "revenue": 6.0
+    },
+    "1000218": {
+      "clicks": 646,
+      "installs": 58,
+      "revenue": 52.76758197619221
+    },
+    "1000220": {
+      "clicks": 130,
+      "installs": 9,
+      "revenue": 4.8
+    }
+  },
+  "com.yalla.okey101yalla": {},
+  "com.yalla.yallabaloot": {},
+  "com.yalla.yallaparchisi": {},
+  "com.yandex.aliceapp": {},
+  "com.yandex.browser": {},
+  "com.yandex.searchapp": {},
+  "com.yandex.shedevrus": {},
+  "com.youhodler.youhodler": {
+    "Exceeded_AdSet_Limit": {
+      "clicks": 3716,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "com.yup.bank.digital.kartu.kredit.debit.pascabayar.pinjaman.investasi": {
+    "1000224": {
+      "clicks": 1954,
+      "installs": 161,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1100,
+      "installs": 119,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 946,
+      "installs": 168,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 929,
+      "installs": 158,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 237,
+      "installs": 47,
+      "revenue": 0
+    },
+    "AdGroup_name": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 3,
+      "revenue": 0
+    }
+  },
+  "com.yy.hiyo": {
+    "1000255": {
+      "clicks": 68687,
+      "installs": 364,
+      "revenue": 0
+    },
+    "1000533": {
+      "clicks": 42900,
+      "installs": 226,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 33447,
+      "installs": 730,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 32707,
+      "installs": 522,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 29929,
+      "installs": 362,
+      "revenue": 0
+    },
+    "1000125": {
+      "clicks": 23434,
+      "installs": 98,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 18645,
+      "installs": 44,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 16011,
+      "installs": 27,
+      "revenue": 0
+    },
+    "1000523": {
+      "clicks": 15602,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000522": {
+      "clicks": 6448,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1518,
+      "installs": 18,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1513,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000101": {
+      "clicks": 23,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000243": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000227": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000247": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "{siteName_": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "com.zype.mobile": {
+    "1000260": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "credito.loan.cash.tala.finanzas.prestamos.rapido": {},
+  "daily.number.match.free.puzzle": {
+    "1000224": {
+      "clicks": 44098,
+      "installs": 53,
+      "revenue": 244.7706411654807
+    },
+    "1000255": {
+      "clicks": 43373,
+      "installs": 14,
+      "revenue": 210.08625336204554
+    },
+    "1000226": {
+      "clicks": 37603,
+      "installs": 153,
+      "revenue": 1410.606939422051
+    },
+    "1000254": {
+      "clicks": 20035,
+      "installs": 18,
+      "revenue": 16.386569483934828
+    },
+    "1000253": {
+      "clicks": 10009,
+      "installs": 14,
+      "revenue": 73.00021936147446
+    },
+    "1000218": {
+      "clicks": 1772,
+      "installs": 285,
+      "revenue": 890.2780929793417
+    },
+    "1000220": {
+      "clicks": 998,
+      "installs": 4,
+      "revenue": 5.5050459077008345
+    },
+    "1000260": {
+      "clicks": 470,
+      "installs": 42,
+      "revenue": 817.3830601128469
+    },
+    "1000223": {
+      "clicks": 264,
+      "installs": 66,
+      "revenue": 4953.499491242676
+    },
+    "1000222": {
+      "clicks": 103,
+      "installs": 12,
+      "revenue": 182.48319066337163
+    },
+    "102363440": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "102410897": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "de.autodoc.gmbh": {},
+  "easy.sudoku.puzzle.solver.free": {},
+  "ee.mtakso.client": {},
+  "es.socialpoint.DragonCity": {},
+  "finance.empower.mx": {
+    "1000255": {
+      "clicks": 0,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "fr.playsoft.lefigarov3": {},
+  "ge.space.app.uzbekistan": {
+    "Native_UZ": {
+      "clicks": 672894,
+      "installs": 98,
+      "revenue": 0
+    },
+    "banner_UZ": {
+      "clicks": 671058,
+      "installs": 102,
+      "revenue": 0
+    },
+    "interstitial_UZ": {
+      "clicks": 670768,
+      "installs": 99,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 14677,
+      "installs": 69,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 10332,
+      "installs": 100,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 6416,
+      "installs": 18,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 989,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 931,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 518,
+      "installs": 98,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 509,
+      "installs": 88,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 472,
+      "installs": 93,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 379,
+      "installs": 20,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 274,
+      "installs": 43,
+      "revenue": 0
+    }
+  },
+  "gpm.tnt_premier": {},
+  "id.co.bankbkemobile.digitalbank": {
+    "1000253": {
+      "clicks": 352348,
+      "installs": 5406,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 266914,
+      "installs": 6261,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 249525,
+      "installs": 6082,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 248811,
+      "installs": 5007,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 180387,
+      "installs": 2508,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000252": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "id.com.uiux.mobile": {},
+  "id.fdr.app": {},
+  "id.tambadana.app": {
+    "1000226": {
+      "clicks": 6137,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 68,
+      "installs": 16,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 9,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "in.amazon.mShop.android.shopping": {},
+  "in.equal.ai.assistant": {
+    "1000222": {
+      "clicks": 0,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 7,
+      "revenue": 0
+    }
+  },
+  "in.mohalla.quicktv": {},
+  "in.mohalla.video": {},
+  "in.org.npci.upiapp": {
+    "1000226": {
+      "clicks": 131550,
+      "installs": 925,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 104608,
+      "installs": 599,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 103472,
+      "installs": 1506,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 97822,
+      "installs": 1215,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 25194,
+      "installs": 100,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 740,
+      "installs": 85,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 81,
+      "installs": 33,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "in.playsimple.wordsearch": {},
+  "in.stablemoney.app": {
+    "1000226": {
+      "clicks": 15382,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 10575,
+      "installs": 25,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1182,
+      "installs": 30,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 332,
+      "installs": 11,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 225,
+      "installs": 11,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 36,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 4,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 2,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "ing.whitepivot.invest": {
+    "1000226": {
+      "clicks": 9582,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9539,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 8578,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 56,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 52,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "money.powerup.uni.invest.app": {
+    "1000220": {
+      "clicks": 19822,
+      "installs": 110,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 12735,
+      "installs": 32,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9869,
+      "installs": 13,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 8831,
+      "installs": 38,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 7413,
+      "installs": 29,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 6174,
+      "installs": 19,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 5119,
+      "installs": 13,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 828,
+      "installs": 80,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 788,
+      "installs": 105,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 429,
+      "installs": 37,
+      "revenue": 0
+    }
+  },
+  "mx.credito365.app": {
+    "1000253": {
+      "clicks": 26,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 9,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "mx.prestamos.urgente.dinero.online.peso.viva.credito.rapido": {},
+  "net.peakgames.Yuzbir": {
+    "AdGroup_name": {
+      "clicks": 3672,
+      "installs": 115,
+      "revenue": 10.989758830751322
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0.00649390172958374
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0.013102887278066029
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 24,
+      "revenue": 2.6182586227786318
+    },
+    "1000220": {
+      "clicks": 0,
+      "installs": 15,
+      "revenue": 0.12174019257812863
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 17,
+      "revenue": 0.11125983418586788
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 11,
+      "revenue": 0.037416567087173475
+    }
+  },
+  "ng.com.fairmoney.fairmoney": {},
+  "org.linebet.client": {},
+  "org.nustaronline.games": {},
+  "otello.dgis.ru": {},
+  "pe.prestamo365": {},
+  "pl.mediaexpert.app": {},
+  "platiza.ru": {},
+  "plazita.ru": {},
+  "prestamos.creditoya.urgente.dinero.peso.cash.credito.rapido": {},
+  "pro.bingbon.app": {
+    "1000226": {
+      "clicks": 18817,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9480,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1127,
+      "installs": 18,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 611,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 289,
+      "installs": 15,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 267,
+      "installs": 26,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 101,
+      "installs": 24,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 77,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 53,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 41,
+      "installs": 4,
+      "revenue": 0
+    }
+  },
+  "pro.bingx.app": {
+    "1000253": {
+      "clicks": 9977,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 9833,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 6930,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 6894,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 498,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 203,
+      "installs": 23,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 27,
+      "installs": 9,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 25,
+      "installs": 10,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "prodokplay.app_okwinphpf5.com": {
+    "1000218": {
+      "clicks": 18396,
+      "installs": 224,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 12641,
+      "installs": 166,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 2450,
+      "installs": 148,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 1971,
+      "installs": 112,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "robot.zaimer.ru": {},
+  "ru.aforte.android": {},
+  "ru.alfadirect.app": {},
+  "ru.auto.ara": {},
+  "ru.banki.banki": {
+    "1000254": {
+      "clicks": 18318,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 14658,
+      "installs": 246,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 6975,
+      "installs": 8,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 6946,
+      "installs": 95,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 3082,
+      "installs": 118,
+      "revenue": 0
+    },
+    "302.4": {
+      "clicks": 2699,
+      "installs": 33,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1621,
+      "installs": 63,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 4,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000241_": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "ru.betboom.android": {},
+  "ru.betcity.android": {},
+  "ru.bistrodengi.my": {
+    "1000224": {
+      "clicks": 5371,
+      "installs": 97,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 5283,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 56,
+      "installs": 3,
+      "revenue": 0
+    },
+    "Native_RU": {
+      "clicks": 2,
+      "installs": 108,
+      "revenue": 0
+    },
+    "banner_RU": {
+      "clicks": 1,
+      "installs": 114,
+      "revenue": 0
+    },
+    "0058E_0525": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "5567X_0526": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "interstitial_RU": {
+      "clicks": 0,
+      "installs": 114,
+      "revenue": 0
+    }
+  },
+  "ru.bkfon": {},
+  "ru.budzdorov.client.android": {},
+  "ru.cian.main": {
+    "app_new_android_mskmo_sec_miads_top-placements_ocpc_wide_icon_GA_08-04": {
+      "clicks": 13455,
+      "installs": 61,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_ocpc_wide_icon_GA_15-09": {
+      "clicks": 8233,
+      "installs": 42,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_top-placements_ocpc_wide_prefer_GA_15-10": {
+      "clicks": 3287,
+      "installs": 47,
+      "revenue": 0
+    },
+    "app_new_android_focus3_sec_miads_ocpc_wide_icon_GA_19-09": {
+      "clicks": 1827,
+      "installs": 8,
+      "revenue": 0
+    },
+    "app_new_android_all_sec_miads_ocpc_rf_icon_GA_12-01": {
+      "clicks": 1485,
+      "installs": 120,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_top-placements_ocpc_wide_prefer_GA_18-03": {
+      "clicks": 240,
+      "installs": 16,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_top-placements_ocpc_wide_icon_GA_21-05": {
+      "clicks": 206,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_top-placements_cpi_suburb-rent_20-11": {
+      "clicks": 38,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_focus3_sec_miads_top-placements_ocpc_wide_icon_GA_21-05": {
+      "clicks": 34,
+      "installs": 1,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_top-placements_cpi_urban-buy_20-11": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_wide_sec_miads_ocpc_urban-buy_prefer_GA_28-01": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_ocpc_wide_icon_GA_24-04": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_ocpc_wide_icon_GA_25": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "app_new_android_sverdlovsk_sec_miads_top-placements_cpi_urban-rent_06-12": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_top-placements_ocpc_wide_prefer_GA_02-10": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_preferred_cpi_wide_static_video_19-03": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_top-placements_cpi_urban-buy_20-11": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_top-placements_cpi_urban-rent_20-11": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_novosibirsk_sec_suburb-buy_miads_top-placements_cpi_20-11": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_preferred_cpi_wide_static_video_GP_04-04": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_focus3_sec_miads_top-placements_cpi_wide_icon_22-06_GP": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_top-placements_ocpc_wide_icon_GA_08-04": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_ocpc_urban-rent_prefer_GP_07-11": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_focus3_sec_miads_top-placements_ocpc_wide_prefer_GA_02-10": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_all_sec_miads_push_cpc_24-10": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_focus3_sec_miads_preferred_cpi_wide_static_video_20-03": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_novosibirsk_sec_miads_top-placements_cpi_urban-buy_05-12": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_focus3_sec_miads_preferred_cpi_wide_static_video_GP_04-04": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_focus3_sec_miads_top-placements_ocpc_wide_icon_GA_08-04": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_ocpc_urban-rent_prefer_GP_17-10": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_ocpc_wide_icon_GA_04-12": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_focus3_sec_miads_top-placements_cpi_wide_icon_14-05": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_focus3_sec_miads_ocpc_wide_icon_GA_18-03": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_krasnodar_sec_miads_top-placements_cpi_urban-rent_06-12": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_preferred_cpi_wide_static_video_GP_04-04": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_spblo_sec_miads_preferred_cpi_wide_static_video_20-03": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_top-placements_ocpc_wide_prefer_GA_23-09": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_mix_cpi_wide_icon_19-03": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "app_new_android_mskmo_sec_miads_ocpc_wide_icon_GA_18-03": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "ru.cupis.wallet": {},
+  "ru.detmir.dmbonus": {},
+  "ru.detmir.dmbonus.zoo": {},
+  "ru.dodopizza.app": {},
+  "ru.domclick.mortgage": {},
+  "ru.dublgis.dgismobile": {
+    "1000226": {
+      "clicks": 730139,
+      "installs": 663,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 463297,
+      "installs": 461,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 401884,
+      "installs": 163,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 292169,
+      "installs": 79,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 159060,
+      "installs": 770,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 150628,
+      "installs": 823,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 39460,
+      "installs": 41,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 14421,
+      "installs": 18,
+      "revenue": 0
+    },
+    "push": {
+      "clicks": 2632,
+      "installs": 43,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 1875,
+      "installs": 9,
+      "revenue": 0
+    },
+    "search": {
+      "clicks": 43,
+      "installs": 1,
+      "revenue": 0
+    },
+    "icon-GP": {
+      "clicks": 24,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "156261": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "ru.hh.android": {},
+  "ru.hoff.app": {},
+  "ru.kinopoisk": {},
+  "ru.limezaim.www": {},
+  "ru.marathonbet.sportsbook": {},
+  "ru.migcredit.migcredit2": {},
+  "ru.mobstudio.andgalaxy": {},
+  "ru.moneyman": {},
+  "ru.more.play": {},
+  "ru.morizo.clatch": {},
+  "ru.ostrovok.android": {
+    "1000253": {
+      "clicks": 160347,
+      "installs": 224,
+      "revenue": 46.74354251772258
+    },
+    "1000226": {
+      "clicks": 83431,
+      "installs": 11,
+      "revenue": 18.48198613153364
+    },
+    "1000224": {
+      "clicks": 69503,
+      "installs": 8,
+      "revenue": 35.89023524744923
+    },
+    "1000255": {
+      "clicks": 16846,
+      "installs": 268,
+      "revenue": 862.8500088798264
+    },
+    "1000260": {
+      "clicks": 5803,
+      "installs": 279,
+      "revenue": 1162.1158620033873
+    },
+    "1000223": {
+      "clicks": 1988,
+      "installs": 166,
+      "revenue": 571.7809575801534
+    },
+    "1000218": {
+      "clicks": 1928,
+      "installs": 146,
+      "revenue": 454.7244047953678
+    },
+    "1000222": {
+      "clicks": 970,
+      "installs": 80,
+      "revenue": 53.90144608074632
+    },
+    "1000220": {
+      "clicks": 132,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 65,
+      "installs": 3,
+      "revenue": 0
+    },
+    "{publisher_id}": {
+      "clicks": 7,
+      "installs": 0,
+      "revenue": 0
+    },
+    "model": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    },
+    "model2": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "ru.otpbank.mobile": {},
+  "ru.photostrana.mobile": {},
+  "ru.rigla.client.android": {},
+  "ru.s7.android": {
+    "mgcom_s7_miads_campaign_10.06_icon1": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "mgcom_s7_miads_campaign_10.06_icon2": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "mgcom_s7_miads_campaign_11.06_banner1": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "ru.simple.wine": {},
+  "ru.snowqueen.twa": {},
+  "ru.sutochno_redesign": {},
+  "ru.tabor.search": {},
+  "ru.tander.magnit": {
+    "1000223": {
+      "clicks": 46566,
+      "installs": 441,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 28480,
+      "installs": 181,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 16915,
+      "installs": 447,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 14046,
+      "installs": 317,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 3003,
+      "installs": 328,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 569,
+      "installs": 87,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "ru.tinkoff.investing": {
+    "1000253": {
+      "clicks": 146535,
+      "installs": 56,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 9991,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 1991,
+      "installs": 173,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 1322,
+      "installs": 197,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 326,
+      "installs": 34,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 4,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 2,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000250": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "goldpromo01061908": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "yellow_icon": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "default_icon": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "ru.tutu.tutu_emp": {
+    "{travel shopping}": {
+      "clicks": 1022,
+      "installs": 41,
+      "revenue": 0
+    },
+    "icon": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "329712_100840167": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "ru.urentbike.app": {
+    "urent_auto_getapps_cpi_static_apr26": {
+      "clicks": 54735,
+      "installs": 145,
+      "revenue": 0
+    },
+    "urent_icon_getapps_may26_bl-pub": {
+      "clicks": 43636,
+      "installs": 138,
+      "revenue": 0
+    },
+    "urent_auto_getapps_cpi_video_may26": {
+      "clicks": 4458,
+      "installs": 13,
+      "revenue": 0
+    },
+    "urent_auto_getapps_cpi_video_apr26": {
+      "clicks": 4082,
+      "installs": 66,
+      "revenue": 0
+    },
+    "urent_auto_getapps_cpi_static video_apr25": {
+      "clicks": 12,
+      "installs": 0,
+      "revenue": 0
+    },
+    "urent_icon_getapps_apr26_all-pub_mskmo": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "urent_icon_getapps_cpc": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "urent_icon_getapps_apr26_top-pub-exclude-siteid": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    },
+    "urent_icon_getapps_apr26_all-pub": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "ru.uteka.app": {},
+  "ru.vbr.application": {},
+  "ru.yandex.music": {},
+  "ru.yandex.weatherplugin": {},
+  "ru.yandex.yandexmaps": {
+    "1000253": {
+      "clicks": 79044,
+      "installs": 333,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 40918,
+      "installs": 176,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 36376,
+      "installs": 200,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 15491,
+      "installs": 173,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 11699,
+      "installs": 503,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 11617,
+      "installs": 462,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 11367,
+      "installs": 540,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 8785,
+      "installs": 125,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 3084,
+      "installs": 59,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 977,
+      "installs": 190,
+      "revenue": 0
+    }
+  },
+  "ru.zdravcity.app": {},
+  "sg.bigo.live": {
+    "1000253": {
+      "clicks": 5602859,
+      "installs": 5254,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 3924746,
+      "installs": 2487,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 2141128,
+      "installs": 5505,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 2009982,
+      "installs": 4304,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 1925879,
+      "installs": 4885,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 275790,
+      "installs": 7376,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 274700,
+      "installs": 8093,
+      "revenue": 0
+    },
+    "1000400": {
+      "clicks": 85989,
+      "installs": 302,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 51692,
+      "installs": 1701,
+      "revenue": 0
+    },
+    "siteName": {
+      "clicks": 768,
+      "installs": 3,
+      "revenue": 0
+    },
+    "{siteName_": {
+      "clicks": 583,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000243": {
+      "clicks": 11,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000250": {
+      "clicks": 10,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000245": {
+      "clicks": 3,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000235": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "si.oncredit.lk": {
+    "1000260": {
+      "clicks": 122,
+      "installs": 50,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 98,
+      "installs": 48,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 81,
+      "installs": 28,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 42,
+      "installs": 17,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 21,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "xiao": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "siamr.apid.krungm.sexma": {},
+  "sinet.startup.inDriver": {
+    "1000253": {
+      "clicks": 90850,
+      "installs": 325,
+      "revenue": 837.162915962101
+    },
+    "1000226": {
+      "clicks": 67979,
+      "installs": 343,
+      "revenue": 564.3248268993211
+    },
+    "1000224": {
+      "clicks": 54421,
+      "installs": 511,
+      "revenue": 1355.340035959646
+    },
+    "1000254": {
+      "clicks": 36590,
+      "installs": 352,
+      "revenue": 744.0213119492054
+    },
+    "1000218": {
+      "clicks": 8531,
+      "installs": 297,
+      "revenue": 296.5406692955526
+    },
+    "ic_client_ua_xiaomi_cpi_kg_0_andr_static_kg260526": {
+      "clicks": 5480,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 5187,
+      "installs": 196,
+      "revenue": 159.19302729431215
+    },
+    "1000222": {
+      "clicks": 4089,
+      "installs": 189,
+      "revenue": 132.4352924109039
+    },
+    "1000255": {
+      "clicks": 2185,
+      "installs": 235,
+      "revenue": 272.909294885231
+    },
+    "1000260": {
+      "clicks": 2021,
+      "installs": 354,
+      "revenue": 600.0511039710519
+    },
+    "1000220": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    },
+    "AdGroup_name": {
+      "clicks": 0,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "story.tv.drama.reels": {
+    "1000255": {
+      "clicks": 6954,
+      "installs": 411,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 5677,
+      "installs": 764,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 5311,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 480,
+      "installs": 13,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 479,
+      "installs": 2,
+      "revenue": 0
+    },
+    "{bundle_id}": {
+      "clicks": 19,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 13,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 9,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 0,
+      "installs": 6,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    }
+  },
+  "tap.coin.make.money.online.take.surveys": {
+    "1000224": {
+      "clicks": 40419,
+      "installs": 251,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 39722,
+      "installs": 211,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 31179,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 25370,
+      "installs": 92,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 9976,
+      "installs": 46,
+      "revenue": 0
+    },
+    "1000223": {
+      "clicks": 536,
+      "installs": 45,
+      "revenue": 0
+    },
+    "1000218": {
+      "clicks": 261,
+      "installs": 22,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 14,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 8,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 7,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000300": {
+      "clicks": 1,
+      "installs": 0,
+      "revenue": 0
+    }
+  },
+  "team.opay.pay": {
+    "Exceeded_AdSet_Limit": {
+      "clicks": 1005,
+      "installs": 0,
+      "revenue": 0
+    },
+    "1000226": {
+      "clicks": 0,
+      "installs": 4,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 0,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000255": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 0,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 3.4238043973327534
+    },
+    "1000221": {
+      "clicks": 0,
+      "installs": 1,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 0,
+      "installs": 5,
+      "revenue": 0
+    }
+  },
+  "vn.com.encapital.arrow": {},
+  "vn.kredivo.android": {
+    "1000226": {
+      "clicks": 9882,
+      "installs": 2,
+      "revenue": 0
+    },
+    "1000224": {
+      "clicks": 9866,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000260": {
+      "clicks": 84,
+      "installs": 24,
+      "revenue": 0
+    },
+    "1000253": {
+      "clicks": 34,
+      "installs": 7,
+      "revenue": 0
+    },
+    "1000220": {
+      "clicks": 20,
+      "installs": 5,
+      "revenue": 0
+    },
+    "1000254": {
+      "clicks": 13,
+      "installs": 3,
+      "revenue": 0
+    },
+    "1000222": {
+      "clicks": 12,
+      "installs": 1,
+      "revenue": 0
+    }
+  },
+  "youdrive.today": {}
+}
