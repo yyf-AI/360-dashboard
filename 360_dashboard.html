@@ -397,6 +397,7 @@ function renderCharts() {
   renderQuadTable('q1');
 
   // 6. High-revenue high-fraud publisher details
+  const numDays = getSelectedDays().length;
   const pubData = {};
   PUBS.forEach(p => {
     // Sum-based: aggregate all days per campaign, then check thresholds
@@ -432,7 +433,6 @@ function renderCharts() {
   });
 
   // Build flat list: one row per publisher×campaign (aggregate across days)
-  const numDays = getSelectedDays().length;
   const pubDetailRows = [];
   PUBS.forEach(p => {
     const grouped = {};
