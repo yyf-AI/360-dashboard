@@ -110,6 +110,7 @@ const COLORS = ['#42a5f5','#66bb6a','#ffa726','#ef5350','#ab47bc','#26c6da','#ff
 let currentPeriod = new Set(['all']);
 let filteredData = [];
 let goodChannelRows = [];
+let loadedArchivePeriods = new Set(); // track which archive periods are loaded
 let flaggedRows = [];
 let suspendDetailRows = [];
 let sortCol = 'revenue';
@@ -118,11 +119,26 @@ let page = 1;
 const PAGE_SIZE = 30;
 let charts = {};
 
-// Discover day-only periods (MMDD format, 4 digits) and take last 7
+// Discover all day-only periods (MMDD format, 4 digits)
 function getDayPeriods() {
   const allPeriods = [...new Set(DATA.map(d => d.period))];
-  const dayPeriods = allPeriods.filter(p => /^\d{4}$/.test(p)).sort();
-  return dayPeriods.slice(-7);
+  return allPeriods.filter(p => /^\d{4}$/.test(p)).sort();
+}
+
+// Lazy-load archive period data
+async function loadArchivePeriod(period) {
+  if (loadedArchivePeriods.has(period)) return true;
+  try {
+    const resp = await fetch(`archive_data/${period}.json`);
+    if (!resp.ok) return false;
+    const periodData = await resp.json();
+    DATA.push(...periodData);
+    loadedArchivePeriods.add(period);
+    return true;
+  } catch (e) {
+    console.warn(`Failed to load archive period ${period}:`, e);
+    return false;
+  }
 }
 
 // Aggregate data across multiple days by campaign_id
@@ -918,7 +934,7 @@ function renderPeriodButtons() {
     sel.appendChild(btn);
   });
   // Attach click handlers via delegation
-  sel.onclick = (e) => {
+  sel.onclick = async (e) => {
     const btn = e.target.closest('.period-btn');
     if (!btn) return;
     const val = btn.dataset.period;
@@ -937,6 +953,17 @@ function renderPeriodButtons() {
       } else {
         currentPeriod.add(val);
       }
+    }
+    // Lazy-load archive periods that aren't loaded yet
+    let needLoad = [...currentPeriod].filter(p => p !== 'all' && !loadedArchivePeriods.has(p) && !DATA.some(d => d.period === p));
+    // If "all" is selected, load all remaining archive periods
+    if (currentPeriod.has('all')) {
+      needLoad = dayPeriods.filter(p => !loadedArchivePeriods.has(p) && !DATA.some(d => d.period === p));
+    }
+    if (needLoad.length > 0) {
+      btn.textContent = '加载中...';
+      await Promise.all(needLoad.map(p => loadArchivePeriod(p)));
+      btn.textContent = val;
     }
     // Update button styles
     sel.querySelectorAll('.period-btn').forEach(b => {
