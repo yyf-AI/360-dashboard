@@ -487,6 +487,7 @@ function renderCharts() {
           <option value="">全部Campaign</option>
           ${[...new Set(pubDetailRows.map(r => r.campaign_id))].sort().map(c => `<option value="${c}">${c}</option>`).join('')}
         </select>
+        <button onclick="exportFlaggedCSV()" style="padding:6px 14px;background:#1a2a3a;border:1px solid #3a4a5a;color:#4fc3f7;border-radius:4px;cursor:pointer;font-size:13px">导出CSV</button>
       </div>
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;font-size:13px">
@@ -711,6 +712,25 @@ function renderFlaggedTable() {
   }).join('');
   const h3 = document.querySelector('#pub-flagged-section h3 span');
   if (h3) h3.textContent = `（日均收入≥$100 且 作弊率>20%，共${filtered.length}条）`;
+}
+
+function exportFlaggedCSV() {
+  const selectedAdvs = getSelectedFlaggedAdvs();
+  const cidFilter = (document.getElementById('flaggedCidFilter')?.value || '').trim();
+  const filtered = flaggedRows.filter(r => {
+    if (selectedAdvs.length > 0 && !selectedAdvs.includes(r.advertiser)) return false;
+    if (cidFilter && !r.campaign_id.includes(cidFilter)) return false;
+    return true;
+  });
+  const headers = ['渠道','包名','Campaign','广告主','日均收入','作弊率','Block率','PA率'];
+  const rows = filtered.map(r => [r.publisher, r.package_name, r.campaign_id + ',', r.advertiser, r.revenue.toFixed(2), (r.fraud*100).toFixed(2)+'%', (r.block*100).toFixed(2)+'%', (r.pa*100).toFixed(2)+'%']);
+  const csvRows = [headers.join(',')].concat(rows.map(r => r.map(v => '"' + String(v).replace(/"/g,'""') + '"').join(',')));
+  const csv = '﻿' + csvRows.join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = '收入100以上关停渠道_' + (currentPeriod.has('all') ? '全部' : [...currentPeriod].sort().join('-')) + '.csv';
+  a.click();
 }
 
 function renderGoodTable() {
