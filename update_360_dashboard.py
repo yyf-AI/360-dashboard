@@ -468,12 +468,31 @@ def send_optimize_channel_report(period):
 
 
 # ============ GitHub Pages推送 ============
+def bump_cache_version():
+    """刷新两个HTML文件中数据JS的缓存版本号，防止浏览器缓存旧数据"""
+    version = f"v={datetime.now().strftime('%Y%m%d%H%M')}"
+    for html_file in [DASHBOARD_HTML, _DIR / "index.html"]:
+        if not html_file.exists():
+            continue
+        content = html_file.read_text(encoding="utf-8")
+        updated = re.sub(
+            r'360_dashboard_data\.js\?v=[^"]+',
+            f'360_dashboard_data.js?{version}',
+            content,
+        )
+        if updated != content:
+            html_file.write_text(updated, encoding="utf-8")
+            log.info(f"Bumped cache version in {html_file.name} to {version}")
+
+
 def push_to_github():
     """将更新后的数据文件推送到GitHub"""
     repo_dir = _DIR
     try:
-        # 添加数据文件
-        subprocess.run(["git", "add", "360_dashboard_data.js"], cwd=repo_dir, check=True, capture_output=True)
+        # 刷新缓存版本号
+        bump_cache_version()
+        # 添加数据文件和HTML
+        subprocess.run(["git", "add", "360_dashboard_data.js", "index.html", "360_dashboard.html"], cwd=repo_dir, check=True, capture_output=True)
         # 检查是否有变更
         result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=repo_dir, capture_output=True)
         if result.returncode == 0:
