@@ -251,6 +251,10 @@ def get_existing_periods():
     return set(re.findall(r'"period":\s*"([^"]+)"', content))
 
 
+ARCHIVE_DIR = _DIR / "archive_data"
+KEEP_PERIODS = 7  # 主文件保留最近N个周期
+
+
 def append_data(records, period):
     for r in records:
         r["period"] = period
@@ -265,6 +269,37 @@ def append_data(records, period):
     updated = content[:last_bracket] + new_js + content[last_bracket:]
     DASHBOARD_DATA.write_text(updated, encoding="utf-8")
     log.info(f"Appended {len(records)} records, period={period}")
+
+
+def archive_old_periods():
+    """将主文件中超过KEEP_PERIODS个周期的旧数据移到archive_data目录"""
+    content = DASHBOARD_DATA.read_text(encoding="utf-8")
+    match = re.search(r'const\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    if not match:
+        return
+
+    data = json.loads(match.group(1))
+    all_periods = sorted(set(d['period'] for d in data if d.get('period') and len(d['period']) == 4))
+
+    if len(all_periods) <= KEEP_PERIODS:
+        log.info(f"Only {len(all_periods)} periods, no archiving needed")
+        return
+
+    archive_periods = set(all_periods[:-KEEP_PERIODS])
+    keep_periods = set(all_periods[-KEEP_PERIODS:])
+
+    ARCHIVE_DIR.mkdir(exist_ok=True)
+    for p in archive_periods:
+        rows = [d for d in data if d['period'] == p]
+        archive_file = ARCHIVE_DIR / f"{p}.json"
+        with open(archive_file, 'w', encoding='utf-8') as f:
+            json.dump(rows, f, ensure_ascii=False, separators=(',', ':'))
+        log.info(f"Archived period {p}: {len(rows)} records → {archive_file.name}")
+
+    main_data = [d for d in data if d['period'] in keep_periods]
+    main_js = 'const DATA = ' + json.dumps(main_data, ensure_ascii=False, separators=(',', ':')) + ';\n'
+    DASHBOARD_DATA.write_text(main_js, encoding="utf-8")
+    log.info(f"Main file trimmed: {len(data)} → {len(main_data)} records ({len(keep_periods)} periods)")
 
 
 # ============ 工具函数 ============
@@ -605,6 +640,12 @@ def _main_impl():
         # Write
         append_data(records, period)
         log.info(f"=== Update complete: {len(records)} records added for {period} ===")
+
+    # 归档旧周期数据到archive_data目录
+    try:
+        archive_old_periods()
+    except Exception as e:
+        log.error(f"Failed to archive old periods: {e}")
 
     # 补全历史空advertiser记录
     try:
