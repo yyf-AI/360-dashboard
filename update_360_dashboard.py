@@ -51,6 +51,15 @@ LEFT JOIN (
 ORDER BY a.campaign_id, a.publisher_id
 """
 
+# 查询所有campaign→advertiser映射（用于补全历史空记录）
+ADV_MAPPING_SQL = """
+SELECT campaign_id, advertiser_id,
+    get_json_object(info, '$.advertiser_name') AS advertiser_name
+FROM hive_alsgprc_hadoop.miuiads.postback_info_milengine
+WHERE date >= {start_date} AND date <= {end_date}
+GROUP BY campaign_id, advertiser_id, get_json_object(info, '$.advertiser_name')
+"""
+
 # ============ 日志 ============
 logging.basicConfig(
     level=logging.INFO,
@@ -294,6 +303,54 @@ def format_report_content(rows, total_rev, label):
         content_lines.append([{"tag": "text", "text": "\n"}])
 
     return content_lines
+
+
+# ============ 补全历史空advertiser ============
+def backfill_empty_advertisers(token):
+    """查询postback表获取campaign→advertiser映射，补全JS数据中空的advertiser字段"""
+    content = DASHBOARD_DATA.read_text(encoding="utf-8")
+    match = re.search(r'const\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    if not match:
+        log.warning("Cannot parse DATA, skipping backfill")
+        return
+
+    data = json.loads(match.group(1))
+    empty_records = [d for d in data if not d.get('advertiser')]
+    if not empty_records:
+        log.info("No empty advertiser records, skipping backfill")
+        return
+
+    log.info(f"Found {len(empty_records)} records with empty advertiser, querying mapping...")
+
+    # 查询最近90天的映射
+    today = datetime.now()
+    start = (today - timedelta(days=90)).strftime("%Y%m%d")
+    end = today.strftime("%Y%m%d")
+    sql = ADV_MAPPING_SQL.format(start_date=start, end_date=end)
+
+    query_id = submit_sql(sql, token)
+    query_id = poll_query(query_id, token)
+    _, rows = fetch_results(query_id, token)
+
+    adv_map = {}
+    for cid, adv_id, adv_name in rows:
+        if adv_name and adv_id:
+            adv_map[str(cid)] = f"{adv_name}({adv_id})"
+
+    patched = 0
+    for d in data:
+        if not d.get('advertiser'):
+            cid = str(d.get('campaign_id', ''))
+            if cid in adv_map:
+                d['advertiser'] = adv_map[cid]
+                patched += 1
+
+    if patched > 0:
+        new_js = f"const DATA = {json.dumps(data, ensure_ascii=False)};\n"
+        DASHBOARD_DATA.write_text(new_js, encoding="utf-8")
+        log.info(f"Backfilled {patched} records with advertiser from postback table")
+    else:
+        log.info("No records could be patched (no mapping found)")
 
 
 # ============ 高收入高作弊渠道推送 ============
@@ -548,6 +605,13 @@ def _main_impl():
         # Write
         append_data(records, period)
         log.info(f"=== Update complete: {len(records)} records added for {period} ===")
+
+    # 补全历史空advertiser记录
+    try:
+        token = load_token()
+        backfill_empty_advertisers(token)
+    except Exception as e:
+        log.error(f"Failed to backfill advertisers: {e}")
 
     # 推送T-2的高收入高作弊渠道明细到飞书群
     try:
