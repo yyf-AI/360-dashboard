@@ -141,3 +141,440 @@ remove the file manually to continue.
 2026-06-02 11:00:04,801 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
 2026-06-02 11:00:07,469 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
 2026-06-02 11:00:19,678 [INFO] Pushed to GitHub successfully
+2026-06-03 11:00:03,066 [INFO] === Update started: T-2 = 20260601, period = 0601 ===
+2026-06-03 11:00:04,540 [INFO] Submitting SQL for date=20260601...
+2026-06-03 11:00:05,481 [INFO] Query submitted, id=/v1/statement/queued/20260603_030004_01916_sg_public01_5khdp/yc079e6373b83bfe05b7638a26e4248d7698fe132/2;7698e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1780455603966:1780455604522:false:TRINO:RUNNING:84986bd816452ced1133ec725fb3b5bb:d56e943f33045f93
+2026-06-03 11:00:16,493 [INFO] Query finished, fetching results...
+2026-06-03 11:00:17,160 [INFO] Fetched 8666 rows
+2026-06-03 11:00:17,189 [INFO] Processed 1338 campaigns
+2026-06-03 11:00:17,474 [INFO] Appended 1338 records, period=0601
+2026-06-03 11:00:17,487 [INFO] === Update complete: 1338 records added for 0601 ===
+2026-06-03 11:00:20,834 [INFO] Webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-06-03 11:00:22,470 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-03 11:00:32,044 [INFO] Pushed to GitHub successfully
+2026-06-04 11:00:04,054 [INFO] === Update started: T-2 = 20260602, period = 0602 ===
+2026-06-04 11:00:05,812 [INFO] Submitting SQL for date=20260602...
+2026-06-04 11:00:06,537 [INFO] Query submitted, id=/v1/statement/queued/20260604_030004_02213_sg_public02_behpf/y94356f0c67d3b810ea7fa4c1aaad54481932ec7e/2;1668e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1780542004473:1780542005009:false:TRINO:RUNNING:a2cba23813a227f332580d46f7bd8ab0:996a1fb8ea0f2f74
+2026-06-04 11:00:17,538 [INFO] Query finished, fetching results...
+2026-06-04 11:00:18,347 [INFO] Fetched 9056 rows
+2026-06-04 11:00:18,372 [INFO] Processed 1336 campaigns
+2026-06-04 11:00:18,716 [INFO] Appended 1336 records, period=0602
+2026-06-04 11:00:18,733 [INFO] === Update complete: 1336 records added for 0602 ===
+2026-06-04 11:00:22,252 [INFO] Webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-06-04 11:00:25,365 [INFO] Optimize channel webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-06-04 11:00:35,345 [INFO] Pushed to GitHub successfully
+2026-06-05 13:28:14,672 [INFO] === Update started: T-2 = 20260603, period = 0603 ===
+2026-06-05 13:28:16,262 [INFO] Submitting SQL for date=20260603...
+2026-06-05 13:28:17,060 [INFO] Query submitted, id=/v1/statement/queued/20260605_052816_04034_sg_public02_behpf/y988c79d20357d8d162a061c23f7dfc74bfcd4bfe/2;9458e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1780637295880:1780637296371:false:TRINO:RUNNING:e50567060def4140bb1e0145c9411c1f:4c434daa7ad69a7f
+2026-06-05 13:28:21,810 [INFO] Query finished, fetching results...
+2026-06-05 13:28:22,634 [INFO] Fetched 8934 rows
+2026-06-05 13:28:22,661 [INFO] Processed 1330 campaigns
+2026-06-05 13:28:22,941 [INFO] Appended 1330 records, period=0603
+2026-06-05 13:28:22,956 [INFO] === Update complete: 1330 records added for 0603 ===
+2026-06-05 13:28:26,065 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-05 13:28:27,331 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-05 13:28:36,994 [INFO] Pushed to GitHub successfully
+2026-06-08 13:40:58,806 [INFO] === Update started: T-2 = 20260606, period = 0606 ===
+2026-06-08 13:40:59,274 [INFO] Submitting SQL for date=20260606...
+2026-06-08 13:41:00,028 [INFO] Query submitted, id=/v1/statement/queued/20260608_054059_04088_sg_public02_behpf/ye83864ea2da0c6e0bb3b20e3cb7f3ec16f6b61ad/2;2578e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1780897259510:1780897259975:false:TRINO:RUNNING:f39748dba8d0df79bfc513a62e402c4a:3e19933c5f1047c5
+2026-06-08 13:41:05,653 [INFO] Query finished, fetching results...
+2026-06-08 13:41:06,327 [INFO] Fetched 8422 rows
+2026-06-08 13:41:06,360 [INFO] Processed 1297 campaigns
+2026-06-08 13:41:06,777 [INFO] Appended 1297 records, period=0606
+2026-06-08 13:41:06,781 [INFO] === Update complete: 1297 records added for 0606 ===
+2026-06-08 13:41:09,370 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-08 13:41:10,077 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-08 13:41:23,167 [INFO] Pushed to GitHub successfully
+2026-06-09 11:33:46,525 [INFO] === Update started: T-2 = 20260607, period = 0607 ===
+2026-06-09 11:33:47,577 [INFO] Submitting SQL for date=20260607...
+2026-06-09 11:33:50,382 [INFO] Query submitted, id=/v1/statement/queued/20260609_033349_02765_sg_public02_behpf/yf83f488e1b764cb3854e305ba5a88dc5b25271b9/2;7668e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1780976029186:1780976029674:false:TRINO:RUNNING:13eb0749c3d2e55cae6600f227383779:380255581bd1eea7
+2026-06-09 11:33:52,964 [INFO] Query finished, fetching results...
+2026-06-09 11:33:53,688 [INFO] Fetched 8372 rows
+2026-06-09 11:33:53,753 [INFO] Processed 1292 campaigns
+2026-06-09 11:33:54,038 [INFO] Appended 1292 records, period=0607
+2026-06-09 11:33:54,048 [INFO] === Update complete: 1292 records added for 0607 ===
+2026-06-09 11:33:56,113 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-09 11:33:57,118 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-09 11:34:13,536 [INFO] Pushed to GitHub successfully
+2026-06-10 11:06:48,110 [INFO] === Update started: T-2 = 20260608, period = 0608 ===
+2026-06-10 11:06:48,368 [INFO] Submitting SQL for date=20260608...
+2026-06-10 11:06:49,078 [INFO] Query submitted, id=/v1/statement/queued/20260610_030648_01888_sg_public01_5khdp/ybc850b0ead2fd52e1ec3dc841b893049fdafd47e/2;4338e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1781060808233:1781060808762:false:TRINO:RUNNING:d43ea5fef22d5ad747112647c8a0b555:a4f96216cad9ad64
+2026-06-10 11:06:57,974 [INFO] Query finished, fetching results...
+2026-06-10 11:06:58,658 [INFO] Fetched 8615 rows
+2026-06-10 11:06:58,689 [INFO] Processed 1320 campaigns
+2026-06-10 11:06:58,755 [INFO] Appended 1320 records, period=0608
+2026-06-10 11:06:58,757 [INFO] === Update complete: 1320 records added for 0608 ===
+2026-06-10 11:06:59,864 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-10 11:07:00,695 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-10 11:07:06,009 [INFO] Pushed to GitHub successfully
+2026-06-11 11:00:03,743 [INFO] === Update started: T-2 = 20260609, period = 0609 ===
+2026-06-11 11:00:04,164 [INFO] Submitting SQL for date=20260609...
+2026-06-11 11:00:04,753 [INFO] Query submitted, id=/v1/statement/queued/20260611_030003_01817_sg_public01_5khdp/y86d918afaf183e1df4d266b37bf5d00f850e630b/2;6738e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1781146803608:1781146804012:false:TRINO:RUNNING:7c2d0de24de74a9385cf748792a16903:238f675dfcb5ae49
+2026-06-11 11:00:12,532 [INFO] Query finished, fetching results...
+2026-06-11 11:00:13,204 [INFO] Fetched 8581 rows
+2026-06-11 11:00:13,226 [INFO] Processed 1305 campaigns
+2026-06-11 11:00:13,302 [INFO] Appended 1305 records, period=0609
+2026-06-11 11:00:13,304 [INFO] === Update complete: 1305 records added for 0609 ===
+2026-06-11 11:00:14,550 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-11 11:00:15,675 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-11 11:00:20,702 [INFO] Pushed to GitHub successfully
+2026-06-12 11:00:03,527 [INFO] === Update started: T-2 = 20260610, period = 0610 ===
+2026-06-12 11:00:04,042 [INFO] Submitting SQL for date=20260610...
+2026-06-12 11:00:04,755 [INFO] Query submitted, id=/v1/statement/queued/20260612_030004_03084_sg_public01_w7w2b/y4cdbf633154134fe1f6dfd89351c45bc43a47112/2;6888e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1781233204204:1781233204622:false:TRINO:RUNNING:37efb04b341312bc7a4cd489c2482ce6:8d7420863f7c75f8
+2026-06-12 11:00:13,554 [INFO] Query finished, fetching results...
+2026-06-12 11:00:14,220 [INFO] Fetched 8716 rows
+2026-06-12 11:00:14,241 [INFO] Processed 1308 campaigns
+2026-06-12 11:00:14,324 [INFO] Appended 1308 records, period=0610
+2026-06-12 11:00:14,327 [INFO] === Update complete: 1308 records added for 0610 ===
+2026-06-12 11:00:15,636 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-12 11:00:16,662 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-12 11:00:22,157 [INFO] Pushed to GitHub successfully
+2026-06-15 10:58:17,843 [INFO] === Update started: T-2 = 20260613, period = 0613 ===
+2026-06-15 10:58:18,634 [INFO] Submitting SQL for date=20260613...
+2026-06-15 11:00:06,018 [INFO] === Update started: T-2 = 20260613, period = 0613 ===
+2026-06-15 11:00:06,556 [INFO] Submitting SQL for date=20260613...
+2026-06-15 11:00:07,251 [INFO] Query submitted, id=/v1/statement/queued/20260615_030005_02166_sg_public02_behpf/ya7dd1c89d8819c23c0f104bc889c8ffa129ef29c/2;4538e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1781492405042:1781492405515:false:TRINO:RUNNING:99bc5ab18eeb087e075082ac442bf07a:411b9bdb21872214
+2026-06-15 11:00:22,588 [INFO] Query finished, fetching results...
+2026-06-15 11:00:23,300 [INFO] Fetched 8399 rows
+2026-06-15 11:00:23,329 [INFO] Processed 1308 campaigns
+2026-06-15 11:00:23,489 [INFO] Appended 1308 records, period=0613
+2026-06-15 11:00:23,497 [INFO] === Update complete: 1308 records added for 0613 ===
+2026-06-15 11:00:25,646 [INFO] Webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-06-15 11:00:26,862 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-15 11:00:34,622 [INFO] Pushed to GitHub successfully
+2026-06-16 14:26:38,820 [INFO] Submitting SQL for date=20260611...
+2026-06-16 14:26:39,558 [INFO] Query submitted, id=/v1/statement/queued/20260616_062637_06394_sg_public02_behpf/y1176112d172d12cb8fc743dd6451a9cda9dde764/2;2318e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1781591196790:1781591197351:false:TRINO:RUNNING:5d9b263725d8be13a09d7a0d4e963b42:c5cf6c094558159d
+2026-06-16 14:26:50,574 [INFO] Query finished, fetching results...
+2026-06-16 14:26:51,203 [INFO] Fetched 8677 rows
+2026-06-16 14:26:51,342 [INFO] Appended 1308 records, period=0611
+2026-06-16 14:26:51,348 [INFO] Submitting SQL for date=20260612...
+2026-06-16 14:26:51,972 [INFO] Query submitted, id=/v1/statement/queued/20260616_062649_04639_sg_public01_w7w2b/y7dc309ff019209abb05921876e4681c1a8dd1860/2;2958e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1781591209294:1781591209768:false:TRINO:RUNNING:2aeec8454904c9efe6592ff0920b5f45:4eb64a7536b50013
+2026-06-16 14:27:03,328 [INFO] Query finished, fetching results...
+2026-06-16 14:27:04,121 [INFO] Fetched 8798 rows
+2026-06-16 14:27:04,283 [INFO] Appended 1326 records, period=0612
+2026-06-16 18:22:30,541 [INFO] Submitting SQL for date=20260614...
+2026-06-16 18:22:31,213 [INFO] Query submitted, id=/v1/statement/queued/20260616_102231_08305_sg_public01_w7w2b/ybae33668c73f1f22aab3a461c3cd39fde05d380c/2;7268e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1781605350679:1781605351167:false:TRINO:RUNNING:41742faac5af5576decb5cae766926d3:0f15e07f4db40f0c
+2026-06-16 18:22:40,370 [INFO] Query finished, fetching results...
+2026-06-16 18:22:41,026 [INFO] Fetched 8336 rows
+2026-06-16 18:22:41,174 [INFO] Appended 1308 records, period=0614
+2026-06-16 18:23:35,575 [INFO] === Update started: T-2 = 20260614, period = 0614 ===
+2026-06-16 18:23:35,640 [INFO] Period 0614 already exists in data file, skipping query.
+2026-06-16 18:23:36,538 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-16 18:23:37,424 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-16 18:23:37,541 [INFO] No changes to push
+2026-06-17 11:00:03,635 [INFO] === Update started: T-2 = 20260615, period = 0615 ===
+2026-06-17 11:00:04,449 [INFO] Submitting SQL for date=20260615...
+2026-06-17 11:00:05,011 [INFO] Query submitted, id=/v1/statement/queued/20260617_030004_02081_sg_public01_w7w2b/y8ee3d788e1e1d86da00c416fbf3b91cc7f34d71c/2;0358e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1781665204257:1781665204641:false:TRINO:RUNNING:924c4fda515f6d5a448a91978044cf08:3729e7b5e4d1629c
+2026-06-17 11:00:14,452 [INFO] Query finished, fetching results...
+2026-06-17 11:00:15,095 [INFO] Fetched 8309 rows
+2026-06-17 11:00:15,121 [INFO] Processed 1316 campaigns
+2026-06-17 11:00:15,270 [INFO] Appended 1316 records, period=0615
+2026-06-17 11:00:15,281 [INFO] === Update complete: 1316 records added for 0615 ===
+2026-06-17 11:00:17,048 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-17 11:00:18,058 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-17 11:00:18,143 [INFO] Bumped cache version in 360_dashboard.html to v=202606171100
+2026-06-17 11:00:18,152 [INFO] Bumped cache version in index.html to v=202606171100
+2026-06-17 11:00:25,578 [INFO] Pushed to GitHub successfully
+2026-06-18 11:00:03,249 [INFO] === Update started: T-2 = 20260616, period = 0616 ===
+2026-06-18 11:00:04,134 [INFO] Submitting SQL for date=20260616...
+2026-06-18 11:00:05,253 [INFO] Query submitted, id=/v1/statement/queued/20260618_030004_03563_sg_public02_behpf/y94071f225331ae5d02a1030d888fd23f1e36b6f4/2;7558e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1781751603505:1781751604432:false:TRINO:RUNNING:466501dcfa8bb6ca962feb566c47a8ab:abede54edfe6781a
+2026-06-18 11:00:22,492 [INFO] Query finished, fetching results...
+2026-06-18 11:00:23,248 [INFO] Fetched 8605 rows
+2026-06-18 11:00:23,280 [INFO] Processed 1313 campaigns
+2026-06-18 11:00:23,452 [INFO] Appended 1313 records, period=0616
+2026-06-18 11:00:23,460 [INFO] === Update complete: 1313 records added for 0616 ===
+2026-06-18 11:00:25,969 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-18 11:00:28,676 [INFO] Optimize channel webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-06-18 11:00:28,733 [INFO] Bumped cache version in 360_dashboard.html to v=202606181100
+2026-06-18 11:00:28,742 [INFO] Bumped cache version in index.html to v=202606181100
+2026-06-18 11:00:36,506 [INFO] Pushed to GitHub successfully
+2026-06-22 13:38:38,085 [INFO] === Update started: T-2 = 20260620, period = 0620 ===
+2026-06-22 13:38:39,316 [INFO] Submitting SQL for date=20260620...
+2026-06-22 13:38:40,157 [INFO] Query submitted, id=/v1/statement/queued/20260622_053840_03800_sg_public02_behpf/yc1b8ba1e4b95c275f2a5b41f51d3e08c85c6e522/2;7678e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782106719654:1782106720113:false:TRINO:RUNNING:b6cfa8b59728e1dbac0ade327e6346d3:4ba362c42e3bdf0c
+2026-06-22 13:38:45,070 [INFO] Query finished, fetching results...
+2026-06-22 13:38:45,844 [INFO] Fetched 8091 rows
+2026-06-22 13:38:45,885 [INFO] Processed 1312 campaigns
+2026-06-22 13:38:48,483 [INFO] Appended 1312 records, period=0620
+2026-06-22 13:38:48,491 [INFO] === Update complete: 1312 records added for 0620 ===
+2026-06-22 13:38:50,950 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-22 13:38:51,984 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-22 13:38:52,269 [INFO] Bumped cache version in 360_dashboard.html to v=202606221338
+2026-06-22 13:38:52,277 [INFO] Bumped cache version in index.html to v=202606221338
+2026-06-22 13:39:33,323 [INFO] Pushed to GitHub successfully
+2026-06-22 14:25:56,145 [INFO] === Backfill: date=20260617, period=0617 ===
+2026-06-22 14:25:56,148 [INFO] Submitting SQL for date=20260617...
+2026-06-22 14:25:56,788 [INFO] Query submitted, id=/v1/statement/queued/20260622_062556_04194_sg_public01_w7w2b/ye801e70959cd24b37fca666b8bf68bce74b0f0f2/2;1698e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782109556278:1782109556755:false:TRINO:RUNNING:35c636ab635587db22eef74d824c4322:f8c31a35c82041f9
+2026-06-22 14:26:04,581 [INFO] Query finished, fetching results...
+2026-06-22 14:26:05,375 [INFO] Fetched 8467 rows
+2026-06-22 14:26:05,398 [INFO] Processed 1319 campaigns
+2026-06-22 14:26:05,587 [INFO] Appended 1319 records, period=0617
+2026-06-22 14:26:05,596 [INFO] === Backfill complete: 1319 records added for 0617 ===
+2026-06-22 14:26:07,715 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-22 14:26:08,808 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-22 14:26:08,960 [INFO] === Backfill: date=20260618, period=0618 ===
+2026-06-22 14:26:08,961 [INFO] Submitting SQL for date=20260618...
+2026-06-22 14:26:09,599 [INFO] Query submitted, id=/v1/statement/queued/20260622_062609_04330_sg_public02_behpf/y66e075ded34dc12ec59af0fb30b8e71fc9f49f98/2;7928e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782109569086:1782109569567:false:TRINO:RUNNING:89c134e516d676b2685b749a82ab816c:4d60ec42be847078
+2026-06-22 14:26:15,181 [INFO] Query finished, fetching results...
+2026-06-22 14:26:15,810 [INFO] Fetched 8548 rows
+2026-06-22 14:26:15,830 [INFO] Processed 1330 campaigns
+2026-06-22 14:26:16,031 [INFO] Appended 1330 records, period=0618
+2026-06-22 14:26:16,039 [INFO] === Backfill complete: 1330 records added for 0618 ===
+2026-06-22 14:26:17,908 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-22 14:26:19,156 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-22 14:26:19,298 [INFO] === Backfill: date=20260619, period=0619 ===
+2026-06-22 14:26:19,299 [INFO] Submitting SQL for date=20260619...
+2026-06-22 14:26:19,888 [INFO] Query submitted, id=/v1/statement/queued/20260622_062619_04203_sg_public01_w7w2b/y9a5f26638709badbe44c1048bcff6c2b92065320/2;2138e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782109579439:1782109579851:false:TRINO:RUNNING:31ec0d601e4c6b4baae6215d0ccce7b1:b238655b05715984
+2026-06-22 14:26:22,874 [INFO] Query finished, fetching results...
+2026-06-22 14:26:23,487 [INFO] Fetched 8291 rows
+2026-06-22 14:26:23,508 [INFO] Processed 1329 campaigns
+2026-06-22 14:26:23,715 [INFO] Appended 1329 records, period=0619
+2026-06-22 14:26:23,724 [INFO] === Backfill complete: 1329 records added for 0619 ===
+2026-06-22 14:26:25,759 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-22 14:26:26,902 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-22 14:26:26,930 [INFO] === Pushing to GitHub ===
+2026-06-22 14:26:26,933 [INFO] Bumped cache version in 360_dashboard.html to v=202606221426
+2026-06-22 14:26:26,934 [INFO] Bumped cache version in index.html to v=202606221426
+2026-06-22 14:26:33,796 [INFO] Pushed to GitHub successfully
+2026-06-22 14:26:33,796 [INFO] === All backfill done ===
+2026-06-23 11:00:03,193 [INFO] === Update started: T-2 = 20260621, period = 0621 ===
+2026-06-23 11:00:04,409 [INFO] Submitting SQL for date=20260621...
+2026-06-23 11:00:05,220 [INFO] Query submitted, id=/v1/statement/queued/20260623_030004_02057_sg_public01_w7w2b/y1a38b717bbf7d47fdf47c1baa3f124f87b3f188f/2;1938e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782183604179:1782183604802:false:TRINO:RUNNING:4cb86b86f57626c89900271126ed38e0:87451854cca0959e
+2026-06-23 11:00:09,759 [INFO] Query finished, fetching results...
+2026-06-23 11:00:09,935 [INFO] Fetched 0 rows
+2026-06-23 11:00:09,936 [INFO] Processed 0 campaigns
+2026-06-23 11:00:10,148 [INFO] Appended 0 records, period=0621
+2026-06-23 11:00:10,158 [INFO] === Update complete: 0 records added for 0621 ===
+2026-06-23 11:00:11,813 [ERROR] Failed to send high-fraud report: Illegal trailing comma before end of array: line 17103 column 1109 (char 26936123)
+2026-06-23 11:00:12,445 [ERROR] Failed to send optimize channel report: Illegal trailing comma before end of array: line 17103 column 1109 (char 26936123)
+2026-06-23 11:00:12,493 [INFO] Bumped cache version in 360_dashboard.html to v=202606231100
+2026-06-23 11:00:12,515 [INFO] Bumped cache version in index.html to v=202606231100
+2026-06-23 11:00:19,511 [INFO] Pushed to GitHub successfully
+2026-06-24 11:00:04,858 [INFO] === Update started: T-2 = 20260622, period = 0622 ===
+2026-06-24 11:00:06,905 [INFO] Submitting SQL for date=20260622...
+2026-06-24 11:00:07,768 [INFO] Query submitted, id=/v1/statement/queued/20260624_030006_04949_sg_public02_szz47/ye2de1b01e93a7e0e11982b984c3fa996b4f063bb/2;6358e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782270006269:1782270006846:false:TRINO:RUNNING:c6b08a05c8dc5d4c66f0d31d0a332e02:14bcb5a2ba800dab
+2026-06-24 11:00:22,481 [INFO] Query finished, fetching results...
+2026-06-24 11:00:23,259 [INFO] Fetched 8080 rows
+2026-06-24 11:00:23,319 [INFO] Processed 1313 campaigns
+2026-06-24 11:00:24,070 [INFO] Appended 1313 records, period=0622
+2026-06-24 11:00:24,098 [INFO] === Update complete: 1313 records added for 0622 ===
+2026-06-24 11:00:27,582 [ERROR] Failed to send high-fraud report: Expecting value: line 17104 column 1 (char 26936125)
+2026-06-24 11:00:29,443 [ERROR] Failed to send optimize channel report: Expecting value: line 17104 column 1 (char 26936125)
+2026-06-24 11:00:29,604 [INFO] Bumped cache version in 360_dashboard.html to v=202606241100
+2026-06-24 11:00:29,619 [INFO] Bumped cache version in index.html to v=202606241100
+2026-06-24 11:00:44,473 [INFO] Pushed to GitHub successfully
+2026-06-24 16:44:49,994 [INFO] Submitting SQL for date=20260621...
+2026-06-24 16:44:50,723 [INFO] Query submitted, id=/v1/statement/queued/20260624_084449_06680_sg_public01_wc9xg/y1f7d670027b4bcbb7f951beb4cc70bd864ae7d0d/2;7408e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782290689437:1782290689843:false:TRINO:RUNNING:254216d4859b6690b55ab5a9b3dee4be:3ef5c0b13897bf04
+2026-06-24 16:44:55,772 [INFO] Query finished, fetching results...
+2026-06-24 16:44:56,440 [INFO] Fetched 8078 rows
+2026-06-24 16:44:56,867 [INFO] Appended 1312 records, period=0621
+2026-06-25 11:00:02,921 [INFO] === Update started: T-2 = 20260623, period = 0623 ===
+2026-06-25 11:00:04,265 [INFO] Submitting SQL for date=20260623...
+2026-06-25 11:00:04,944 [INFO] Query submitted, id=/v1/statement/queued/20260625_030005_02071_sg_public01_iuv9d/yae87f6f49aa6086d2146ce0f118a76ffa4a72cfa/2;5038e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782356405309:1782356405806:false:TRINO:RUNNING:c38152159f8f91969be9df8833ab48c0:9c8b3733bc4efc6e
+2026-06-25 11:00:09,533 [INFO] Query finished, fetching results...
+2026-06-25 11:00:10,246 [INFO] Fetched 7929 rows
+2026-06-25 11:00:10,268 [INFO] Processed 1292 campaigns
+2026-06-25 11:00:11,125 [INFO] Appended 1292 records, period=0623
+2026-06-25 11:00:11,139 [INFO] === Update complete: 1292 records added for 0623 ===
+2026-06-25 11:00:13,215 [ERROR] Failed to send high-fraud report: Expecting value: line 17104 column 1 (char 26936125)
+2026-06-25 11:00:14,196 [ERROR] Failed to send optimize channel report: Expecting value: line 17104 column 1 (char 26936125)
+2026-06-25 11:00:14,214 [INFO] Bumped cache version in 360_dashboard.html to v=202606251100
+2026-06-25 11:00:14,222 [INFO] Bumped cache version in index.html to v=202606251100
+2026-06-25 11:00:22,570 [INFO] Pushed to GitHub successfully
+2026-06-26 11:00:03,058 [INFO] === Update started: T-2 = 20260624, period = 0624 ===
+2026-06-26 11:00:04,482 [INFO] Submitting SQL for date=20260624...
+2026-06-26 11:00:05,318 [INFO] Query submitted, id=/v1/statement/queued/20260626_030004_02509_sg_public02_szz47/yc487d37b4aa72901e58b729c359af1c59d94755b/2;0018e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782442804297:1782442804897:false:TRINO:RUNNING:62f8c94ca3122d8e5f1e0191ac9dd271:6dd78b452ba522d9
+2026-06-26 11:00:17,355 [INFO] Query finished, fetching results...
+2026-06-26 11:00:18,112 [INFO] Fetched 8444 rows
+2026-06-26 11:00:18,139 [INFO] Processed 1288 campaigns
+2026-06-26 11:00:18,540 [INFO] Appended 1288 records, period=0624
+2026-06-26 11:00:18,547 [INFO] === Update complete: 1288 records added for 0624 ===
+2026-06-26 11:00:20,894 [ERROR] Failed to send high-fraud report: Expecting value: line 17104 column 1 (char 26936125)
+2026-06-26 11:00:21,545 [ERROR] Failed to send optimize channel report: Expecting value: line 17104 column 1 (char 26936125)
+2026-06-26 11:00:21,584 [INFO] Bumped cache version in 360_dashboard.html to v=202606261100
+2026-06-26 11:00:21,592 [INFO] Bumped cache version in index.html to v=202606261100
+2026-06-26 11:00:29,493 [INFO] Pushed to GitHub successfully
+2026-06-27 13:57:16,851 [INFO] === Update started: T-2 = 20260625, period = 0625 ===
+2026-06-27 13:57:26,931 [INFO] Submitting SQL for date=20260625...
+2026-06-28 16:45:11,107 [INFO] === Update started: T-2 = 20260626, period = 0626 ===
+2026-06-28 16:45:14,520 [INFO] Submitting SQL for date=20260626...
+2026-06-29 11:00:02,375 [INFO] === Update started: T-2 = 20260627, period = 0627 ===
+2026-06-29 11:00:03,744 [INFO] Submitting SQL for date=20260627...
+2026-06-29 11:00:04,366 [INFO] Query submitted, id=/v1/statement/queued/20260629_025958_02294_sg_public01_mhhpg/y911e49aca404285e2bcb05b6f3adac3708b78208/2;3658e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782701997786:1782701998170:false:TRINO:RUNNING:225253a57e1c2159ac63609212b13d3b:2244830e4d58cd6a
+2026-06-29 11:00:07,691 [INFO] Query finished, fetching results...
+2026-06-29 11:00:08,465 [INFO] Fetched 7938 rows
+2026-06-29 11:00:08,490 [INFO] Processed 1269 campaigns
+2026-06-29 11:00:08,754 [INFO] Appended 1269 records, period=0627
+2026-06-29 11:00:08,767 [INFO] === Update complete: 1269 records added for 0627 ===
+2026-06-29 11:00:10,768 [ERROR] Failed to send high-fraud report: Expecting value: line 17104 column 1 (char 26936125)
+2026-06-29 11:00:11,540 [ERROR] Failed to send optimize channel report: Expecting value: line 17104 column 1 (char 26936125)
+2026-06-29 11:00:11,572 [INFO] Bumped cache version in 360_dashboard.html to v=202606291100
+2026-06-29 11:00:11,580 [INFO] Bumped cache version in index.html to v=202606291100
+2026-06-29 11:00:22,914 [INFO] Pushed to GitHub successfully
+2026-06-29 14:01:21,624 [INFO] Submitting SQL for date=20260625...
+2026-06-29 14:01:22,436 [INFO] Query submitted, id=/v1/statement/queued/20260629_060116_06188_sg_public02_yhma7/y9dcecbbe8463798ea0f899527f5ba85b35140799/2;7448e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782712875487:1782712876098:false:TRINO:RUNNING:881765b2e176cd50fb9bc2902a5bbf34:714ea07bb3013ab3
+2026-06-29 14:01:31,681 [INFO] Query finished, fetching results...
+2026-06-29 14:01:32,334 [INFO] Fetched 8338 rows
+2026-06-29 14:01:32,631 [INFO] Appended 1268 records, period=0625
+2026-06-29 14:01:32,646 [INFO] Submitting SQL for date=20260626...
+2026-06-29 14:01:34,083 [INFO] Query submitted, id=/v1/statement/queued/20260629_060127_06256_sg_public01_mhhpg/ya3cc896e08c8b59de0e202f79af03536a1d551ae/2;2508e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782712886477:1782712887750:false:TRINO:RUNNING:0e0f692b79047f819d221e0870fff7a5:506e187191d7ff02
+2026-06-29 14:01:41,887 [INFO] Query finished, fetching results...
+2026-06-29 14:01:42,515 [INFO] Fetched 8362 rows
+2026-06-29 14:01:42,812 [INFO] Appended 1288 records, period=0626
+2026-06-29 14:01:42,849 [INFO] Bumped cache version in 360_dashboard.html to v=202606291401
+2026-06-29 14:01:42,856 [INFO] Bumped cache version in index.html to v=202606291401
+2026-06-29 14:01:52,840 [INFO] Pushed to GitHub successfully
+2026-06-30 11:00:05,221 [INFO] === Update started: T-2 = 20260628, period = 0628 ===
+2026-06-30 11:00:08,867 [INFO] Submitting SQL for date=20260628...
+2026-06-30 11:00:09,685 [INFO] Query submitted, id=/v1/statement/queued/20260630_030002_03042_sg_public01_2vxbz/y72493e3aa6e9d5d46eef4af5417fceeb8a30207d/2;5238e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782788401582:1782788402174:false:TRINO:RUNNING:f73021be4dd04726a359b357e9ac4150:9e168e179d417fdc
+2026-06-30 11:00:21,768 [INFO] Query finished, fetching results...
+2026-06-30 11:00:22,544 [INFO] Fetched 7897 rows
+2026-06-30 11:00:22,624 [INFO] Processed 1261 campaigns
+2026-06-30 11:00:23,868 [INFO] Appended 1261 records, period=0628
+2026-06-30 11:00:23,911 [INFO] === Update complete: 1261 records added for 0628 ===
+2026-06-30 11:00:32,260 [INFO] Webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-06-30 11:00:36,650 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-06-30 11:00:36,889 [INFO] Bumped cache version in 360_dashboard.html to v=202606301100
+2026-06-30 11:00:36,907 [INFO] Bumped cache version in index.html to v=202606301100
+2026-06-30 11:00:51,895 [INFO] Pushed to GitHub successfully
+2026-07-01 11:00:04,572 [INFO] === Update started: T-2 = 20260629, period = 0629 ===
+2026-07-01 11:00:06,583 [INFO] Submitting SQL for date=20260629...
+2026-07-01 11:00:08,004 [INFO] Query submitted, id=/v1/statement/queued/20260701_030006_01160_sg_public02_3z5j5/ya02eb88614159e3ddb236ba8ca7850f77fe83d11/2;0448e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782874805647:1782874806893:false:TRINO:RUNNING:7203322daffa43a8fd140913cfc09606:a918f4d115267123
+2026-07-01 11:00:23,203 [INFO] Query finished, fetching results...
+2026-07-01 11:00:24,110 [INFO] Fetched 8128 rows
+2026-07-01 11:00:24,137 [INFO] Processed 1288 campaigns
+2026-07-01 11:00:24,424 [INFO] Appended 1288 records, period=0629
+2026-07-01 11:00:24,441 [INFO] === Update complete: 1288 records added for 0629 ===
+2026-07-01 11:00:27,508 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-01 11:00:29,065 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-01 11:00:29,137 [INFO] Bumped cache version in 360_dashboard.html to v=202607011100
+2026-07-01 11:00:29,145 [INFO] Bumped cache version in index.html to v=202607011100
+2026-07-01 11:00:38,583 [INFO] Pushed to GitHub successfully
+2026-07-02 11:00:03,106 [INFO] === Update started: T-2 = 20260630, period = 0630 ===
+2026-07-02 11:00:04,879 [INFO] Submitting SQL for date=20260630...
+2026-07-02 11:00:05,469 [INFO] Query submitted, id=/v1/statement/queued/20260702_030004_02646_sg_public02_w72dq/y99d3790fb0f16fdd311fa8288456fe5421900413/2;6098e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1782961203921:1782961204324:false:TRINO:RUNNING:5c32c9a86d82f9e0d35c45fa50f80c15:5916fabbf0d86d1f
+2026-07-02 11:00:14,410 [INFO] Query finished, fetching results...
+2026-07-02 11:00:15,062 [INFO] Fetched 8682 rows
+2026-07-02 11:00:15,085 [INFO] Processed 1292 campaigns
+2026-07-02 11:00:15,412 [INFO] Appended 1292 records, period=0630
+2026-07-02 11:00:15,430 [INFO] === Update complete: 1292 records added for 0630 ===
+2026-07-02 11:00:18,501 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-02 11:00:20,070 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-02 11:00:20,142 [INFO] Bumped cache version in 360_dashboard.html to v=202607021100
+2026-07-02 11:00:20,148 [INFO] Bumped cache version in index.html to v=202607021100
+2026-07-02 11:00:29,899 [INFO] Pushed to GitHub successfully
+2026-07-03 11:00:02,756 [INFO] === Update started: T-2 = 20260701, period = 0701 ===
+2026-07-03 11:00:04,525 [INFO] Submitting SQL for date=20260701...
+2026-07-03 11:00:05,150 [INFO] Query submitted, id=/v1/statement/queued/20260703_030004_02354_sg_public02_ttvpy/y72e62340fe1df5493b29430902e3d6275fae6926/2;3068e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1783047603642:1783047604087:false:TRINO:RUNNING:a2c0b3c86194b39ef4f91eb94ee8814a:eee294f927e6e37b
+2026-07-03 11:00:11,228 [INFO] Query finished, fetching results...
+2026-07-03 11:00:11,970 [INFO] Fetched 8592 rows
+2026-07-03 11:00:11,993 [INFO] Processed 1313 campaigns
+2026-07-03 11:00:12,348 [INFO] Appended 1313 records, period=0701
+2026-07-03 11:00:12,360 [INFO] === Update complete: 1313 records added for 0701 ===
+2026-07-03 11:00:15,428 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-03 11:00:17,136 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-03 11:00:17,194 [INFO] Bumped cache version in 360_dashboard.html to v=202607031100
+2026-07-03 11:00:17,203 [INFO] Bumped cache version in index.html to v=202607031100
+2026-07-03 11:00:27,518 [INFO] Pushed to GitHub successfully
+2026-07-05 16:49:33,320 [INFO] === Update started: T-2 = 20260703, period = 0703 ===
+2026-07-05 16:49:38,005 [INFO] Submitting SQL for date=20260703...
+2026-07-06 13:54:53,262 [INFO] === Update started: T-2 = 20260704, period = 0704 ===
+2026-07-06 13:54:56,109 [INFO] Submitting SQL for date=20260704...
+2026-07-06 13:54:56,978 [INFO] Query submitted, id=/v1/statement/queued/20260706_055455_04003_sg_public02_qneix/yba2825bd27a3cba0528ed3ac719c55a5e56ef9f1/2;5668e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1783317294856:1783317295370:false:TRINO:RUNNING:a6a61d5e77c65d1effbc365b74d23a95:03d9f3b2b9e6886e
+2026-07-06 13:55:00,303 [INFO] Query finished, fetching results...
+2026-07-06 13:55:01,052 [INFO] Fetched 8225 rows
+2026-07-06 13:55:01,075 [INFO] Processed 1304 campaigns
+2026-07-06 13:55:06,367 [INFO] Appended 1304 records, period=0704
+2026-07-06 13:55:06,926 [INFO] === Update complete: 1304 records added for 0704 ===
+2026-07-06 13:55:10,772 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-06 13:55:14,972 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-06 13:55:18,910 [INFO] Bumped cache version in 360_dashboard.html to v=202607061355
+2026-07-06 13:55:19,177 [INFO] Bumped cache version in index.html to v=202607061355
+2026-07-06 13:55:36,196 [INFO] Pushed to GitHub successfully
+2026-07-07 13:52:59,428 [INFO] === Update started: T-2 = 20260705, period = 0705 ===
+2026-07-07 13:53:01,985 [INFO] Submitting SQL for date=20260705...
+2026-07-07 13:53:05,534 [INFO] Query submitted, id=/v1/statement/queued/20260707_055302_03516_sg_public02_qneix/y197c19d2f84a26a4881a97838ac956bc0c70f204/2;8128e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1783403579222:1783403582578:false:TRINO:RUNNING:eaed12022945ada80da017d89deac2d3:fd099418e6d5a86a
+2026-07-07 13:53:08,418 [INFO] Query finished, fetching results...
+2026-07-07 13:53:09,035 [INFO] Fetched 8151 rows
+2026-07-07 13:53:09,059 [INFO] Processed 1301 campaigns
+2026-07-07 13:53:15,764 [INFO] Appended 1301 records, period=0705
+2026-07-07 13:53:15,835 [INFO] === Update complete: 1301 records added for 0705 ===
+2026-07-07 13:53:19,340 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-07 13:53:27,023 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-07 13:53:27,745 [INFO] Bumped cache version in 360_dashboard.html to v=202607071353
+2026-07-07 13:53:27,749 [INFO] Bumped cache version in index.html to v=202607071353
+2026-07-07 13:53:38,979 [INFO] Pushed to GitHub successfully
+2026-07-07 15:36:38,363 [INFO] Submitting SQL for date=20260702...
+2026-07-07 15:36:39,326 [INFO] Query submitted, id=/v1/statement/queued/20260707_073636_01292_sg_public02_9sg3n/yad16994a52f2b96654a17bf8776774a9626e2ddd/2;4088e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1783409795805:1783409796337:false:TRINO:RUNNING:558ad05f0fb0131b0ffd3fbae9c2e9f1:09cf7441fd18cceb
+2026-07-07 15:36:42,532 [INFO] Query finished, fetching results...
+2026-07-07 15:36:43,197 [INFO] Fetched 8652 rows
+2026-07-07 15:36:43,807 [INFO] Appended 1308 records, period=0702
+2026-07-07 15:36:44,839 [INFO] Submitting SQL for date=20260703...
+2026-07-07 15:36:45,416 [INFO] Query submitted, id=/v1/statement/queued/20260707_073642_01297_sg_public02_9sg3n/ycd7818d67fa3866e5f98207fae18f90c81931179/2;0048e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1783409802044:1783409802455:false:TRINO:RUNNING:b62be49785528664cfe689c0f5220cb0:637e5e164f9f0287
+2026-07-07 15:36:47,911 [INFO] Query finished, fetching results...
+2026-07-07 15:36:48,610 [INFO] Fetched 8685 rows
+2026-07-07 15:36:49,237 [INFO] Appended 1326 records, period=0703
+2026-07-07 15:36:50,270 [INFO] Bumped cache version in 360_dashboard.html to v=202607071536
+2026-07-07 15:36:50,274 [INFO] Bumped cache version in index.html to v=202607071536
+2026-07-07 15:37:13,529 [ERROR] Git error: fatal: unable to access 'https://github.com/yyf-AI/360-dashboard.git/': Failed to connect to github.com port 443 after 21124 ms: Could not connect to server
+
+2026-07-08 11:00:07,177 [INFO] === Update started: T-2 = 20260706, period = 0706 ===
+2026-07-08 11:00:11,305 [INFO] Submitting SQL for date=20260706...
+2026-07-08 11:00:12,323 [INFO] Query submitted, id=/v1/statement/queued/20260708_030012_02643_sg_public01_cpq3c/y0056a584ac4688274e6b4f8bb87d159bda212a9d/2;2908e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1783479611464:1783479612283:false:TRINO:RUNNING:520acb731bbc73833e71d8b9cfc9f21b:f73ea58700def7e3
+2026-07-08 11:00:18,029 [INFO] Query finished, fetching results...
+2026-07-08 11:00:18,744 [INFO] Fetched 8171 rows
+2026-07-08 11:00:18,772 [INFO] Processed 1300 campaigns
+2026-07-08 11:00:19,388 [INFO] Appended 1300 records, period=0706
+2026-07-08 11:00:19,416 [INFO] === Update complete: 1300 records added for 0706 ===
+2026-07-08 11:00:26,802 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-08 11:00:32,997 [INFO] Optimize channel webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-07-08 11:00:33,438 [INFO] Bumped cache version in 360_dashboard.html to v=202607081100
+2026-07-08 11:00:33,542 [INFO] Bumped cache version in index.html to v=202607081100
+2026-07-08 11:00:45,736 [INFO] Pushed to GitHub successfully
+2026-07-09 11:00:03,774 [INFO] === Update started: T-2 = 20260707, period = 0707 ===
+2026-07-09 11:00:05,803 [INFO] Submitting SQL for date=20260707...
+2026-07-09 11:00:06,621 [INFO] Query submitted, id=/v1/statement/queued/20260709_030005_02627_sg_public01_g8dcw/y5bedc960afafbc95844b503bef2c12a038251dd8/2;9658e17075626c696330312e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1783566004543:1783566005180:false:TRINO:RUNNING:6347d247765b34249e609fe4eb52efdb:5e7f56b91f7d1c7f
+2026-07-09 11:00:14,473 [INFO] Query finished, fetching results...
+2026-07-09 11:00:15,696 [INFO] Fetched 8943 rows
+2026-07-09 11:00:15,719 [INFO] Processed 1329 campaigns
+2026-07-09 11:00:16,151 [INFO] Appended 1329 records, period=0707
+2026-07-09 11:00:16,174 [INFO] === Update complete: 1329 records added for 0707 ===
+2026-07-09 11:00:20,378 [INFO] Webhook sent: 200 {"code":11232,"data":{},"msg":"frequency limited psm[lark.oapi.app_platform_runtime]appID[1500]"}
+2026-07-09 11:00:22,201 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-09 11:00:22,277 [INFO] Bumped cache version in 360_dashboard.html to v=202607091100
+2026-07-09 11:00:22,286 [INFO] Bumped cache version in index.html to v=202607091100
+2026-07-09 11:00:30,289 [INFO] Pushed to GitHub successfully
+2026-07-10 14:21:31,251 [INFO] === Update started: T-2 = 20260708, period = 0708 ===
+2026-07-10 14:21:35,351 [INFO] Submitting SQL for date=20260708...
+2026-07-13 10:30:57,711 [INFO] === Update started: T-2 = 20260711, period = 0711 ===
+2026-07-13 10:31:00,726 [INFO] Submitting SQL for date=20260711...
+2026-07-13 10:31:01,966 [INFO] Query submitted, id=/v1/statement/queued/20260713_023053_02352_sg_public02_fhdeg/ye7315d3c2cb70f42c495db55bfcbff2b20ad57c8/2;2098e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1783909853133:1783909854108:false:TRINO:RUNNING:462560ed4c079c2b105a200d033ffdef:6c2e3408d55cd69e
+2026-07-13 10:31:08,779 [INFO] Query finished, fetching results...
+2026-07-13 10:31:09,698 [INFO] Fetched 9320 rows
+2026-07-13 10:31:09,731 [INFO] Processed 1288 campaigns
+2026-07-13 10:31:10,460 [INFO] Appended 1288 records, period=0711
+2026-07-13 10:31:10,488 [INFO] === Update complete: 1288 records added for 0711 ===
+2026-07-13 10:31:14,939 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-13 10:31:17,348 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-13 10:31:17,483 [INFO] Bumped cache version in 360_dashboard.html to v=202607131031
+2026-07-13 10:31:17,492 [INFO] Bumped cache version in index.html to v=202607131031
+2026-07-13 10:31:29,223 [INFO] Pushed to GitHub successfully
+2026-07-13 11:00:03,062 [INFO] === Update started: T-2 = 20260711, period = 0711 ===
+2026-07-13 11:00:03,560 [INFO] Period 0711 already exists in data file, skipping query.
+2026-07-13 11:00:05,651 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-13 11:00:07,797 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-13 11:00:07,849 [INFO] Bumped cache version in 360_dashboard.html to v=202607131100
+2026-07-13 11:00:07,851 [INFO] Bumped cache version in index.html to v=202607131100
+2026-07-13 11:00:11,694 [INFO] Pushed to GitHub successfully
+2026-07-14 11:00:04,385 [INFO] === Update started: T-2 = 20260712, period = 0712 ===
+2026-07-14 11:00:07,644 [INFO] Submitting SQL for date=20260712...
+2026-07-14 11:00:08,344 [INFO] Query submitted, id=/v1/statement/queued/20260714_030007_02627_sg_public02_finv8/yf317617144b32fefcc92af7dd7fcf1842ae94ad0/2;8208e17075626c696330322e73672e7472696e6f2e7372763a38307c73716c2d70726f78793a762d79696e796966616e3a31363433363a776f726b73706163655f31363433362e646576;0;1000;false:1783998007328:1783998007827:false:TRINO:RUNNING:10f58a040a13aee1308eb5ae37fa7b90:400cabba53699843
+2026-07-14 11:00:16,895 [INFO] Query finished, fetching results...
+2026-07-14 11:00:17,814 [INFO] Fetched 9271 rows
+2026-07-14 11:00:17,836 [INFO] Processed 1286 campaigns
+2026-07-14 11:00:18,364 [INFO] Appended 1286 records, period=0712
+2026-07-14 11:00:18,391 [INFO] === Update complete: 1286 records added for 0712 ===
+2026-07-14 11:00:23,139 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-14 11:00:25,950 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-07-14 11:00:26,101 [INFO] Bumped cache version in 360_dashboard.html to v=202607141100
+2026-07-14 11:00:26,132 [INFO] Bumped cache version in index.html to v=202607141100
+2026-07-14 11:00:38,406 [INFO] Pushed to GitHub successfully

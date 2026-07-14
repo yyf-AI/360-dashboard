@@ -155,7 +155,7 @@ function aggregateData(rawData) {
     if (!map[key]) {
       map[key] = {
         campaign_id: d.campaign_id,
-        advertiser: normAdv(d.advertiser) || d.campaign_id,
+        advertiser: normAdv(d.advertiser) || '',
         package_name: pkg,
         revenue: 0, conversions: 0,
         overall_block: 0, overall_pa: 0,
@@ -456,7 +456,7 @@ function renderCharts() {
       const rev = d.pub_rev?.[p] || 0;
       if (rev <= 0) return;
       const key = d.campaign_id;
-      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: normAdv(d.advertiser) || d.campaign_id, totalRev: 0, convSum: 0, blockSum: 0, paSum: 0 };
+      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: normAdv(d.advertiser) || '', totalRev: 0, convSum: 0, blockSum: 0, paSum: 0 };
       const g = grouped[key];
       g.totalRev += rev;
       g.convSum += d.pub_conv?.[p] || 0;
@@ -535,7 +535,7 @@ function renderCharts() {
       const rev = d.pub_rev?.[p] || 0;
       if (rev <= 0) return;
       const key = d.campaign_id;
-      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: normAdv(d.advertiser) || d.campaign_id, totalRev: 0, convSum: 0, blockSum: 0, paSum: 0 };
+      if (!grouped[key]) grouped[key] = { package_name: d.package_name, campaign_id: d.campaign_id, advertiser: normAdv(d.advertiser) || '', totalRev: 0, convSum: 0, blockSum: 0, paSum: 0 };
       const g = grouped[key];
       g.totalRev += rev;
       g.convSum += d.pub_conv?.[p] || 0;
@@ -620,7 +620,7 @@ function renderCharts() {
         publisher: PUB_SHORT[pi],
         package_name: d.package_name,
         campaign_id: d.campaign_id,
-        advertiser: normAdv(d.advertiser) || d.campaign_id,
+        advertiser: normAdv(d.advertiser) || '',
         revenue: avgRev,
         fraud, block: denom > 0 ? block / denom : 0, pa: denom > 0 ? pa / denom : 0
       });
