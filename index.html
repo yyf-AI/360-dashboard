@@ -1232,60 +1232,66 @@ function renderWeeklyPkgTable() {
   const thisDays = weeklyData.thisWeek.length;
   const lastDays = weeklyData.lastWeek.length;
 
-  // 先按包维度汇总，筛选收入大的包
-  const pkgSummary = {};
+  // 按包维度汇总整体数据
+  const pkgRows = [];
   Object.keys(thisMetrics.pkgMap).forEach(pkg => {
     const thisPkg = thisMetrics.pkgMap[pkg];
     const lastPkg = lastMetrics.pkgMap[pkg] || { pub_data: {}, revenue: 0 };
-    const totalRev = thisPkg.revenue + lastPkg.revenue;
+
     if (search && !pkg.toLowerCase().includes(search)) return;
-    pkgSummary[pkg] = { thisPkg, lastPkg, totalRev };
-  });
 
-  // 按总收入降序排序，取Top 30
-  const sortedPkgs = Object.entries(pkgSummary)
-    .sort((a, b) => b[1].totalRev - a[1].totalRev)
-    .slice(0, 30);
+    // 计算本周包整体的作弊率/Block率/PA率
+    let thisRev = thisPkg.revenue;
+    let thisConv = 0, thisBlock = 0, thisPA = 0;
+    PUBS.forEach(p => {
+      const pd = thisPkg.pub_data[p];
+      thisConv += pd.conv;
+      thisBlock += pd.block;
+      thisPA += pd.pa;
+    });
+    const thisDenom = thisConv + thisBlock;
+    const thisFraud = thisDenom > 0 ? (thisPA + thisBlock) / thisDenom : 0;
+    const thisBlockRate = thisDenom > 0 ? thisBlock / thisDenom : 0;
+    const thisPARate = thisDenom > 0 ? thisPA / thisDenom : 0;
 
-  // 生成表格行
-  const pkgRows = [];
-  sortedPkgs.forEach(([pkg, { thisPkg, lastPkg }]) => {
-    PUBS.forEach((p, pi) => {
-      const thisPD = thisPkg.pub_data[p];
-      const lastPD = lastPkg.pub_data[p] || { rev: 0, conv: 0, block: 0, pa: 0 };
+    // 计算上周包整体的作弊率/Block率/PA率
+    let lastRev = lastPkg.revenue;
+    let lastConv = 0, lastBlockSum = 0, lastPASum = 0;
+    PUBS.forEach(p => {
+      const pd = lastPkg.pub_data[p];
+      lastConv += pd.conv;
+      lastBlockSum += pd.block;
+      lastPASum += pd.pa;
+    });
+    const lastDenom = lastConv + lastBlockSum;
+    const lastFraud = lastDenom > 0 ? (lastPASum + lastBlockSum) / lastDenom : 0;
+    const lastBlockRate = lastDenom > 0 ? lastBlockSum / lastDenom : 0;
+    const lastPARate = lastDenom > 0 ? lastPASum / lastDenom : 0;
 
-      // 该渠道在本周/上周有消耗才显示
-      if (thisPD.rev <= 0 && lastPD.rev <= 0) return;
+    // 只显示有消耗的包
+    if (thisRev <= 0 && lastRev <= 0) return;
 
-      const thisDenom = thisPD.conv + thisPD.block;
-      const lastDenom = lastPD.conv + lastPD.block;
-
-      const thisFraud = thisDenom > 0 ? (thisPD.pa + thisPD.block) / thisDenom : 0;
-      const lastFraud = lastDenom > 0 ? (lastPD.pa + lastPD.block) / lastDenom : 0;
-      const thisBlock = thisDenom > 0 ? thisPD.block / thisDenom : 0;
-      const lastBlock = lastDenom > 0 ? lastPD.block / lastDenom : 0;
-      const thisPA = thisDenom > 0 ? thisPD.pa / thisDenom : 0;
-      const lastPA = lastDenom > 0 ? lastPD.pa / lastDenom : 0;
-
-      pkgRows.push({
-        package_name: pkg,
-        publisher: PUB_SHORT[pi],
-        thisRevenue: thisPD.rev,
-        lastRevenue: lastPD.rev,
-        thisFraud, lastFraud,
-        thisBlock, lastBlock,
-        thisPA, lastPA
-      });
+    pkgRows.push({
+      package_name: pkg,
+      thisRevenue: thisRev,
+      lastRevenue: lastRev,
+      thisFraud, lastFraud,
+      thisBlock: thisBlockRate, lastBlock: lastBlockRate,
+      thisPA: thisPARate, lastPA: lastPARate
     });
   });
 
-  let html = `<div style="margin-bottom:10px;color:#666;font-size:12px">显示收入Top 30的包，按包总收入降序</div>`;
+  // 按总收入降序排序，取Top 30
+  pkgRows.sort((a, b) => (b.thisRevenue + b.lastRevenue) - (a.thisRevenue + a.lastRevenue));
+  const topPkgs = pkgRows.slice(0, 30);
+
+  let html = `<div style="margin-bottom:10px;color:#666;font-size:12px">显示收入Top 30的包（整体维度，不拆渠道）</div>`;
   html += `<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px">
     <thead><tr>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:left;border-bottom:2px solid #e0e6ed">包名</th>
-      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:left;border-bottom:2px solid #e0e6ed">渠道</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周收入</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周收入</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">收入变化</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周作弊率</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周作弊率</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">作弊率变化</th>
@@ -1297,19 +1303,22 @@ function renderWeeklyPkgTable() {
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">PA变化</th>
     </tr></thead><tbody>`;
 
-  pkgRows.forEach(r => {
+  topPkgs.forEach(r => {
     const fraudChange = r.thisFraud - r.lastFraud;
     const blockChange = r.thisBlock - r.lastBlock;
     const paChange = r.thisPA - r.lastPA;
+    const revChange = r.thisRevenue - r.lastRevenue;
 
     const changeClass = (v) => v > 0.05 ? 'color:#e53935;font-weight:600' : v < -0.05 ? 'color:#43a047;font-weight:600' : '';
+    const revChangeClass = (v) => v > 0 ? 'color:#43a047' : v < 0 ? 'color:#e53935' : '';
     const changeIcon = (v) => v > 0.05 ? '↑' : v < -0.05 ? '↓' : '';
+    const revIcon = (v) => v > 0 ? '↑' : v < 0 ? '↓' : '';
 
     html += `<tr>
-      <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis" title="${r.package_name}">${r.package_name}</td>
-      <td style="font-weight:600;color:#1976d2">${r.publisher}</td>
+      <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis" title="${r.package_name}">${r.package_name}</td>
       <td style="text-align:right">${fmt$(r.thisRevenue)}</td>
       <td style="text-align:right">${fmt$(r.lastRevenue)}</td>
+      <td style="text-align:right;${revChangeClass(revChange)}">${fmt$(Math.abs(revChange))} ${revIcon(revChange)}</td>
       <td style="text-align:right">${fmtPct(r.thisFraud)}</td>
       <td style="text-align:right">${fmtPct(r.lastFraud)}</td>
       <td style="text-align:right;${changeClass(fraudChange)}">${(fraudChange*100).toFixed(1)}% ${changeIcon(fraudChange)}</td>
@@ -1323,7 +1332,7 @@ function renderWeeklyPkgTable() {
   });
 
   html += '</tbody></table></div>';
-  if (pkgRows.length === 0) html = '<p style="color:#999;font-size:13px;padding:20px">暂无符合条件的数据</p>';
+  if (topPkgs.length === 0) html = '<p style="color:#999;font-size:13px;padding:20px">暂无符合条件的数据</p>';
   document.getElementById('weekly-pkg-table').innerHTML = html;
 }
 </script>
