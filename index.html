@@ -1281,11 +1281,11 @@ function renderWeeklyPkgTable() {
     });
   });
 
-  // 按总收入降序排序，取Top 30
+  // 按总收入降序排序
   pkgRows.sort((a, b) => (b.thisRevenue + b.lastRevenue) - (a.thisRevenue + a.lastRevenue));
-  const topPkgs = pkgRows.slice(0, 30);
+  const topPkgs = pkgRows;
 
-  let html = `<div style="margin-bottom:10px;color:#666;font-size:12px">显示收入Top 30的包（整体维度，不拆渠道）</div>`;
+  let html = `<div style="margin-bottom:10px;color:#666;font-size:12px">显示所有本周日均收入≥$100的包（整体维度，不拆渠道）</div>`;
   html += `<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px">
     <thead><tr>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:left;border-bottom:2px solid #e0e6ed">包名</th>
