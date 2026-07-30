@@ -1268,8 +1268,9 @@ function renderWeeklyPkgTable() {
     const lastBlockRate = lastDenom > 0 ? lastBlockSum / lastDenom : 0;
     const lastPARate = lastDenom > 0 ? lastPASum / lastDenom : 0;
 
-    // 只显示有消耗的包
+    // 只显示有消耗的包，且本周或上周日均收入>=100
     if (thisRev <= 0 && lastRev <= 0) return;
+    if (thisRev / thisDays < 100 && lastRev / lastDays < 100) return;
 
     pkgRows.push({
       package_name: pkg,
