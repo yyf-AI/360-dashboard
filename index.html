@@ -118,7 +118,7 @@ tr:hover td { background: #f5f8fc; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=202607301200"></script>
+<script src="360_dashboard_data.js?v=202607301300"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260','1000262'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260','262'];
@@ -1218,23 +1218,27 @@ function renderWeeklyPkgTable() {
   if (!weeklyData) return;
   const { thisMetrics, lastMetrics } = weeklyData;
   const search = (document.getElementById('weeklyPkgSearch')?.value || '').toLowerCase();
+  const thisDays = weeklyData.thisWeek.length;
+  const lastDays = weeklyData.lastWeek.length;
 
-  // 日均消耗100以上的包
+  // 日均消耗100以上的包（基于本周或上周总消耗）
   const pkgRows = [];
   Object.keys(thisMetrics.pkgMap).forEach(pkg => {
     const thisPkg = thisMetrics.pkgMap[pkg];
     const lastPkg = lastMetrics.pkgMap[pkg] || { pub_data: {}, revenue: 0 };
-    const thisDays = weeklyData.thisWeek.length;
-    const lastDays = weeklyData.lastWeek.length;
     const thisAvgRev = thisPkg.revenue / thisDays;
     const lastAvgRev = lastPkg.revenue / lastDays;
 
+    // 筛选：本周或上周日均消耗>=100
     if (thisAvgRev < 100 && lastAvgRev < 100) return;
     if (search && !pkg.toLowerCase().includes(search)) return;
 
     PUBS.forEach((p, pi) => {
       const thisPD = thisPkg.pub_data[p];
       const lastPD = lastPkg.pub_data[p] || { rev: 0, conv: 0, block: 0, pa: 0 };
+
+      // 该渠道在本周/上周有消耗才显示
+      if (thisPD.rev <= 0 && lastPD.rev <= 0) return;
 
       const thisDenom = thisPD.conv + thisPD.block;
       const lastDenom = lastPD.conv + lastPD.block;
@@ -1245,9 +1249,6 @@ function renderWeeklyPkgTable() {
       const lastBlock = lastDenom > 0 ? lastPD.block / lastDenom : 0;
       const thisPA = thisDenom > 0 ? thisPD.pa / thisDenom : 0;
       const lastPA = lastDenom > 0 ? lastPD.pa / lastDenom : 0;
-
-      // 只显示有变化或数值较大的
-      if (thisPD.rev < 10 && lastPD.rev < 10) return;
 
       pkgRows.push({
         package_name: pkg,
@@ -1272,13 +1273,13 @@ function renderWeeklyPkgTable() {
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周收入</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周作弊率</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周作弊率</th>
-      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">作弊率变化</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周Block</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周Block</th>
-      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">Block变化</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周PA</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周PA</th>
-      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">PA变化</th>
     </tr></thead><tbody>`;
 
   pkgRows.forEach(r => {
@@ -1290,7 +1291,7 @@ function renderWeeklyPkgTable() {
     const changeIcon = (v) => v > 0.05 ? '↑' : v < -0.05 ? '↓' : '';
 
     html += `<tr>
-      <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis">${r.package_name}</td>
+      <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis" title="${r.package_name}">${r.package_name}</td>
       <td style="font-weight:600;color:#1976d2">${r.publisher}</td>
       <td style="text-align:right">${fmt$(r.thisRevenue)}</td>
       <td style="text-align:right">${fmt$(r.lastRevenue)}</td>
