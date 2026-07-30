@@ -7,48 +7,48 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f1923; color: #e0e0e0; }
-.header { background: linear-gradient(135deg, #1a2a3a, #0f1923); padding: 20px 30px; border-bottom: 1px solid #2a3a4a; display: flex; justify-content: space-between; align-items: center; }
-.header h1 { font-size: 22px; color: #4fc3f7; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #333; }
+.header { background: linear-gradient(135deg, #ffffff, #f0f4f8); padding: 20px 30px; border-bottom: 1px solid #e0e6ed; display: flex; justify-content: space-between; align-items: center; }
+.header h1 { font-size: 22px; color: #1976d2; }
 .header .period-selector { display: flex; gap: 8px; }
-.header .period-btn { padding: 6px 16px; border: 1px solid #3a4a5a; background: transparent; color: #aaa; border-radius: 4px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
-.header .period-btn.active, .header .period-btn:hover { background: #4fc3f7; color: #0f1923; border-color: #4fc3f7; }
+.header .period-btn { padding: 6px 16px; border: 1px solid #ccc; background: transparent; color: #666; border-radius: 4px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+.header .period-btn.active, .header .period-btn:hover { background: #1976d2; color: #fff; border-color: #1976d2; }
 .container { padding: 20px 30px; }
 .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 24px; }
-.card { background: #1a2a3a; border-radius: 8px; padding: 18px; border: 1px solid #2a3a4a; }
-.card .label { font-size: 12px; color: #7a8a9a; text-transform: uppercase; letter-spacing: 0.5px; }
+.card { background: #fff; border-radius: 8px; padding: 18px; border: 1px solid #e0e6ed; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.card .label { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
 .card .value { font-size: 28px; font-weight: 700; margin-top: 6px; }
-.card .sub { font-size: 12px; color: #6a7a8a; margin-top: 4px; }
-.card.green .value { color: #66bb6a; }
-.card.red .value { color: #ef5350; }
-.card.blue .value { color: #42a5f5; }
-.card.orange .value { color: #ffa726; }
-.card.purple .value { color: #ab47bc; }
+.card .sub { font-size: 12px; color: #999; margin-top: 4px; }
+.card.green .value { color: #43a047; }
+.card.red .value { color: #e53935; }
+.card.blue .value { color: #1e88e5; }
+.card.orange .value { color: #fb8c00; }
+.card.purple .value { color: #8e24aa; }
 .charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
-.chart-box { background: #1a2a3a; border-radius: 8px; padding: 18px; border: 1px solid #2a3a4a; }
-.chart-box h3 { font-size: 14px; color: #90a4ae; margin-bottom: 12px; font-weight: 500; }
+.chart-box { background: #fff; border-radius: 8px; padding: 18px; border: 1px solid #e0e6ed; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.chart-box h3 { font-size: 14px; color: #666; margin-bottom: 12px; font-weight: 500; }
 .chart-box canvas { max-height: 320px; }
 .full-width { grid-column: 1 / -1; }
-.table-box { background: #1a2a3a; border-radius: 8px; padding: 18px; border: 1px solid #2a3a4a; margin-bottom: 24px; }
-.table-box h3 { font-size: 14px; color: #90a4ae; margin-bottom: 12px; font-weight: 500; }
+.table-box { background: #fff; border-radius: 8px; padding: 18px; border: 1px solid #e0e6ed; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.table-box h3 { font-size: 14px; color: #666; margin-bottom: 12px; font-weight: 500; }
 .table-controls { display: flex; gap: 12px; margin-bottom: 12px; align-items: center; }
-.table-controls input, .table-controls select { background: #0f1923; border: 1px solid #3a4a5a; color: #e0e0e0; padding: 6px 12px; border-radius: 4px; font-size: 13px; }
+.table-controls input, .table-controls select { background: #fff; border: 1px solid #ccc; color: #333; padding: 6px 12px; border-radius: 4px; font-size: 13px; }
 .table-controls input { width: 260px; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
-th { background: #152535; color: #7a9ab5; text-align: left; padding: 10px 12px; border-bottom: 2px solid #2a3a4a; cursor: pointer; user-select: none; white-space: nowrap; }
-th:hover { color: #4fc3f7; }
-th.sorted-asc::after { content: ' ▲'; color: #4fc3f7; }
-th.sorted-desc::after { content: ' ▼'; color: #4fc3f7; }
-td { padding: 8px 12px; border-bottom: 1px solid #1e2e3e; white-space: nowrap; }
-tr:hover td { background: #1e2e3e; }
-.fraud-high { color: #ef5350; font-weight: 600; }
-.fraud-mid { color: #ffa726; }
-.fraud-low { color: #66bb6a; }
-.pub-tag { display: inline-block; padding: 2px 6px; border-radius: 3px; font-size: 11px; margin: 1px; background: #2a3a4a; color: #90a4ae; }
-.pub-tag.flagged { background: #3e1a1a; color: #ef5350; }
+th { background: #f0f4f8; color: #555; text-align: left; padding: 10px 12px; border-bottom: 2px solid #e0e6ed; cursor: pointer; user-select: none; white-space: nowrap; }
+th:hover { color: #1976d2; }
+th.sorted-asc::after { content: ' ▲'; color: #1976d2; }
+th.sorted-desc::after { content: ' ▼'; color: #1976d2; }
+td { padding: 8px 12px; border-bottom: 1px solid #eee; white-space: nowrap; }
+tr:hover td { background: #f5f8fc; }
+.fraud-high { color: #e53935; font-weight: 600; }
+.fraud-mid { color: #fb8c00; }
+.fraud-low { color: #43a047; }
+.pub-tag { display: inline-block; padding: 2px 6px; border-radius: 3px; font-size: 11px; margin: 1px; background: #e8edf2; color: #666; }
+.pub-tag.flagged { background: #fdecea; color: #e53935; }
 .pagination { display: flex; gap: 6px; margin-top: 12px; justify-content: center; }
-.pagination button { padding: 4px 12px; background: #1a2a3a; border: 1px solid #3a4a5a; color: #aaa; border-radius: 4px; cursor: pointer; font-size: 12px; }
-.pagination button.active { background: #4fc3f7; color: #0f1923; border-color: #4fc3f7; }
+.pagination button { padding: 4px 12px; background: #fff; border: 1px solid #ccc; color: #666; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.pagination button.active { background: #1976d2; color: #fff; border-color: #1976d2; }
 @media (max-width: 1200px) { .cards { grid-template-columns: repeat(3, 1fr); } .charts-row { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -101,7 +101,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=202607291109"></script>
+<script src="360_dashboard_data.js?v=202607301102"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260','1000262'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260','262'];
