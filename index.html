@@ -56,6 +56,7 @@ tr:hover td { background: #f5f8fc; }
 <div class="header">
   <h1>360 数据监控看板</h1>
   <div class="period-selector" id="period-selector">
+    <button class="period-btn" data-period="weekly" onclick="showWeeklyView()">周维度</button>
     <button class="period-btn active" data-period="all">全部</button>
   </div>
 </div>
@@ -73,6 +74,22 @@ tr:hover td { background: #f5f8fc; }
   <div id="pub-flagged-section"></div>
   <div id="suspend-section"></div>
   <div id="good-channel-section"></div>
+
+  <!-- 周维度模块 -->
+  <div id="weekly-section" style="display:none">
+    <div class="table-box">
+      <h3>渠道维度 - 本周 vs 上周 作弊率/Block率/PA率变化</h3>
+      <div id="weekly-pub-table"></div>
+    </div>
+    <div class="table-box">
+      <h3>包维度 - 日均消耗$100以上包的渠道变化</h3>
+      <div class="table-controls">
+        <input id="weeklyPkgSearch" type="text" placeholder="搜索包名..." oninput="renderWeeklyPkgTable()" style="width:260px;background:#fff;border:1px solid #ccc;color:#333;padding:6px 12px;border-radius:4px;font-size:13px">
+      </div>
+      <div id="weekly-pkg-table"></div>
+    </div>
+  </div>
+
   <div class="table-box">
     <h3>Campaign 明细</h3>
     <div class="table-controls">
@@ -101,7 +118,7 @@ tr:hover td { background: #f5f8fc; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=202607301102"></script>
+<script src="360_dashboard_data.js?v=202607301200"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260','1000262'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260','262'];
@@ -929,7 +946,23 @@ function renderTable() {
 function renderPeriodButtons() {
   const sel = document.getElementById('period-selector');
   const dayPeriods = getDayPeriods();
-  sel.innerHTML = '<button class="period-btn active" data-period="all">全部</button>';
+  // Keep the weekly button, update daily buttons
+  const weeklyBtn = sel.querySelector('[data-period="weekly"]');
+  sel.innerHTML = '';
+  if (weeklyBtn) sel.appendChild(weeklyBtn);
+  else {
+    const wb = document.createElement('button');
+    wb.className = 'period-btn';
+    wb.dataset.period = 'weekly';
+    wb.textContent = '周维度';
+    wb.onclick = () => showWeeklyView();
+    sel.appendChild(wb);
+  }
+  const allBtn = document.createElement('button');
+  allBtn.className = 'period-btn active';
+  allBtn.dataset.period = 'all';
+  allBtn.textContent = '全部';
+  sel.appendChild(allBtn);
   dayPeriods.forEach(p => {
     const btn = document.createElement('button');
     btn.className = 'period-btn';
@@ -942,6 +975,14 @@ function renderPeriodButtons() {
     const btn = e.target.closest('.period-btn');
     if (!btn) return;
     const val = btn.dataset.period;
+    if (val === 'weekly') {
+      showWeeklyView();
+      sel.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      return;
+    }
+    // 切换回日维度视图
+    showDailyView();
     if (val === 'all') {
       // Toggle all: if all already selected, deselect all; otherwise select all
       if (currentPeriod.has('all') || currentPeriod.size === dayPeriods.length) {
@@ -985,6 +1026,290 @@ document.addEventListener('click', function(e) {
     if (dd && menu && !dd.contains(e.target) && !menu.contains(e.target)) menu.style.display = 'none';
   });
 });
+
+// ==================== 周维度模块 ====================
+let weeklyData = null;
+
+function getWeeklyPeriods() {
+  const allPeriods = [...new Set(DATA.map(d => d.period))].filter(p => /^\d{4}$/.test(p)).sort();
+  // 获取最近两周的数据
+  const thisWeek = allPeriods.slice(-7);
+  const lastWeek = allPeriods.slice(-14, -7);
+  return { thisWeek, lastWeek };
+}
+
+function aggregateWeeklyData(periods) {
+  const map = {};
+  DATA.filter(d => periods.includes(d.period)).forEach(d => {
+    const key = d.campaign_id + '|' + d.package_name;
+    if (!map[key]) {
+      map[key] = {
+        campaign_id: d.campaign_id,
+        package_name: d.package_name,
+        advertiser: normAdv(d.advertiser) || d.campaign_id,
+        revenue: 0, conversions: 0,
+        blockSum: 0, paSum: 0, convSum: 0,
+        pub_data: {}
+      };
+      PUBS.forEach(p => {
+        map[key].pub_data[p] = { rev: 0, conv: 0, block: 0, pa: 0 };
+      });
+    }
+    const e = map[key];
+    e.revenue += d.revenue;
+    e.conversions += d.conversions;
+    e.convSum += d.conversions;
+    e.blockSum += d.conversions * d.overall_block;
+    e.paSum += d.conversions * d.overall_pa;
+    PUBS.forEach(p => {
+      const pd = e.pub_data[p];
+      pd.rev += d.pub_rev?.[p] || 0;
+      pd.conv += d.pub_conv?.[p] || 0;
+      pd.block += d.pub_block?.[p] || 0;
+      pd.pa += d.pub_pa?.[p] || 0;
+    });
+  });
+  return Object.values(map);
+}
+
+function calcWeeklyMetrics(data, days) {
+  // 渠道维度聚合
+  const pubMetrics = {};
+  PUBS.forEach(p => { pubMetrics[p] = { rev: 0, conv: 0, block: 0, pa: 0 }; });
+
+  data.forEach(d => {
+    PUBS.forEach(p => {
+      const pd = d.pub_data[p];
+      pubMetrics[p].rev += pd.rev;
+      pubMetrics[p].conv += pd.conv;
+      pubMetrics[p].block += pd.block;
+      pubMetrics[p].pa += pd.pa;
+    });
+  });
+
+  const pubResult = {};
+  PUBS.forEach(p => {
+    const m = pubMetrics[p];
+    const denom = m.conv + m.block;
+    pubResult[p] = {
+      revenue: m.rev,
+      fraud: denom > 0 ? (m.pa + m.block) / denom : 0,
+      block: denom > 0 ? m.block / denom : 0,
+      pa: denom > 0 ? m.pa / denom : 0
+    };
+  });
+
+  // 包维度聚合
+  const pkgMap = {};
+  data.forEach(d => {
+    const pkg = d.package_name;
+    if (!pkgMap[pkg]) {
+      pkgMap[pkg] = { package_name: pkg, revenue: 0, pub_data: {} };
+      PUBS.forEach(p => { pkgMap[pkg].pub_data[p] = { rev: 0, conv: 0, block: 0, pa: 0 }; });
+    }
+    const e = pkgMap[pkg];
+    e.revenue += d.revenue;
+    PUBS.forEach(p => {
+      const pd = d.pub_data[p];
+      e.pub_data[p].rev += pd.rev;
+      e.pub_data[p].conv += pd.conv;
+      e.pub_data[p].block += pd.block;
+      e.pub_data[p].pa += pd.pa;
+    });
+  });
+
+  return { pubResult, pkgMap };
+}
+
+function showWeeklyView() {
+  const { thisWeek, lastWeek } = getWeeklyPeriods();
+  if (thisWeek.length === 0 || lastWeek.length === 0) {
+    alert('数据不足，无法进行周对比');
+    return;
+  }
+
+  const thisWeekData = aggregateWeeklyData(thisWeek);
+  const lastWeekData = aggregateWeeklyData(lastWeek);
+
+  const thisMetrics = calcWeeklyMetrics(thisWeekData, thisWeek.length);
+  const lastMetrics = calcWeeklyMetrics(lastWeekData, lastWeek.length);
+
+  weeklyData = { thisMetrics, lastMetrics, thisWeek, lastWeek };
+
+  // 渲染渠道维度表格
+  renderWeeklyPubTable();
+
+  // 渲染包维度表格
+  renderWeeklyPkgTable();
+
+  // 切换显示
+  document.getElementById('weekly-section').style.display = 'block';
+  document.querySelectorAll('.charts-row, #quadrant-section, #pub-flagged-section, #suspend-section, #good-channel-section, .table-box:not(.table-box h3)').forEach(el => {
+    if (!el.closest('#weekly-section')) el.style.display = 'none';
+  });
+  document.querySelector('.cards').style.display = 'none';
+}
+
+function showDailyView() {
+  document.getElementById('weekly-section').style.display = 'none';
+  document.querySelectorAll('.charts-row, #quadrant-section, #pub-flagged-section, #suspend-section, #good-channel-section, .table-box').forEach(el => {
+    el.style.display = '';
+  });
+  document.querySelector('.cards').style.display = '';
+  renderCards();
+  renderCharts();
+  renderTable();
+}
+
+function renderWeeklyPubTable() {
+  if (!weeklyData) return;
+  const { thisMetrics, lastMetrics } = weeklyData;
+
+  let html = `<table style="width:100%;border-collapse:collapse;font-size:13px">
+    <thead><tr>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:left;border-bottom:2px solid #e0e6ed">渠道</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">本周收入</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">上周收入</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">收入变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">本周作弊率</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">上周作弊率</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">作弊率变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">本周Block率</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">上周Block率</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">Block变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">本周PA率</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">上周PA率</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">PA变化</th>
+    </tr></thead><tbody>`;
+
+  PUBS.forEach((p, i) => {
+    const thisM = thisMetrics.pubResult[p];
+    const lastM = lastMetrics.pubResult[p];
+    const revChange = thisM.revenue - lastM.revenue;
+    const fraudChange = thisM.fraud - lastM.fraud;
+    const blockChange = thisM.block - lastM.block;
+    const paChange = thisM.pa - lastM.pa;
+
+    const changeClass = (v) => v > 0 ? 'color:#e53935' : v < 0 ? 'color:#43a047' : '';
+    const changeIcon = (v) => v > 0 ? '↑' : v < 0 ? '↓' : '-';
+
+    html += `<tr>
+      <td style="font-weight:600;color:#1976d2">${PUB_SHORT[i]}</td>
+      <td style="text-align:right">${fmt$(thisM.revenue)}</td>
+      <td style="text-align:right">${fmt$(lastM.revenue)}</td>
+      <td style="text-align:right;${changeClass(revChange)}">${fmt$(Math.abs(revChange))} ${changeIcon(revChange)}</td>
+      <td style="text-align:right">${fmtPct(thisM.fraud)}</td>
+      <td style="text-align:right">${fmtPct(lastM.fraud)}</td>
+      <td style="text-align:right;${changeClass(fraudChange)}">${(fraudChange*100).toFixed(1)}% ${changeIcon(fraudChange)}</td>
+      <td style="text-align:right">${fmtPct(thisM.block)}</td>
+      <td style="text-align:right">${fmtPct(lastM.block)}</td>
+      <td style="text-align:right;${changeClass(blockChange)}">${(blockChange*100).toFixed(1)}% ${changeIcon(blockChange)}</td>
+      <td style="text-align:right">${fmtPct(thisM.pa)}</td>
+      <td style="text-align:right">${fmtPct(lastM.pa)}</td>
+      <td style="text-align:right;${changeClass(paChange)}">${(paChange*100).toFixed(1)}% ${changeIcon(paChange)}</td>
+    </tr>`;
+  });
+
+  html += '</tbody></table>';
+  document.getElementById('weekly-pub-table').innerHTML = html;
+}
+
+function renderWeeklyPkgTable() {
+  if (!weeklyData) return;
+  const { thisMetrics, lastMetrics } = weeklyData;
+  const search = (document.getElementById('weeklyPkgSearch')?.value || '').toLowerCase();
+
+  // 日均消耗100以上的包
+  const pkgRows = [];
+  Object.keys(thisMetrics.pkgMap).forEach(pkg => {
+    const thisPkg = thisMetrics.pkgMap[pkg];
+    const lastPkg = lastMetrics.pkgMap[pkg] || { pub_data: {}, revenue: 0 };
+    const thisDays = weeklyData.thisWeek.length;
+    const lastDays = weeklyData.lastWeek.length;
+    const thisAvgRev = thisPkg.revenue / thisDays;
+    const lastAvgRev = lastPkg.revenue / lastDays;
+
+    if (thisAvgRev < 100 && lastAvgRev < 100) return;
+    if (search && !pkg.toLowerCase().includes(search)) return;
+
+    PUBS.forEach((p, pi) => {
+      const thisPD = thisPkg.pub_data[p];
+      const lastPD = lastPkg.pub_data[p] || { rev: 0, conv: 0, block: 0, pa: 0 };
+
+      const thisDenom = thisPD.conv + thisPD.block;
+      const lastDenom = lastPD.conv + lastPD.block;
+
+      const thisFraud = thisDenom > 0 ? (thisPD.pa + thisPD.block) / thisDenom : 0;
+      const lastFraud = lastDenom > 0 ? (lastPD.pa + lastPD.block) / lastDenom : 0;
+      const thisBlock = thisDenom > 0 ? thisPD.block / thisDenom : 0;
+      const lastBlock = lastDenom > 0 ? lastPD.block / lastDenom : 0;
+      const thisPA = thisDenom > 0 ? thisPD.pa / thisDenom : 0;
+      const lastPA = lastDenom > 0 ? lastPD.pa / lastDenom : 0;
+
+      // 只显示有变化或数值较大的
+      if (thisPD.rev < 10 && lastPD.rev < 10) return;
+
+      pkgRows.push({
+        package_name: pkg,
+        publisher: PUB_SHORT[pi],
+        thisRevenue: thisPD.rev,
+        lastRevenue: lastPD.rev,
+        thisFraud, lastFraud,
+        thisBlock, lastBlock,
+        thisPA, lastPA
+      });
+    });
+  });
+
+  // 按收入降序排序
+  pkgRows.sort((a, b) => b.thisRevenue - a.thisRevenue);
+
+  let html = `<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px">
+    <thead><tr>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:left;border-bottom:2px solid #e0e6ed">包名</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:left;border-bottom:2px solid #e0e6ed">渠道</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周收入</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周收入</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周作弊率</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周作弊率</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周Block</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周Block</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周PA</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周PA</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">变化</th>
+    </tr></thead><tbody>`;
+
+  pkgRows.forEach(r => {
+    const fraudChange = r.thisFraud - r.lastFraud;
+    const blockChange = r.thisBlock - r.lastBlock;
+    const paChange = r.thisPA - r.lastPA;
+
+    const changeClass = (v) => v > 0.05 ? 'color:#e53935;font-weight:600' : v < -0.05 ? 'color:#43a047;font-weight:600' : '';
+    const changeIcon = (v) => v > 0.05 ? '↑' : v < -0.05 ? '↓' : '';
+
+    html += `<tr>
+      <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis">${r.package_name}</td>
+      <td style="font-weight:600;color:#1976d2">${r.publisher}</td>
+      <td style="text-align:right">${fmt$(r.thisRevenue)}</td>
+      <td style="text-align:right">${fmt$(r.lastRevenue)}</td>
+      <td style="text-align:right">${fmtPct(r.thisFraud)}</td>
+      <td style="text-align:right">${fmtPct(r.lastFraud)}</td>
+      <td style="text-align:right;${changeClass(fraudChange)}">${(fraudChange*100).toFixed(1)}% ${changeIcon(fraudChange)}</td>
+      <td style="text-align:right">${fmtPct(r.thisBlock)}</td>
+      <td style="text-align:right">${fmtPct(r.lastBlock)}</td>
+      <td style="text-align:right;${changeClass(blockChange)}">${(blockChange*100).toFixed(1)}% ${changeIcon(blockChange)}</td>
+      <td style="text-align:right">${fmtPct(r.thisPA)}</td>
+      <td style="text-align:right">${fmtPct(r.lastPA)}</td>
+      <td style="text-align:right;${changeClass(paChange)}">${(paChange*100).toFixed(1)}% ${changeIcon(paChange)}</td>
+    </tr>`;
+  });
+
+  html += '</tbody></table></div>';
+  if (pkgRows.length === 0) html = '<p style="color:#999;font-size:13px;padding:20px">暂无符合条件的数据</p>';
+  document.getElementById('weekly-pkg-table').innerHTML = html;
+}
 </script>
 </body>
 </html>
