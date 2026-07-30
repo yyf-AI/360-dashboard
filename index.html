@@ -118,7 +118,7 @@ tr:hover td { background: #f5f8fc; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=202607301300"></script>
+<script src="360_dashboard_data.js?v=202607301400"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260','1000262'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260','262'];
@@ -1032,9 +1032,20 @@ let weeklyData = null;
 
 function getWeeklyPeriods() {
   const allPeriods = [...new Set(DATA.map(d => d.period))].filter(p => /^\d{4}$/.test(p)).sort();
-  // 获取最近两周的数据
-  const thisWeek = allPeriods.slice(-7);
-  const lastWeek = allPeriods.slice(-14, -7);
+  // 如果数据>=14天，取最近7天 vs 前7天
+  // 如果数据<14天，取后3天 vs 前3天
+  let thisWeek, lastWeek;
+  if (allPeriods.length >= 14) {
+    thisWeek = allPeriods.slice(-7);
+    lastWeek = allPeriods.slice(-14, -7);
+  } else if (allPeriods.length >= 6) {
+    const mid = Math.floor(allPeriods.length / 2);
+    thisWeek = allPeriods.slice(mid);
+    lastWeek = allPeriods.slice(0, mid);
+  } else {
+    thisWeek = allPeriods;
+    lastWeek = [];
+  }
   return { thisWeek, lastWeek };
 }
 
