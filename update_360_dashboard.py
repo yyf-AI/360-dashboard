@@ -252,7 +252,7 @@ def get_existing_periods():
 
 
 ARCHIVE_DIR = _DIR / "archive_data"
-KEEP_PERIODS = 7  # 主文件保留最近N个周期
+KEEP_PERIODS = 14  # 主文件保留最近N个周期（支持周对比）
 
 
 def append_data(records, period):
