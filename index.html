@@ -1244,7 +1244,7 @@ function renderWeeklyPkgTable() {
     let thisRev = thisPkg.revenue;
     let thisConv = 0, thisBlock = 0, thisPA = 0;
     PUBS.forEach(p => {
-      const pd = thisPkg.pub_data[p];
+      const pd = thisPkg.pub_data[p] || { conv: 0, block: 0, pa: 0 };
       thisConv += pd.conv;
       thisBlock += pd.block;
       thisPA += pd.pa;
@@ -1258,7 +1258,7 @@ function renderWeeklyPkgTable() {
     let lastRev = lastPkg.revenue;
     let lastConv = 0, lastBlockSum = 0, lastPASum = 0;
     PUBS.forEach(p => {
-      const pd = lastPkg.pub_data[p];
+      const pd = lastPkg.pub_data[p] || { conv: 0, block: 0, pa: 0 };
       lastConv += pd.conv;
       lastBlockSum += pd.block;
       lastPASum += pd.pa;
