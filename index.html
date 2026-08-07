@@ -118,7 +118,7 @@ tr:hover td { background: #f5f8fc; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=202608051000"></script>
+<script src="360_dashboard_data.js?v=202608051100"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260','1000262'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260','262'];
@@ -261,7 +261,7 @@ function renderCards() {
   const totalConv = data.reduce((s,d) => s + d.conversions, 0);
   const avgFraud = data.reduce((s,d) => s + d.overall_fraud, 0) / data.length;
   const flagged = data.filter(d => {
-    return PUBS.some(p => (d.pub_fraud[p] || 0) >= 0.2);
+    return PUBS.some(p => (d.pub_fraud[p] || 0) >= 0.15);
   }).length;
   const days = getSelectedDays().length;
 
@@ -269,7 +269,7 @@ function renderCards() {
     <div class="card blue"><div class="label">总收入</div><div class="value">${fmt$(totalRev)}</div><div class="sub">${data.length} 个campaign</div></div>
     <div class="card green"><div class="label">总安装量</div><div class="value">${totalConv.toLocaleString()}</div><div class="sub">均价 $${(totalRev/totalConv).toFixed(2)}/install</div></div>
     <div class="card orange"><div class="label">平均作弊率</div><div class="value">${fmtPct(avgFraud)}</div><div class="sub">整体加权</div></div>
-    <div class="card red"><div class="label">高危 (>=20%)</div><div class="value">${flagged}</div><div class="sub">占比 ${(flagged/data.length*100).toFixed(1)}%</div></div>
+    <div class="card red"><div class="label">高危 (>=15%)</div><div class="value">${flagged}</div><div class="sub">占比 ${(flagged/data.length*100).toFixed(1)}%</div></div>
     <div class="card purple"><div class="label">360日均收入</div><div class="value">${fmt$(totalRev / days)}</div><div class="sub">${days}天周期</div></div>
   `;
 }
@@ -434,7 +434,7 @@ function renderCharts() {
     Object.values(grouped).forEach(g => {
       const denom = g.convSum + g.blockSum;
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
-      if (g.totalRev / numDays < 100 || fraud <= 0.2) return;
+      if (g.totalRev / numDays < 100 || fraud <= 0.15) return;
       totalRev += g.totalRev;
       totalConv += g.convSum;
       totalBlock += g.blockSum;
@@ -470,7 +470,7 @@ function renderCharts() {
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
       const block = denom > 0 ? g.blockSum / denom : 0;
       const pa = denom > 0 ? g.paSum / denom : 0;
-      if (g.totalRev / numDays < 100 || fraud <= 0.2) return;
+      if (g.totalRev / numDays < 100 || fraud <= 0.15) return;
       pubDetailRows.push({
         publisher: PUB_SHORT[PUBS.indexOf(p)],
         package_name: g.package_name,
@@ -491,7 +491,7 @@ function renderCharts() {
 
   document.getElementById('pub-flagged-section').innerHTML = `
     <div class="table-box">
-      <h3>收入100以上关停渠道 <span style="color:#999;font-size:12px;font-weight:400">（日均收入≥$100 且 作弊率>20%，共${flaggedRows.length}条）</span></h3>
+      <h3>收入100以上关停渠道 <span style="color:#999;font-size:12px;font-weight:400">（日均收入≥$100 且 作弊率>=15%，共${flaggedRows.length}条）</span></h3>
       <div class="table-controls" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
         <div style="position:relative">
           <div id="flaggedAdvDropdown" onclick="toggleMultiSelect('flaggedAdv')" style="padding:6px 28px 6px 10px;border:1px solid #ccc;border-radius:4px;background:#fff;color:#333;font-size:13px;cursor:pointer;min-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">全部广告主 ▾</div>
@@ -548,7 +548,7 @@ function renderCharts() {
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
       const block = denom > 0 ? g.blockSum / denom : 0;
       const pa = denom > 0 ? g.paSum / denom : 0;
-      if (fraud >= 0.2) return;
+      if (fraud >= 0.15) return;
       goodChannelRows.push({
         publisher: PUB_SHORT[PUBS.indexOf(p)],
         package_name: g.package_name,
@@ -565,7 +565,7 @@ function renderCharts() {
 
   document.getElementById('good-channel-section').innerHTML = `
     <div class="table-box">
-      <h3>优化渠道明细 <span style="color:#999;font-size:12px;font-weight:400">（高收入包中作弊率<20%的渠道，共${goodChannelRows.length}条）</span></h3>
+      <h3>优化渠道明细 <span style="color:#999;font-size:12px;font-weight:400">（高收入包中作弊率<15%的渠道，共${goodChannelRows.length}条）</span></h3>
       <div class="table-controls">
         <select id="goodRevFilter" onchange="renderGoodTable()">
           <option value="100">日均收入 >= $100</option>
@@ -574,7 +574,6 @@ function renderCharts() {
           <option value="1000">日均收入 >= $1000</option>
         </select>
         <select id="goodFraudFilter" onchange="renderGoodTable()">
-          <option value="20">作弊率 < 20%</option>
           <option value="15">作弊率 < 15%</option>
           <option value="10">作弊率 < 10%</option>
           <option value="5">作弊率 < 5%</option>
@@ -616,7 +615,7 @@ function renderCharts() {
       const denom = conv + block;
       const fraud = denom > 0 ? (pa + block) / denom : 0;
       const avgRev = rev / numDays;
-      if (avgRev >= 100 || fraud <= 0.2) return;
+      if (avgRev >= 100 || fraud <= 0.15) return;
       suspendDetailRows.push({
         publisher: PUB_SHORT[pi],
         package_name: d.package_name,
@@ -634,7 +633,7 @@ function renderCharts() {
 
   document.getElementById('suspend-section').innerHTML = `
     <div class="table-box">
-      <h3>收入100以下关停渠道 <span id="suspend-count" style="color:#999;font-size:12px;font-weight:400">（渠道日均收入<$100 且 作弊率>20%，共${suspendDetailRows.length}条）</span></h3>
+      <h3>收入100以下关停渠道 <span id="suspend-count" style="color:#999;font-size:12px;font-weight:400">（渠道日均收入<$100 且 作弊率>=15%，共${suspendDetailRows.length}条）</span></h3>
       <div class="table-controls">
         <select id="suspendPubFilter" onchange="renderSuspendTable()">
           <option value="all">全部渠道</option>
@@ -728,7 +727,7 @@ function renderFlaggedTable() {
     </tr>`;
   }).join('');
   const h3 = document.querySelector('#pub-flagged-section h3 span');
-  if (h3) h3.textContent = `（日均收入≥$100 且 作弊率>20%，共${filtered.length}条）`;
+  if (h3) h3.textContent = `（日均收入≥$100 且 作弊率>=15%，共${filtered.length}条）`;
 }
 
 function exportFlaggedCSV() {
@@ -819,7 +818,7 @@ function renderSuspendTable() {
   const tbody = document.getElementById('suspend-tbody');
   if (!tbody) return;
   const countEl = document.getElementById('suspend-count');
-  if (countEl) countEl.textContent = `（渠道日均收入<$100 且 作弊率>20%，共${filtered.length}条）`;
+  if (countEl) countEl.textContent = `（渠道日均收入<$100 且 作弊率>=15%，共${filtered.length}条）`;
   tbody.innerHTML = filtered.map(r => {
     const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
     return `<tr>
