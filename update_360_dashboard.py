@@ -274,7 +274,7 @@ def append_data(records, period):
 def archive_old_periods():
     """将主文件中超过KEEP_PERIODS个周期的旧数据移到archive_data目录"""
     content = DASHBOARD_DATA.read_text(encoding="utf-8")
-    match = re.search(r'const\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    match = re.search(r'var\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
     if not match:
         return
 
@@ -297,7 +297,7 @@ def archive_old_periods():
         log.info(f"Archived period {p}: {len(rows)} records → {archive_file.name}")
 
     main_data = [d for d in data if d['period'] in keep_periods]
-    main_js = 'const DATA = ' + json.dumps(main_data, ensure_ascii=False, separators=(',', ':')) + ';\n'
+    main_js = 'var DATA = ' + json.dumps(main_data, ensure_ascii=False, separators=(',', ':')) + ';\n'
     DASHBOARD_DATA.write_text(main_js, encoding="utf-8")
     log.info(f"Main file trimmed: {len(data)} → {len(main_data)} records ({len(keep_periods)} periods)")
 
@@ -344,7 +344,7 @@ def format_report_content(rows, total_rev, label):
 def backfill_empty_advertisers(token):
     """查询postback表获取campaign→advertiser映射，补全JS数据中空的advertiser字段"""
     content = DASHBOARD_DATA.read_text(encoding="utf-8")
-    match = re.search(r'const\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    match = re.search(r'var\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
     if not match:
         log.warning("Cannot parse DATA, skipping backfill")
         return
@@ -381,7 +381,7 @@ def backfill_empty_advertisers(token):
                 patched += 1
 
     if patched > 0:
-        new_js = f"const DATA = {json.dumps(data, ensure_ascii=False)};\n"
+        new_js = f"var DATA = {json.dumps(data, ensure_ascii=False)};\n"
         DASHBOARD_DATA.write_text(new_js, encoding="utf-8")
         log.info(f"Backfilled {patched} records with advertiser from postback table")
     else:
@@ -394,7 +394,7 @@ def send_high_fraud_report(period):
     from collections import defaultdict
 
     content = DASHBOARD_DATA.read_text(encoding="utf-8")
-    match = re.search(r'const\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    match = re.search(r'var\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
     if not match:
         log.warning("Cannot parse DATA from JS file, skipping report")
         return
@@ -466,7 +466,7 @@ def send_optimize_channel_report(period):
     from collections import defaultdict
 
     content = DASHBOARD_DATA.read_text(encoding="utf-8")
-    match = re.search(r'const\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    match = re.search(r'var\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
     if not match:
         log.warning("Cannot parse DATA from JS file, skipping optimize report")
         return
