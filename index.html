@@ -118,7 +118,7 @@ tr:hover td { background: #f5f8fc; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=202608071736"></script>
+<script src="360_dashboard_data.js?v=202608071737"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260','1000262'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260','262'];
@@ -336,7 +336,7 @@ function renderCharts() {
     type: 'bar',
     data: {
       labels: PUB_SHORT,
-      datasets: [{ label: '平均作弊率', data: pubFraudAvg.map(v => v*100), backgroundColor: pubFraudAvg.map(v => v >= 0.3 ? '#ef5350' : v >= 0.15 ? '#ffa726' : '#66bb6a'), borderRadius: 4 }]
+      datasets: [{ label: '平均作弊率', data: pubFraudAvg.map(v => v*100), backgroundColor: pubFraudAvg.map(v => v >= 0.3 ? '#ef5350' : v >= 0.20 ? '#ffa726' : '#66bb6a'), borderRadius: 4 }]
     },
     options: {
       responsive: true, plugins: { legend: { display: false }, annotation: {} },
@@ -378,7 +378,7 @@ function renderCharts() {
         <td>${(d.package_name||'').substring(0,30)}</td>
         <td>${(d.advertiser||'').substring(0,22)}</td>
         <td>${fmt$(d.revenue / days)}</td>
-        <td class="${d.overall_fraud >= 0.3 ? 'fraud-high' : d.overall_fraud >= 0.15 ? 'fraud-mid' : 'fraud-low'}">${fmtPct(d.overall_fraud)}</td>
+        <td class="${d.overall_fraud >= 0.3 ? 'fraud-high' : d.overall_fraud >= 0.20 ? 'fraud-mid' : 'fraud-low'}">${fmtPct(d.overall_fraud)}</td>
         <td>${fmtPct(d.overall_block)}</td>
         <td>${fmtPct(d.overall_pa)}</td>
         <td>${pubs}</td>
