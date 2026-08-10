@@ -101,7 +101,7 @@ tr:hover td { background: #1e2e3e; }
   </div>
 </div>
 
-<script src="360_dashboard_data.js?v=202608101725"></script>
+<script src="360_dashboard_data.js?v=202608102016"></script>
 <script>
 const PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260'];
 const PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260'];
@@ -260,7 +260,7 @@ function renderCards() {
   const totalConv = data.reduce((s,d) => s + d.conversions, 0);
   const avgFraud = data.reduce((s,d) => s + d.overall_fraud, 0) / data.length;
   const flagged = data.filter(d => {
-    return PUBS.some(p => (d.pub_fraud[p] || 0) >= 0.2);
+    return PUBS.some(p => (d.pub_fraud[p] || 0) >= 0.15);
   }).length;
   const days = getSelectedDays().length;
 
@@ -268,7 +268,7 @@ function renderCards() {
     <div class="card blue"><div class="label">总收入</div><div class="value">${fmt$(totalRev)}</div><div class="sub">${data.length} 个campaign</div></div>
     <div class="card green"><div class="label">总安装量</div><div class="value">${totalConv.toLocaleString()}</div><div class="sub">均价 $${(totalRev/totalConv).toFixed(2)}/install</div></div>
     <div class="card orange"><div class="label">平均作弊率</div><div class="value">${fmtPct(avgFraud)}</div><div class="sub">整体加权</div></div>
-    <div class="card red"><div class="label">高危 (>=20%)</div><div class="value">${flagged}</div><div class="sub">占比 ${(flagged/data.length*100).toFixed(1)}%</div></div>
+    <div class="card red"><div class="label">高危 (>=15%)</div><div class="value">${flagged}</div><div class="sub">占比 ${(flagged/data.length*100).toFixed(1)}%</div></div>
     <div class="card purple"><div class="label">360日均收入</div><div class="value">${fmt$(totalRev / days)}</div><div class="sub">${days}天周期</div></div>
   `;
 }
@@ -335,7 +335,7 @@ function renderCharts() {
     type: 'bar',
     data: {
       labels: PUB_SHORT,
-      datasets: [{ label: '平均作弊率', data: pubFraudAvg.map(v => v*100), backgroundColor: pubFraudAvg.map(v => v >= 0.3 ? '#ef5350' : v >= 0.20 ? '#ffa726' : '#66bb6a'), borderRadius: 4 }]
+      datasets: [{ label: '平均作弊率', data: pubFraudAvg.map(v => v*100), backgroundColor: pubFraudAvg.map(v => v >= 0.3 ? '#ef5350' : v >= 0.15 ? '#ffa726' : '#66bb6a'), borderRadius: 4 }]
     },
     options: {
       responsive: true, plugins: { legend: { display: false }, annotation: {} },
@@ -377,7 +377,7 @@ function renderCharts() {
         <td>${(d.package_name||'').substring(0,30)}</td>
         <td>${(d.advertiser||'').substring(0,22)}</td>
         <td>${fmt$(d.revenue / days)}</td>
-        <td class="${d.overall_fraud >= 0.3 ? 'fraud-high' : d.overall_fraud >= 0.20 ? 'fraud-mid' : 'fraud-low'}">${fmtPct(d.overall_fraud)}</td>
+        <td class="${d.overall_fraud >= 0.3 ? 'fraud-high' : d.overall_fraud >= 0.15 ? 'fraud-mid' : 'fraud-low'}">${fmtPct(d.overall_fraud)}</td>
         <td>${fmtPct(d.overall_block)}</td>
         <td>${fmtPct(d.overall_pa)}</td>
         <td>${pubs}</td>
@@ -547,7 +547,7 @@ function renderCharts() {
       const fraud = denom > 0 ? (g.paSum + g.blockSum) / denom : 0;
       const block = denom > 0 ? g.blockSum / denom : 0;
       const pa = denom > 0 ? g.paSum / denom : 0;
-      if (fraud >= 0.2) return;
+      if (fraud >= 0.15) return;
       goodChannelRows.push({
         publisher: PUB_SHORT[PUBS.indexOf(p)],
         package_name: g.package_name,
@@ -714,7 +714,7 @@ function renderFlaggedTable() {
   const tbody = document.getElementById('flagged-tbody');
   if (!tbody) return;
   tbody.innerHTML = filtered.map(r => {
-    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.20 ? 'fraud-mid' : 'fraud-low';
+    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
     return `<tr>
       <td style="font-weight:600;color:#4fc3f7">${r.publisher}</td>
       <td>${r.package_name}</td>
@@ -766,7 +766,7 @@ function renderGoodTable() {
   const tbody = document.getElementById('good-tbody');
   if (!tbody) return;
   tbody.innerHTML = filtered.map(r => {
-    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.20 ? 'fraud-mid' : 'fraud-low';
+    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
     return `<tr>
       <td style="font-weight:600;color:#66bb6a">${r.publisher}</td>
       <td>${r.package_name}</td>
@@ -820,7 +820,7 @@ function renderSuspendTable() {
   const countEl = document.getElementById('suspend-count');
   if (countEl) countEl.textContent = `（渠道日均收入<$100 且 作弊率>20%，共${filtered.length}条）`;
   tbody.innerHTML = filtered.map(r => {
-    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.20 ? 'fraud-mid' : 'fraud-low';
+    const fClass = r.fraud >= 0.3 ? 'fraud-high' : r.fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
     return `<tr>
       <td><span class="pub-tag flagged">${r.publisher}</span></td>
       <td>${r.package_name}</td>
@@ -908,7 +908,7 @@ function renderTable() {
   const slice = filteredData.slice(start, start + PAGE_SIZE);
 
   document.getElementById('tableBody').innerHTML = slice.map(d => {
-    const fClass = d.overall_fraud >= 0.3 ? 'fraud-high' : d.overall_fraud >= 0.20 ? 'fraud-mid' : 'fraud-low';
+    const fClass = d.overall_fraud >= 0.3 ? 'fraud-high' : d.overall_fraud >= 0.15 ? 'fraud-mid' : 'fraud-low';
     const flags = PUBS.filter(p => (d.pub_fraud?.[p] || 0) >= 0.3);
     const pubTags = PUBS.map((p,i) => {
       const f = d.pub_fraud?.[p] || 0;
