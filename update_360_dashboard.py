@@ -22,8 +22,8 @@ KUBUUBI_CONFIG = Path(r"C:\Users\Mi\kyuubi-config.json")
 LOG_FILE = _DIR / "update_360_dashboard.log"
 
 BASE_URL = "http://proxy-service-http-alisgp0-dp.api.xiaomi.net"
-PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260']
-PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260']
+PUBS = ['1000218','1000220','1000222','1000223','1000224','1000226','1000253','1000254','1000255','1000260','1000262']
+PUB_SHORT = ['218','220','222','223','224','226','253','254','255','260','262']
 WEBHOOK_URL = "https://open.feishu.cn/open-apis/bot/v2/hook/8843f281-2440-4f13-a75f-4ef0e7a815d4"
 
 SQL_TEMPLATE = """
