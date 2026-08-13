@@ -1173,14 +1173,16 @@ function showDailyView() {
 
 function renderWeeklyPubTable() {
   if (!weeklyData) return;
-  const { thisMetrics, lastMetrics } = weeklyData;
+  const { thisMetrics, lastMetrics, thisWeek, lastWeek } = weeklyData;
+  const thisDays = thisWeek.length;
+  const lastDays = lastWeek.length;
 
   let html = `<table style="width:100%;border-collapse:collapse;font-size:13px">
     <thead><tr>
       <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:left;border-bottom:2px solid #e0e6ed">渠道</th>
-      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">本周收入</th>
-      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">上周收入</th>
-      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">收入变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">本周日均收入</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">上周日均收入</th>
+      <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">日均变化</th>
       <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">本周作弊率</th>
       <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">上周作弊率</th>
       <th style="background:#f0f4f8;color:#555;padding:8px 10px;text-align:right;border-bottom:2px solid #e0e6ed">作弊率变化</th>
@@ -1195,7 +1197,10 @@ function renderWeeklyPubTable() {
   PUBS.forEach((p, i) => {
     const thisM = thisMetrics.pubResult[p];
     const lastM = lastMetrics.pubResult[p];
-    const revChange = thisM.revenue - lastM.revenue;
+    // 日均收入 = 总收入 / 天数
+    const thisRevDaily = thisM.revenue / thisDays;
+    const lastRevDaily = lastM.revenue / lastDays;
+    const revChange = thisRevDaily - lastRevDaily;
     const fraudChange = thisM.fraud - lastM.fraud;
     const blockChange = thisM.block - lastM.block;
     const paChange = thisM.pa - lastM.pa;
@@ -1205,8 +1210,8 @@ function renderWeeklyPubTable() {
 
     html += `<tr>
       <td style="font-weight:600;color:#1976d2">${PUB_SHORT[i]}</td>
-      <td style="text-align:right">${fmt$(thisM.revenue)}</td>
-      <td style="text-align:right">${fmt$(lastM.revenue)}</td>
+      <td style="text-align:right">${fmt$(thisRevDaily)}</td>
+      <td style="text-align:right">${fmt$(lastRevDaily)}</td>
       <td style="text-align:right;${changeClass(revChange)}">${fmt$(Math.abs(revChange))} ${changeIcon(revChange)}</td>
       <td style="text-align:right">${fmtPct(thisM.fraud)}</td>
       <td style="text-align:right">${fmtPct(lastM.fraud)}</td>
@@ -1288,9 +1293,9 @@ function renderWeeklyPkgTable() {
   html += `<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px">
     <thead><tr>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:left;border-bottom:2px solid #e0e6ed">包名</th>
-      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周收入</th>
-      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周收入</th>
-      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">收入变化</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周日均收入</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周日均收入</th>
+      <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">日均变化</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">本周作弊率</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">上周作弊率</th>
       <th style="background:#f0f4f8;color:#555;padding:6px 8px;text-align:right;border-bottom:2px solid #e0e6ed">作弊率变化</th>
@@ -1306,7 +1311,10 @@ function renderWeeklyPkgTable() {
     const fraudChange = r.thisFraud - r.lastFraud;
     const blockChange = r.thisBlock - r.lastBlock;
     const paChange = r.thisPA - r.lastPA;
-    const revChange = r.thisRevenue - r.lastRevenue;
+    // 日均收入 = 总收入 / 天数
+    const thisRevDaily = r.thisRevenue / thisDays;
+    const lastRevDaily = r.lastRevenue / lastDays;
+    const revChange = thisRevDaily - lastRevDaily;
 
     const changeClass = (v) => v > 0.05 ? 'color:#e53935;font-weight:600' : v < -0.05 ? 'color:#43a047;font-weight:600' : '';
     const revChangeClass = (v) => v > 0 ? 'color:#43a047' : v < 0 ? 'color:#e53935' : '';
@@ -1315,8 +1323,8 @@ function renderWeeklyPkgTable() {
 
     html += `<tr>
       <td style="max-width:280px;overflow:hidden;text-overflow:ellipsis" title="${r.package_name}">${r.package_name}</td>
-      <td style="text-align:right">${fmt$(r.thisRevenue)}</td>
-      <td style="text-align:right">${fmt$(r.lastRevenue)}</td>
+      <td style="text-align:right">${fmt$(thisRevDaily)}</td>
+      <td style="text-align:right">${fmt$(lastRevDaily)}</td>
       <td style="text-align:right;${revChangeClass(revChange)}">${fmt$(Math.abs(revChange))} ${revIcon(revChange)}</td>
       <td style="text-align:right">${fmtPct(r.thisFraud)}</td>
       <td style="text-align:right">${fmtPct(r.lastFraud)}</td>
