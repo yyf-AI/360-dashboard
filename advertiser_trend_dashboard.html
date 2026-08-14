@@ -943,10 +943,13 @@
                     responsive: true, maintainAspectRatio: false,
                     interaction: { mode: 'index', intersect: false },
                     plugins: {
-                        legend: { position: 'bottom', labels: { boxWidth: 14, font: { size: 12 }, padding: 12, usePointStyle: true } }
+                        legend: { position: 'bottom', labels: { boxWidth: 14, font: { size: 11 }, padding: 10, usePointStyle: true } }
                     },
                     scales: {
-                        y: { ticks: { callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : v >= 1000 ? (v/1000).toFixed(0)+'K' : v } }
+                        y: {
+                            type: 'logarithmic',
+                            ticks: { callback: v => v >= 1000000 ? (v/1000000).toFixed(0)+'M' : v >= 1000 ? (v/1000).toFixed(0)+'K' : v }
+                        }
                     }
                 }
             });
@@ -958,10 +961,13 @@
                     responsive: true, maintainAspectRatio: false,
                     interaction: { mode: 'index', intersect: false },
                     plugins: {
-                        legend: { position: 'bottom', labels: { boxWidth: 14, font: { size: 12 }, padding: 12, usePointStyle: true } }
+                        legend: { position: 'bottom', labels: { boxWidth: 14, font: { size: 11 }, padding: 10, usePointStyle: true } }
                     },
                     scales: {
-                        y: { ticks: { callback: v => '$' + v.toLocaleString() } }
+                        y: {
+                            type: 'logarithmic',
+                            ticks: { callback: v => '$' + v.toLocaleString() }
+                        }
                     }
                 }
             });
