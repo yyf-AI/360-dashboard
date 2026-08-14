@@ -911,37 +911,29 @@
         const shortName = s => s.split('(')[0].substring(0, 18);
 
         if (adv === '所有广告主汇总') {
-            // 汇总模式：按总收入排序，只显示Top 6
+            // 汇总模式：每个广告主一条线
             const advNames = Object.keys(trendData.data);
-            const advTotals = advNames.map(a => ({
-                name: a,
-                total: trendData.data[a].revenue.reduce((s, v) => s + v, 0)
-            }));
-            advTotals.sort((a, b) => b.total - a.total);
-            const topAdvNames = advTotals.slice(0, 6).map(a => a.name);
-
-            const clickDatasets = topAdvNames.map((a, i) => ({
+            const clickDatasets = advNames.map((a, i) => ({
                 label: shortName(a),
                 data: trendData.data[a].clicks,
-                borderColor: COLORS[i],
+                borderColor: COLORS[i % COLORS.length],
                 backgroundColor: 'transparent',
-                pointRadius: 5,
-                pointHoverRadius: 8,
-                pointBackgroundColor: COLORS[i],
+                pointRadius: 4,
+                pointHoverRadius: 7,
+                pointBackgroundColor: COLORS[i % COLORS.length],
                 tension: 0.3,
-                borderWidth: 3
+                borderWidth: 2
             }));
-            const revDatasets = topAdvNames.map((a, i) => ({
+            const revDatasets = advNames.map((a, i) => ({
                 label: shortName(a),
                 data: trendData.data[a].revenue,
-                borderColor: COLORS[i],
-                backgroundColor: COLORS[i] + '20',
-                pointRadius: 5,
-                pointHoverRadius: 8,
-                pointBackgroundColor: COLORS[i],
+                borderColor: COLORS[i % COLORS.length],
+                backgroundColor: 'transparent',
+                pointRadius: 4,
+                pointHoverRadius: 7,
+                pointBackgroundColor: COLORS[i % COLORS.length],
                 tension: 0.3,
-                borderWidth: 3,
-                fill: true
+                borderWidth: 2
             }));
 
             clickChart = new Chart(ctxClick, {
