@@ -494,13 +494,15 @@
         <div class="card">
             <h2>点击&收入趋势图（切换Advertiser查看）</h2>
             <div class="tabs" id="adv-tabs"></div>
-            <div style="margin-top:16px">
-                <h3 style="text-align:center;color:#42a5f5;margin-bottom:8px;font-size:14px">📈 点击趋势</h3>
-                <div style="position:relative;height:200px"><canvas id="clickChart"></canvas></div>
-            </div>
-            <div style="margin-top:12px;padding-top:12px;border-top:1px solid #eee">
-                <h3 style="text-align:center;color:#66bb6a;margin-bottom:8px;font-size:14px">💰 收入趋势</h3>
-                <div style="position:relative;height:200px"><canvas id="revenueChart"></canvas></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px">
+                <div>
+                    <h3 style="text-align:center;color:#42a5f5;margin-bottom:8px;font-size:14px">📈 点击趋势</h3>
+                    <div style="position:relative;height:500px"><canvas id="clickChart"></canvas></div>
+                </div>
+                <div>
+                    <h3 style="text-align:center;color:#66bb6a;margin-bottom:8px;font-size:14px">💰 收入趋势</h3>
+                    <div style="position:relative;height:500px"><canvas id="revenueChart"></canvas></div>
+                </div>
             </div>
         </div>
 
