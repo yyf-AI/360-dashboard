@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertiser维度 点击&收入趋势分析</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #333; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; margin-bottom: 6px; color: #1a237e; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 24px; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 24px; margin-bottom: 24px; overflow-x: auto; }
+        .card h2 { font-size: 18px; color: #333; margin-bottom: 16px; border-left: 4px solid #1976d2; padding-left: 12px; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; white-space: nowrap; }
+        th { background: #f0f4f8; color: #555; padding: 10px 12px; text-align: left; border-bottom: 2px solid #e0e6ed; position: sticky; top: 0; }
+        td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+        tr:hover { background: #f5f7fa; }
+        .num { text-align: right; font-family: 'SF Mono', Consolas, monospace; }
+        .positive { color: #e53935; font-weight: 600; }
+        .negative { color: #43a047; font-weight: 600; }
+        .neutral { color: #999; }
+        .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+        .summary-item { background: white; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+        .summary-item .label { color: #666; font-size: 14px; margin-bottom: 8px; }
+        .summary-item .value { font-size: 28px; font-weight: bold; color: #1a237e; }
+        .chart-container { position: relative; height: 420px; }
+        .tabs { display: flex; gap: 6px; margin-bottom: 16px; flex-wrap: wrap; }
+        .tab { padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 12px; border: 1px solid #ddd; background: white; transition: all 0.2s; }
+        .tab:hover { border-color: #1976d2; }
+        .tab.active { background: #1976d2; color: white; border-color: #1976d2; }
+        @media (max-width: 768px) {
+            .summary { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Advertiser维度 点击&收入趋势分析</h1>
+        <p class="subtitle">数据周期: 2026/8/3 ~ 2026/8/13 | 11天 | 29个Advertiser</p>
+
+        <div class="summary">
+            <div class="summary-item">
+                <div class="label">总点击</div>
+                <div class="value">1,471,719,231</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">总收入</div>
+                <div class="value">$2,144,404.37</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">最新日(2026/8/13)点击</div>
+                <div class="value">148,678,321</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">最新日(2026/8/13)收入</div>
+                <div class="value">$190,301.76</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>收入下滑TOP10（2026/8/12 vs 2026/8/13）</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Advertiser</th>
+                        <th class="num">总点击</th>
+                        <th class="num">总收入</th>
+                        <th class="num">最新日点击</th>
+                        <th class="num">前日点击</th>
+                        <th class="num">点击变化</th>
+                        <th class="num">点击%</th>
+                        <th class="num">最新日收入</th>
+                        <th class="num">前日收入</th>
+                        <th class="num">收入变化</th>
+                        <th class="num">收入%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+            <td>代理-xapads 4347(1000374)</td>
+            <td class="num">73,835,968</td>
+            <td class="num">$179,370.12</td>
+            <td class="num">5,466,293</td>
+            <td class="num">6,676,894</td>
+            <td class="num negative">-1,210,601</td>
+            <td class="num negative">-18.1%</td>
+            <td class="num">$14,924.47</td>
+            <td class="num">$16,171.97</td>
+            <td class="num negative">-1,247.50</td>
+            <td class="num negative">-7.7%</td>
+        </tr><tr>
+            <td>代理-doublerich 7933(1000393)</td>
+            <td class="num">24,470,886</td>
+            <td class="num">$118,838.00</td>
+            <td class="num">1,901,262</td>
+            <td class="num">1,972,784</td>
+            <td class="num negative">-71,522</td>
+            <td class="num negative">-3.6%</td>
+            <td class="num">$10,395.75</td>
+            <td class="num">$11,442.40</td>
+            <td class="num negative">-1,046.65</td>
+            <td class="num negative">-9.1%</td>
+        </tr><tr>
+            <td>印度团队(1000362)</td>
+            <td class="num">11,861,831</td>
+            <td class="num">$72,078.00</td>
+            <td class="num">691,929</td>
+            <td class="num">683,848</td>
+            <td class="num negative">+8,081</td>
+            <td class="num negative">+1.2%</td>
+            <td class="num">$6,656.93</td>
+            <td class="num">$7,451.72</td>
+            <td class="num negative">-794.79</td>
+            <td class="num negative">-10.7%</td>
+        </tr><tr>
+            <td>中国出海(1000358)</td>
+            <td class="num">133,681,120</td>
+            <td class="num">$326,294.68</td>
+            <td class="num">9,925,706</td>
+            <td class="num">10,939,166</td>
+            <td class="num negative">-1,013,460</td>
+            <td class="num negative">-9.3%</td>
+            <td class="num">$26,808.25</td>
+            <td class="num">$27,154.83</td>
+            <td class="num negative">-346.58</td>
+            <td class="num negative">-1.3%</td>
+        </tr><tr>
+            <td>代理-俄罗斯(1000392)</td>
+            <td class="num">41,057,468</td>
+            <td class="num">$118,871.87</td>
+            <td class="num">3,553,188</td>
+            <td class="num">3,580,609</td>
+            <td class="num negative">-27,421</td>
+            <td class="num negative">-0.8%</td>
+            <td class="num">$10,819.97</td>
+            <td class="num">$11,142.66</td>
+            <td class="num negative">-322.69</td>
+            <td class="num negative">-2.9%</td>
+        </tr><tr>
+            <td>mena(1000403)</td>
+            <td class="num">27,970,838</td>
+            <td class="num">$96,641.47</td>
+            <td class="num">1,922,521</td>
+            <td class="num">1,994,620</td>
+            <td class="num negative">-72,099</td>
+            <td class="num negative">-3.6%</td>
+            <td class="num">$8,278.85</td>
+            <td class="num">$8,575.57</td>
+            <td class="num negative">-296.72</td>
+            <td class="num negative">-3.5%</td>
+        </tr><tr>
+            <td>代理-riddec 6461(1000383)</td>
+            <td class="num">6,852,443</td>
+            <td class="num">$46,154.30</td>
+            <td class="num">777,260</td>
+            <td class="num">735,967</td>
+            <td class="num negative">+41,293</td>
+            <td class="num negative">+5.6%</td>
+            <td class="num">$4,575.00</td>
+            <td class="num">$4,736.30</td>
+            <td class="num negative">-161.30</td>
+            <td class="num negative">-3.4%</td>
+        </tr><tr>
+            <td>代理 -digital 12074(1000401)</td>
+            <td class="num">4,589,446</td>
+            <td class="num">$13,209.39</td>
+            <td class="num">469,221</td>
+            <td class="num">465,473</td>
+            <td class="num negative">+3,748</td>
+            <td class="num negative">+0.8%</td>
+            <td class="num">$1,322.89</td>
+            <td class="num">$1,468.03</td>
+            <td class="num negative">-145.14</td>
+            <td class="num negative">-9.9%</td>
+        </tr><tr>
+            <td>affinity1208(1000408)</td>
+            <td class="num">5,328,279</td>
+            <td class="num">$8,397.95</td>
+            <td class="num">336,815</td>
+            <td class="num">240,186</td>
+            <td class="num negative">+96,629</td>
+            <td class="num negative">+40.2%</td>
+            <td class="num">$547.64</td>
+            <td class="num">$648.26</td>
+            <td class="num negative">-100.62</td>
+            <td class="num negative">-15.5%</td>
+        </tr><tr>
+            <td>代理-avow(1000359)</td>
+            <td class="num">5,337,603</td>
+            <td class="num">$14,040.04</td>
+            <td class="num">541,419</td>
+            <td class="num">472,767</td>
+            <td class="num negative">+68,652</td>
+            <td class="num negative">+14.5%</td>
+            <td class="num">$1,513.15</td>
+            <td class="num">$1,599.93</td>
+            <td class="num negative">-86.78</td>
+            <td class="num negative">-5.4%</td>
+        </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>收入增长TOP10（2026/8/12 vs 2026/8/13）</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Advertiser</th>
+                        <th class="num">总点击</th>
+                        <th class="num">总收入</th>
+                        <th class="num">最新日点击</th>
+                        <th class="num">前日点击</th>
+                        <th class="num">点击变化</th>
+                        <th class="num">点击%</th>
+                        <th class="num">最新日收入</th>
+                        <th class="num">前日收入</th>
+                        <th class="num">收入变化</th>
+                        <th class="num">收入%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+            <td>代理-Trendmax12696(1000417)</td>
+            <td class="num">652,216,580</td>
+            <td class="num">$268,247.95</td>
+            <td class="num">87,693,806</td>
+            <td class="num">71,475,847</td>
+            <td class="num positive">+16,217,959</td>
+            <td class="num positive">+22.7%</td>
+            <td class="num">$24,981.96</td>
+            <td class="num">$23,943.98</td>
+            <td class="num positive">+1,037.98</td>
+            <td class="num positive">+4.3%</td>
+        </tr><tr>
+            <td>印尼团队(1000365)</td>
+            <td class="num">329,348,830</td>
+            <td class="num">$451,851.93</td>
+            <td class="num">24,496,062</td>
+            <td class="num">25,423,842</td>
+            <td class="num positive">-927,780</td>
+            <td class="num positive">-3.6%</td>
+            <td class="num">$40,121.02</td>
+            <td class="num">$39,319.25</td>
+            <td class="num positive">+801.77</td>
+            <td class="num positive">+2.0%</td>
+        </tr><tr>
+            <td>代理-xapads1814(印度核代账户)(1000402)</td>
+            <td class="num">11,887,383</td>
+            <td class="num">$23,544.38</td>
+            <td class="num">1,055,922</td>
+            <td class="num">1,078,667</td>
+            <td class="num positive">-22,745</td>
+            <td class="num positive">-2.1%</td>
+            <td class="num">$2,526.01</td>
+            <td class="num">$2,362.19</td>
+            <td class="num positive">+163.82</td>
+            <td class="num positive">+6.9%</td>
+        </tr><tr>
+            <td>flymobi-sea代理2(1000422)</td>
+            <td class="num">6,382,878</td>
+            <td class="num">$45,622.08</td>
+            <td class="num">647,934</td>
+            <td class="num">630,996</td>
+            <td class="num positive">+16,938</td>
+            <td class="num positive">+2.7%</td>
+            <td class="num">$4,896.29</td>
+            <td class="num">$4,770.63</td>
+            <td class="num positive">+125.66</td>
+            <td class="num positive">+2.6%</td>
+        </tr><tr>
+            <td>affle-6208(1000412)</td>
+            <td class="num">1,513,937</td>
+            <td class="num">$8,211.80</td>
+            <td class="num">163,470</td>
+            <td class="num">110,679</td>
+            <td class="num positive">+52,791</td>
+            <td class="num positive">+47.7%</td>
+            <td class="num">$920.25</td>
+            <td class="num">$795.75</td>
+            <td class="num positive">+124.50</td>
+            <td class="num positive">+15.6%</td>
+        </tr><tr>
+            <td>代理-affle 6208(1000397)</td>
+            <td class="num">50,907,566</td>
+            <td class="num">$92,396.43</td>
+            <td class="num">2,730,120</td>
+            <td class="num">4,580,717</td>
+            <td class="num positive">-1,850,597</td>
+            <td class="num positive">-40.4%</td>
+            <td class="num">$8,564.32</td>
+            <td class="num">$8,469.74</td>
+            <td class="num positive">+94.58</td>
+            <td class="num positive">+1.1%</td>
+        </tr><tr>
+            <td>东欧团队(1000357)</td>
+            <td class="num">24,910,650</td>
+            <td class="num">$90,261.55</td>
+            <td class="num">1,532,145</td>
+            <td class="num">1,204,768</td>
+            <td class="num positive">+327,377</td>
+            <td class="num positive">+27.2%</td>
+            <td class="num">$6,876.65</td>
+            <td class="num">$6,804.85</td>
+            <td class="num positive">+71.80</td>
+            <td class="num positive">+1.1%</td>
+        </tr><tr>
+            <td>wanka(14127)(1000423)</td>
+            <td class="num">2,854,307</td>
+            <td class="num">$9,497.80</td>
+            <td class="num">327,961</td>
+            <td class="num">323,938</td>
+            <td class="num positive">+4,023</td>
+            <td class="num positive">+1.2%</td>
+            <td class="num">$1,126.40</td>
+            <td class="num">$1,055.85</td>
+            <td class="num positive">+70.55</td>
+            <td class="num positive">+6.7%</td>
+        </tr><tr>
+            <td>代理-omn 4799(1000384)</td>
+            <td class="num">22,229,032</td>
+            <td class="num">$59,688.70</td>
+            <td class="num">1,880,612</td>
+            <td class="num">1,660,637</td>
+            <td class="num positive">+219,975</td>
+            <td class="num positive">+13.2%</td>
+            <td class="num">$5,511.00</td>
+            <td class="num">$5,451.19</td>
+            <td class="num positive">+59.81</td>
+            <td class="num positive">+1.1%</td>
+        </tr><tr>
+            <td>代理-flymobi 8342(1000354)</td>
+            <td class="num">23,081,797</td>
+            <td class="num">$62,988.75</td>
+            <td class="num">1,607,569</td>
+            <td class="num">1,514,803</td>
+            <td class="num positive">+92,766</td>
+            <td class="num positive">+6.1%</td>
+            <td class="num">$5,287.61</td>
+            <td class="num">$5,266.79</td>
+            <td class="num positive">+20.82</td>
+            <td class="num positive">+0.4%</td>
+        </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>点击&收入趋势图（切换Advertiser查看）</h2>
+            <div class="tabs" id="adv-tabs"></div>
+            <div class="chart-container">
+                <canvas id="trendChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>全量Advertiser数据</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Advertiser</th>
+                        <th class="num">总点击</th>
+                        <th class="num">总收入</th>
+                        <th class="num">最新日点击</th>
+                        <th class="num">前日点击</th>
+                        <th class="num">点击变化</th>
+                        <th class="num">点击%</th>
+                        <th class="num">最新日收入</th>
+                        <th class="num">前日收入</th>
+                        <th class="num">收入变化</th>
+                        <th class="num">收入%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+            <td>代理-Trendmax12696(1000417)</td>
+            <td class="num">652,216,580</td>
+            <td class="num">$268,247.95</td>
+            <td class="num">87,693,806</td>
+            <td class="num">71,475,847</td>
+            <td class="num positive">+16,217,959</td>
+            <td class="num positive">+22.7%</td>
+            <td class="num">$24,981.96</td>
+            <td class="num">$23,943.98</td>
+            <td class="num positive">+1,037.98</td>
+            <td class="num positive">+4.3%</td>
+        </tr><tr>
+            <td>印尼团队(1000365)</td>
+            <td class="num">329,348,830</td>
+            <td class="num">$451,851.93</td>
+            <td class="num">24,496,062</td>
+            <td class="num">25,423,842</td>
+            <td class="num positive">-927,780</td>
+            <td class="num positive">-3.6%</td>
+            <td class="num">$40,121.02</td>
+            <td class="num">$39,319.25</td>
+            <td class="num positive">+801.77</td>
+            <td class="num positive">+2.0%</td>
+        </tr><tr>
+            <td>代理-xapads1814(印度核代账户)(1000402)</td>
+            <td class="num">11,887,383</td>
+            <td class="num">$23,544.38</td>
+            <td class="num">1,055,922</td>
+            <td class="num">1,078,667</td>
+            <td class="num positive">-22,745</td>
+            <td class="num positive">-2.1%</td>
+            <td class="num">$2,526.01</td>
+            <td class="num">$2,362.19</td>
+            <td class="num positive">+163.82</td>
+            <td class="num positive">+6.9%</td>
+        </tr><tr>
+            <td>flymobi-sea代理2(1000422)</td>
+            <td class="num">6,382,878</td>
+            <td class="num">$45,622.08</td>
+            <td class="num">647,934</td>
+            <td class="num">630,996</td>
+            <td class="num positive">+16,938</td>
+            <td class="num positive">+2.7%</td>
+            <td class="num">$4,896.29</td>
+            <td class="num">$4,770.63</td>
+            <td class="num positive">+125.66</td>
+            <td class="num positive">+2.6%</td>
+        </tr><tr>
+            <td>affle-6208(1000412)</td>
+            <td class="num">1,513,937</td>
+            <td class="num">$8,211.80</td>
+            <td class="num">163,470</td>
+            <td class="num">110,679</td>
+            <td class="num positive">+52,791</td>
+            <td class="num positive">+47.7%</td>
+            <td class="num">$920.25</td>
+            <td class="num">$795.75</td>
+            <td class="num positive">+124.50</td>
+            <td class="num positive">+15.6%</td>
+        </tr><tr>
+            <td>代理-affle 6208(1000397)</td>
+            <td class="num">50,907,566</td>
+            <td class="num">$92,396.43</td>
+            <td class="num">2,730,120</td>
+            <td class="num">4,580,717</td>
+            <td class="num positive">-1,850,597</td>
+            <td class="num positive">-40.4%</td>
+            <td class="num">$8,564.32</td>
+            <td class="num">$8,469.74</td>
+            <td class="num positive">+94.58</td>
+            <td class="num positive">+1.1%</td>
+        </tr><tr>
+            <td>东欧团队(1000357)</td>
+            <td class="num">24,910,650</td>
+            <td class="num">$90,261.55</td>
+            <td class="num">1,532,145</td>
+            <td class="num">1,204,768</td>
+            <td class="num positive">+327,377</td>
+            <td class="num positive">+27.2%</td>
+            <td class="num">$6,876.65</td>
+            <td class="num">$6,804.85</td>
+            <td class="num positive">+71.80</td>
+            <td class="num positive">+1.1%</td>
+        </tr><tr>
+            <td>wanka(14127)(1000423)</td>
+            <td class="num">2,854,307</td>
+            <td class="num">$9,497.80</td>
+            <td class="num">327,961</td>
+            <td class="num">323,938</td>
+            <td class="num positive">+4,023</td>
+            <td class="num positive">+1.2%</td>
+            <td class="num">$1,126.40</td>
+            <td class="num">$1,055.85</td>
+            <td class="num positive">+70.55</td>
+            <td class="num positive">+6.7%</td>
+        </tr><tr>
+            <td>代理-omn 4799(1000384)</td>
+            <td class="num">22,229,032</td>
+            <td class="num">$59,688.70</td>
+            <td class="num">1,880,612</td>
+            <td class="num">1,660,637</td>
+            <td class="num positive">+219,975</td>
+            <td class="num positive">+13.2%</td>
+            <td class="num">$5,511.00</td>
+            <td class="num">$5,451.19</td>
+            <td class="num positive">+59.81</td>
+            <td class="num positive">+1.1%</td>
+        </tr><tr>
+            <td>代理-flymobi 8342(1000354)</td>
+            <td class="num">23,081,797</td>
+            <td class="num">$62,988.75</td>
+            <td class="num">1,607,569</td>
+            <td class="num">1,514,803</td>
+            <td class="num positive">+92,766</td>
+            <td class="num positive">+6.1%</td>
+            <td class="num">$5,287.61</td>
+            <td class="num">$5,266.79</td>
+            <td class="num positive">+20.82</td>
+            <td class="num positive">+0.4%</td>
+        </tr><tr>
+            <td>weu/cee/latam/na(1000395)</td>
+            <td class="num">58,247</td>
+            <td class="num">$2.00</td>
+            <td class="num">20,693</td>
+            <td class="num">21,014</td>
+            <td class="num neutral">-321</td>
+            <td class="num neutral">-1.5%</td>
+            <td class="num">$0.00</td>
+            <td class="num">$0.00</td>
+            <td class="num neutral">+0.00</td>
+            <td class="num neutral">+0.0%</td>
+        </tr><tr>
+            <td>clickscot(1000415)</td>
+            <td class="num">46,049</td>
+            <td class="num">$7.50</td>
+            <td class="num">560</td>
+            <td class="num">1,030</td>
+            <td class="num neutral">-470</td>
+            <td class="num neutral">-45.6%</td>
+            <td class="num">$0.00</td>
+            <td class="num">$0.00</td>
+            <td class="num neutral">+0.00</td>
+            <td class="num neutral">+0.0%</td>
+        </tr><tr>
+            <td>reliz(1000410)</td>
+            <td class="num">8,813</td>
+            <td class="num">$0.00</td>
+            <td class="num">14</td>
+            <td class="num">11</td>
+            <td class="num neutral">+3</td>
+            <td class="num neutral">+27.3%</td>
+            <td class="num">$0.00</td>
+            <td class="num">$0.00</td>
+            <td class="num neutral">+0.00</td>
+            <td class="num neutral">+0.0%</td>
+        </tr><tr>
+            <td>代理-affle 2882(印度核代账户)(1000406)</td>
+            <td class="num">7,589,215</td>
+            <td class="num">$16,302.45</td>
+            <td class="num">657,249</td>
+            <td class="num">517,059</td>
+            <td class="num negative">+140,190</td>
+            <td class="num negative">+27.1%</td>
+            <td class="num">$1,533.46</td>
+            <td class="num">$1,535.58</td>
+            <td class="num negative">-2.12</td>
+            <td class="num negative">-0.1%</td>
+        </tr><tr>
+            <td>avow-sea(1000425)</td>
+            <td class="num">1,260,470</td>
+            <td class="num">$5,255.60</td>
+            <td class="num">107,756</td>
+            <td class="num">115,835</td>
+            <td class="num negative">-8,079</td>
+            <td class="num negative">-7.0%</td>
+            <td class="num">$679.80</td>
+            <td class="num">$684.10</td>
+            <td class="num negative">-4.30</td>
+            <td class="num negative">-0.6%</td>
+        </tr><tr>
+            <td>Affinity-12499(1000399)</td>
+            <td class="num">141,831</td>
+            <td class="num">$226.18</td>
+            <td class="num">13,206</td>
+            <td class="num">12,887</td>
+            <td class="num negative">+319</td>
+            <td class="num negative">+2.5%</td>
+            <td class="num">$5.74</td>
+            <td class="num">$12.36</td>
+            <td class="num negative">-6.62</td>
+            <td class="num negative">-53.6%</td>
+        </tr><tr>
+            <td>xilany(1000426)</td>
+            <td class="num">365,571</td>
+            <td class="num">$713.50</td>
+            <td class="num">37,217</td>
+            <td class="num">40,124</td>
+            <td class="num negative">-2,907</td>
+            <td class="num negative">-7.2%</td>
+            <td class="num">$253.00</td>
+            <td class="num">$262.50</td>
+            <td class="num negative">-9.50</td>
+            <td class="num negative">-3.6%</td>
+        </tr><tr>
+            <td>shopeepay(1000424)</td>
+            <td class="num">1,025,448</td>
+            <td class="num">$13,214.20</td>
+            <td class="num">97,748</td>
+            <td class="num">97,121</td>
+            <td class="num negative">+627</td>
+            <td class="num negative">+0.6%</td>
+            <td class="num">$1,166.60</td>
+            <td class="num">$1,193.20</td>
+            <td class="num negative">-26.60</td>
+            <td class="num negative">-2.2%</td>
+        </tr><tr>
+            <td>xapads1814(1000419)</td>
+            <td class="num">904,745</td>
+            <td class="num">$2,475.75</td>
+            <td class="num">22,663</td>
+            <td class="num">69,651</td>
+            <td class="num negative">-46,988</td>
+            <td class="num negative">-67.5%</td>
+            <td class="num">$8.75</td>
+            <td class="num">$54.75</td>
+            <td class="num negative">-46.00</td>
+            <td class="num negative">-84.0%</td>
+        </tr><tr>
+            <td>代理-avow(1000359)</td>
+            <td class="num">5,337,603</td>
+            <td class="num">$14,040.04</td>
+            <td class="num">541,419</td>
+            <td class="num">472,767</td>
+            <td class="num negative">+68,652</td>
+            <td class="num negative">+14.5%</td>
+            <td class="num">$1,513.15</td>
+            <td class="num">$1,599.93</td>
+            <td class="num negative">-86.78</td>
+            <td class="num negative">-5.4%</td>
+        </tr><tr>
+            <td>affinity1208(1000408)</td>
+            <td class="num">5,328,279</td>
+            <td class="num">$8,397.95</td>
+            <td class="num">336,815</td>
+            <td class="num">240,186</td>
+            <td class="num negative">+96,629</td>
+            <td class="num negative">+40.2%</td>
+            <td class="num">$547.64</td>
+            <td class="num">$648.26</td>
+            <td class="num negative">-100.62</td>
+            <td class="num negative">-15.5%</td>
+        </tr><tr>
+            <td>代理 -digital 12074(1000401)</td>
+            <td class="num">4,589,446</td>
+            <td class="num">$13,209.39</td>
+            <td class="num">469,221</td>
+            <td class="num">465,473</td>
+            <td class="num negative">+3,748</td>
+            <td class="num negative">+0.8%</td>
+            <td class="num">$1,322.89</td>
+            <td class="num">$1,468.03</td>
+            <td class="num negative">-145.14</td>
+            <td class="num negative">-9.9%</td>
+        </tr><tr>
+            <td>代理-riddec 6461(1000383)</td>
+            <td class="num">6,852,443</td>
+            <td class="num">$46,154.30</td>
+            <td class="num">777,260</td>
+            <td class="num">735,967</td>
+            <td class="num negative">+41,293</td>
+            <td class="num negative">+5.6%</td>
+            <td class="num">$4,575.00</td>
+            <td class="num">$4,736.30</td>
+            <td class="num negative">-161.30</td>
+            <td class="num negative">-3.4%</td>
+        </tr><tr>
+            <td>mena(1000403)</td>
+            <td class="num">27,970,838</td>
+            <td class="num">$96,641.47</td>
+            <td class="num">1,922,521</td>
+            <td class="num">1,994,620</td>
+            <td class="num negative">-72,099</td>
+            <td class="num negative">-3.6%</td>
+            <td class="num">$8,278.85</td>
+            <td class="num">$8,575.57</td>
+            <td class="num negative">-296.72</td>
+            <td class="num negative">-3.5%</td>
+        </tr><tr>
+            <td>代理-俄罗斯(1000392)</td>
+            <td class="num">41,057,468</td>
+            <td class="num">$118,871.87</td>
+            <td class="num">3,553,188</td>
+            <td class="num">3,580,609</td>
+            <td class="num negative">-27,421</td>
+            <td class="num negative">-0.8%</td>
+            <td class="num">$10,819.97</td>
+            <td class="num">$11,142.66</td>
+            <td class="num negative">-322.69</td>
+            <td class="num negative">-2.9%</td>
+        </tr><tr>
+            <td>中国出海(1000358)</td>
+            <td class="num">133,681,120</td>
+            <td class="num">$326,294.68</td>
+            <td class="num">9,925,706</td>
+            <td class="num">10,939,166</td>
+            <td class="num negative">-1,013,460</td>
+            <td class="num negative">-9.3%</td>
+            <td class="num">$26,808.25</td>
+            <td class="num">$27,154.83</td>
+            <td class="num negative">-346.58</td>
+            <td class="num negative">-1.3%</td>
+        </tr><tr>
+            <td>印度团队(1000362)</td>
+            <td class="num">11,861,831</td>
+            <td class="num">$72,078.00</td>
+            <td class="num">691,929</td>
+            <td class="num">683,848</td>
+            <td class="num negative">+8,081</td>
+            <td class="num negative">+1.2%</td>
+            <td class="num">$6,656.93</td>
+            <td class="num">$7,451.72</td>
+            <td class="num negative">-794.79</td>
+            <td class="num negative">-10.7%</td>
+        </tr><tr>
+            <td>代理-doublerich 7933(1000393)</td>
+            <td class="num">24,470,886</td>
+            <td class="num">$118,838.00</td>
+            <td class="num">1,901,262</td>
+            <td class="num">1,972,784</td>
+            <td class="num negative">-71,522</td>
+            <td class="num negative">-3.6%</td>
+            <td class="num">$10,395.75</td>
+            <td class="num">$11,442.40</td>
+            <td class="num negative">-1,046.65</td>
+            <td class="num negative">-9.1%</td>
+        </tr><tr>
+            <td>代理-xapads 4347(1000374)</td>
+            <td class="num">73,835,968</td>
+            <td class="num">$179,370.12</td>
+            <td class="num">5,466,293</td>
+            <td class="num">6,676,894</td>
+            <td class="num negative">-1,210,601</td>
+            <td class="num negative">-18.1%</td>
+            <td class="num">$14,924.47</td>
+            <td class="num">$16,171.97</td>
+            <td class="num negative">-1,247.50</td>
+            <td class="num negative">-7.7%</td>
+        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+    const trendData = {"dates": ["2026/8/3", "2026/8/4", "2026/8/5", "2026/8/6", "2026/8/7", "2026/8/8", "2026/8/9", "2026/8/10", "2026/8/11", "2026/8/12", "2026/8/13"], "data": {"Affinity-12499(1000399)": {"clicks": [30003.0, 203.0, 14391.0, 17733.0, 15142.0, 438.0, 221.0, 240.0, 37367.0, 12887.0, 13206.0], "revenue": [0.48, 0.36, 69.6, 102.6, 29.16, 0.12, 0.0, 0.72, 5.04, 12.36, 5.74]}, "affinity1208(1000408)": {"clicks": [791664.0, 795803.0, 859027.0, 791987.0, 700197.0, 195458.0, 204527.0, 192355.0, 220260.0, 240186.0, 336815.0], "revenue": [648.9, 881.45, 951.39, 1018.0999999999999, 955.63, 737.9200000000001, 647.7, 601.58, 759.38, 648.26, 547.64]}, "affle-6208(1000412)": {"clicks": [360705.0, 320174.0, 123105.0, 54074.0, 82216.0, 83188.0, 62082.0, 65643.0, 88601.0, 110679.0, 163470.0], "revenue": [803.55, 680.9, 633.35, 629.25, 796.5, 789.4, 689.3, 853.3, 620.25, 795.75, 920.25]}, "avow-sea(1000425)": {"clicks": [141584.0, 110958.0, 158874.0, 127261.0, 91034.0, 91678.0, 90916.0, 104651.0, 119923.0, 115835.0, 107756.0], "revenue": [328.25, 312.55, 534.9, 439.15, 387.6, 357.6, 371.0, 560.5, 600.15, 684.1, 679.8]}, "clickscot(1000415)": {"clicks": [22643.0, 20758.0, 922.0, 24.0, 20.0, 24.0, 24.0, 24.0, 20.0, 1030.0, 560.0], "revenue": [7.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}, "flymobi-sea代理2(1000422)": {"clicks": [442266.0, 492850.0, 499498.0, 538091.0, 611593.0, 603504.0, 613545.0, 647009.0, 655592.0, 630996.0, 647934.0], "revenue": [3518.13, 3670.6099999999997, 3741.06, 4052.79, 4140.16, 4041.81, 4126.13, 4275.38, 4389.09, 4770.63, 4896.29]}, "mena(1000403)": {"clicks": [4958544.0, 4740147.0, 2719979.0, 1925526.0, 1867014.0, 1906787.0, 1899121.0, 1971735.0, 2064844.0, 1994620.0, 1922521.0], "revenue": [9444.33, 9168.89, 8802.220000000001, 8757.3, 8969.779999999999, 8671.59, 8713.59, 8601.96, 8657.39, 8575.57, 8278.85]}, "reliz(1000410)": {"clicks": [6219.0, 2484.0, 12.0, 13.0, 12.0, 12.0, 12.0, 12.0, 12.0, 11.0, 14.0], "revenue": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}, "shopeepay(1000424)": {"clicks": [36959.0, 89643.0, 99355.0, 100199.0, 104103.0, 100495.0, 96838.0, 101827.0, 101160.0, 97121.0, 97748.0], "revenue": [953.0, 1190.8, 1197.0, 1158.0, 1391.6, 1371.6, 1212.2, 1182.2, 1198.0, 1193.2, 1166.6]}, "wanka(14127)(1000423)": {"clicks": [183437.0, 212765.0, 193857.0, 175176.0, 262257.0, 267814.0, 267505.0, 321145.0, 318452.0, 323938.0, 327961.0], "revenue": [426.9, 400.0, 378.05, 799.45, 1036.15, 1023.25, 1037.0, 1062.7, 1152.05, 1055.85, 1126.4]}, "weu/cee/latam/na(1000395)": {"clicks": [16312.0, 26.0, 29.0, 29.0, 27.0, 29.0, 29.0, 27.0, 32.0, 21014.0, 20693.0], "revenue": [0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}, "xapads1814(1000419)": {"clicks": [181943.0, 174483.0, 101217.0, 69761.0, 69748.0, 69741.0, 69689.0, 23903.0, 51946.0, 69651.0, 22663.0], "revenue": [386.25, 400.5, 308.75, 297.0, 315.0, 311.5, 294.75, 51.5, 47.0, 54.75, 8.75]}, "xilany(1000426)": {"clicks": [41843.0, 18114.0, 16054.0, 190.0, 41251.0, 42503.0, 42652.0, 42726.0, 42897.0, 40124.0, 37217.0], "revenue": [12.0, 12.0, 12.0, 3.5, 13.0, 13.0, 13.0, 9.5, 110.0, 262.5, 253.0]}, "东欧团队(1000357)": {"clicks": [5253416.0, 3405133.0, 2858658.0, 2398787.0, 1876823.0, 1627854.0, 1459787.0, 1648555.0, 1644724.0, 1204768.0, 1532145.0], "revenue": [9384.1, 10574.75, 9249.9, 9716.55, 7701.55, 7539.7, 7425.1, 7517.85, 7470.549999999999, 6804.85, 6876.65]}, "中国出海(1000358)": {"clicks": [17039183.0, 16209199.0, 13728705.0, 11741574.0, 10897271.0, 10703799.0, 10561761.0, 10781912.0, 11152844.0, 10939166.0, 9925706.0], "revenue": [32655.64, 32797.23, 32018.850000000002, 31271.52, 31628.010000000002, 28176.16, 28639.940000000002, 27409.98, 27734.27, 27154.83, 26808.25]}, "代理 -digital 12074(1000401)": {"clicks": [710718.0, 557093.0, 414112.0, 276872.0, 299908.0, 305861.0, 312136.0, 360055.0, 417997.0, 465473.0, 469221.0], "revenue": [817.9100000000001, 993.28, 1040.79, 1164.14, 1229.18, 1267.14, 1308.38, 1264.41, 1333.24, 1468.0300000000002, 1322.8899999999999]}, "代理-Trendmax12696(1000417)": {"clicks": [99408158.0, 81312203.0, 36665165.0, 24243534.0, 43042654.0, 45331803.0, 45431080.0, 54501323.0, 63111007.0, 71475847.0, 87693806.0], "revenue": [27710.24, 27035.989999999998, 25464.55, 24076.11, 23542.25, 23501.7, 23214.59, 22075.469999999998, 22701.11, 23943.98, 24981.96]}, "代理-affle 2882(印度核代账户)(1000406)": {"clicks": [1139973.0, 973878.0, 777090.0, 653126.0, 704913.0, 575834.0, 541419.0, 541477.0, 507197.0, 517059.0, 657249.0], "revenue": [1717.42, 1747.25, 1336.9099999999999, 1251.92, 1578.73, 1458.37, 1276.8, 1374.98, 1491.03, 1535.58, 1533.46]}, "代理-affle 6208(1000397)": {"clicks": [5559425.0, 5200916.0, 5448931.0, 4836747.0, 4611975.0, 4533032.0, 4498074.0, 4481035.0, 4426594.0, 4580717.0, 2730120.0], "revenue": [9101.34, 9128.83, 9024.52, 8159.299999999999, 8432.07, 8184.349999999999, 7080.51, 8141.13, 8110.320000000001, 8469.74, 8564.32]}, "代理-avow(1000359)": {"clicks": [676945.0, 470910.0, 349220.0, 318552.0, 519597.0, 501207.0, 483669.0, 495443.0, 507874.0, 472767.0, 541419.0], "revenue": [1128.45, 1081.82, 1098.46, 925.1999999999999, 1238.24, 1290.94, 1338.69, 1318.0, 1507.1599999999999, 1599.9299999999998, 1513.15]}, "代理-doublerich 7933(1000393)": {"clicks": [5326206.0, 4997024.0, 2963396.0, 1058367.0, 1085794.0, 1135144.0, 1131471.0, 1411516.0, 1487922.0, 1972784.0, 1901262.0], "revenue": [11733.8, 12093.9, 11276.449999999999, 10397.4, 9881.55, 9531.25, 9736.95, 10480.6, 11867.95, 11442.4, 10395.75]}, "代理-flymobi 8342(1000354)": {"clicks": [4049408.0, 3989929.0, 2822778.0, 1676520.0, 1546916.0, 1462090.0, 1478898.0, 1470569.0, 1462317.0, 1514803.0, 1607569.0], "revenue": [6219.8, 6219.26, 6169.05, 6146.51, 5719.81, 5551.22, 5596.83, 5458.7, 5353.17, 5266.79, 5287.61]}, "代理-omn 4799(1000384)": {"clicks": [3230792.0, 3239607.0, 2444276.0, 1583500.0, 1805073.0, 1635314.0, 1567876.0, 1608468.0, 1572877.0, 1660637.0, 1880612.0], "revenue": [5480.47, 5681.65, 5374.14, 5674.98, 5505.11, 5291.47, 5280.73, 5266.62, 5171.34, 5451.1900000000005, 5511.0]}, "代理-riddec 6461(1000383)": {"clicks": [492191.0, 678311.0, 583137.0, 589828.0, 568493.0, 522178.0, 514571.0, 691552.0, 698955.0, 735967.0, 777260.0], "revenue": [4179.4, 4256.1, 4073.4, 3727.6, 4084.9, 3608.0, 3811.5, 4408.4, 4693.7, 4736.3, 4575.0]}, "代理-xapads 4347(1000374)": {"clicks": [6925045.0, 7488816.0, 6942860.0, 6949250.0, 6806695.0, 6275094.0, 6502133.0, 6649661.0, 7153227.0, 6676894.0, 5466293.0], "revenue": [13659.54, 13787.67, 15327.58, 17779.95, 17760.26, 17270.52, 17347.86, 17895.21, 17445.09, 16171.97, 14924.47]}, "代理-xapads1814(印度核代账户)(1000402)": {"clicks": [1787975.0, 1386729.0, 910076.0, 864237.0, 868769.0, 870575.0, 857102.0, 1078394.0, 1128937.0, 1078667.0, 1055922.0], "revenue": [1866.76, 2130.16, 2254.49, 2135.19, 1964.74, 1751.08, 1827.52, 2250.36, 2475.88, 2362.19, 2526.0099999999998]}, "代理-俄罗斯(1000392)": {"clicks": [4318418.0, 4755268.0, 4423328.0, 3262404.0, 3414923.0, 3238692.0, 3102431.0, 3669861.0, 3738346.0, 3580609.0, 3553188.0], "revenue": [9535.4, 11671.35, 10967.26, 10602.560000000001, 11127.14, 10545.02, 10165.71, 11350.43, 10944.37, 11142.66, 10819.97]}, "印尼团队(1000365)": {"clicks": [49397903.0, 41057060.0, 31135814.0, 28640749.0, 26765970.0, 26308949.0, 26363786.0, 24308861.0, 25449834.0, 25423842.0, 24496062.0], "revenue": [42079.44, 42134.58, 42211.73, 40401.6, 42727.409999999996, 42187.47, 41988.740000000005, 39434.76, 39245.93, 39319.25, 40121.02]}, "印度团队(1000362)": {"clicks": [2173691.0, 1580734.0, 1945945.0, 1361600.0, 775806.0, 643511.0, 617654.0, 703072.0, 684041.0, 683848.0, 691929.0], "revenue": [5436.4, 5829.17, 6822.17, 6565.26, 7671.97, 6408.04, 6267.4800000000005, 6794.58, 6174.28, 7451.719999999999, 6656.929999999999]}}};
+
+    const advList = ["代理-Trendmax12696(1000417)", "印尼团队(1000365)", "代理-xapads1814(印度核代账户)(1000402)", "flymobi-sea代理2(1000422)", "affle-6208(1000412)", "代理-俄罗斯(1000392)", "中国出海(1000358)", "印度团队(1000362)", "代理-doublerich 7933(1000393)", "代理-xapads 4347(1000374)"];
+    const tabsContainer = document.getElementById('adv-tabs');
+
+    advList.forEach((adv, i) => {
+        const tab = document.createElement('div');
+        tab.className = 'tab' + (i === 0 ? ' active' : '');
+        tab.textContent = adv.split('(')[0].substring(0, 20);
+        tab.title = adv;
+        tab.onclick = function() { showAdv(adv, this); };
+        tabsContainer.appendChild(tab);
+    });
+
+    const ctx = document.getElementById('trendChart').getContext('2d');
+    let chart = null;
+
+    function showAdv(adv, el) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        if (el) el.classList.add('active');
+
+        const data = trendData.data[adv];
+        if (!data) return;
+
+        if (chart) chart.destroy();
+
+        chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: trendData.dates,
+                datasets: [
+                    {
+                        label: '点击',
+                        data: data.clicks,
+                        borderColor: '#42a5f5',
+                        backgroundColor: 'rgba(66,165,245,0.1)',
+                        yAxisID: 'y',
+                        tension: 0.3,
+                        fill: true
+                    },
+                    {
+                        label: '收入($)',
+                        data: data.revenue,
+                        borderColor: '#66bb6a',
+                        backgroundColor: 'rgba(102,187,106,0.1)',
+                        yAxisID: 'y1',
+                        tension: 0.3,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { mode: 'index', intersect: false },
+                plugins: {
+                    title: { display: true, text: adv, font: { size: 16 } }
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: { display: true, text: '点击' }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: { display: true, text: '收入($)' },
+                        grid: { drawOnChartArea: false }
+                    }
+                }
+            }
+        });
+    }
+
+    if (advList.length > 0) showAdv(advList[0], document.querySelector('.tab'));
+    </script>
+</body>
+</html>
