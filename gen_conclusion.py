@@ -112,18 +112,20 @@ for adv in adv_daily['advertiser'].unique():
 
 results.sort(key=lambda x: x['rev_change'])
 
-# 生成文本输出
+# 输出文字版
 down = [r for r in results if r['rev_change'] < -10]
 up = [r for r in results if r['rev_change'] > 10]
 
-print(f"数据结论总结（{first} → {latest}，共{len(dates)}天）")
-print("=" * 80)
+print(f"📋 数据变化结论总结（{first} → {latest}，共{len(dates)}天）")
+print("=" * 70)
+print(f"共{len(results)}个广告主，下滑{len(down)}个，增长{len(up)}个")
+print()
 
 if down:
-    print("\n📉 收入下滑广告主（首日→末日）")
-    print("-" * 80)
+    print("📉 收入下滑广告主（首日→末日）")
+    print("-" * 70)
     for r in down:
-        print(f"\n{r['advertiser']}")
+        print(f"▶ {r['advertiser']}")
         print(f"  收入: ${r['rev_first']:,.2f} → ${r['rev_last']:,.2f} ({r['rev_change']:+,.2f}, {r['rev_pct']:+.1f}%)")
         print(f"  点击: {r['clicks_first']:,.0f} → {r['clicks_last']:,.0f} ({r['clicks_change']:+,.0f}, {r['clicks_pct']:+.1f}%)")
         print(f"  全周期总收入: ${r['total_rev']:,.2f} | 日均: ${r['avg_rev']:,.2f} | 趋势: {r['rev_trend']}")
@@ -133,12 +135,13 @@ if down:
                 if abs(p['rev_diff']) < 5:
                     continue
                 print(f"    {p['pkg'][:50]}: ${p['rev_first']:,.2f}→${p['rev_last']:,.2f} ({p['rev_diff']:+,.2f})")
+        print()
 
 if up:
-    print("\n📈 收入增长广告主（首日→末日）")
-    print("-" * 80)
+    print("📈 收入增长广告主（首日→末日）")
+    print("-" * 70)
     for r in up:
-        print(f"\n{r['advertiser']}")
+        print(f"▶ {r['advertiser']}")
         print(f"  收入: ${r['rev_first']:,.2f} → ${r['rev_last']:,.2f} ({r['rev_change']:+,.2f}, {r['rev_pct']:+.1f}%)")
         print(f"  点击: {r['clicks_first']:,.0f} → {r['clicks_last']:,.0f} ({r['clicks_change']:+,.0f}, {r['clicks_pct']:+.1f}%)")
         print(f"  全周期总收入: ${r['total_rev']:,.2f} | 日均: ${r['avg_rev']:,.2f} | 趋势: {r['rev_trend']}")
@@ -148,3 +151,4 @@ if up:
                 if abs(p['rev_diff']) < 5:
                     continue
                 print(f"    {p['pkg'][:50]}: ${p['rev_first']:,.2f}→${p['rev_last']:,.2f} ({p['rev_diff']:+,.2f})")
+        print()
