@@ -616,6 +616,47 @@ def main():
             LOCK_FILE.unlink()
 
 
+def get_missing_periods(existing_periods):
+    """检查并返回缺失的period列表（从最早应该有的日期到T-2）"""
+    today = datetime.now()
+    t2 = today - timedelta(days=2)
+
+    # 找到已有数据中最早的日期
+    if existing_periods:
+        earliest_existing = min(existing_periods)
+        # 转换为date对象：假设是当月的日期
+        month = today.month
+        day = int(earliest_existing[2:])
+        try:
+            earliest_date = today.replace(day=day)
+        except ValueError:
+            # 跨月情况，用上个月
+            earliest_date = (today.replace(day=1) - timedelta(days=1)).replace(day=day)
+    else:
+        # 没有数据，从7天前开始
+        earliest_date = today - timedelta(days=8)
+
+    # 生成从earliest_date到T-2的所有日期period
+    expected_periods = set()
+    current = earliest_date
+    while current <= t2:
+        expected_periods.add(current.strftime("%m%d"))
+        current += timedelta(days=1)
+
+    # 找出缺失的
+    missing = sorted(expected_periods - existing_periods)
+    return missing
+
+
+def query_and_append_date(date_str, period, token):
+    """查询指定日期数据并追加到文件"""
+    rows = query_360_data(date_str, token)
+    records = process_data(rows)
+    log.info(f"Processed {len(records)} campaigns for {period}")
+    append_data(records, period)
+    return len(records)
+
+
 def _main_impl():
     # T-2 date
     today = datetime.now()
@@ -624,12 +665,45 @@ def _main_impl():
     period = t2.strftime("%m%d")
     log.info(f"=== Update started: T-2 = {date_str}, period = {period} ===")
 
-    # Check if already exists
+    # 获取已有的periods
     existing = get_existing_periods()
+    log.info(f"Existing periods: {sorted(existing)}")
+
+    # 检查是否有缺失的日期需要补数据
+    missing = get_missing_periods(existing)
+    if missing:
+        log.info(f"=== Found {len(missing)} missing periods: {missing} ===")
+        token = load_token()
+        for p in missing:
+            # 转换period为date_str (YYYYMMDD)
+            month = int(p[:2])
+            day = int(p[2:])
+            year = today.year
+            # 处理跨年情况
+            try:
+                fill_date = today.replace(month=month, day=day)
+                if fill_date > today:
+                    fill_date = fill_date.replace(year=year - 1)
+            except ValueError:
+                # 日期不存在（比如2月30日），跳过
+                log.warning(f"Invalid date for period {p}, skipping")
+                continue
+            actual_date_str = fill_date.strftime("%Y%m%d")
+            log.info(f"=== Backfilling {actual_date_str} (period={p}) ===")
+            try:
+                count = query_and_append_date(actual_date_str, p, token)
+                log.info(f"=== Backfill complete: {count} records for {p} ===")
+            except Exception as e:
+                log.error(f"Failed to backfill {p}: {e}")
+                import traceback
+                traceback.print_exc()
+
+    # 检查T-2的period是否已存在
+    existing = get_existing_periods()  # 重新获取，可能刚补过数据
     if period in existing:
         log.info(f"Period {period} already exists in data file, skipping query.")
     else:
-        # Query
+        # 正常更新T-2数据
         token = load_token()
         rows = query_360_data(date_str, token)
 
