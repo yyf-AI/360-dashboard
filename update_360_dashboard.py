@@ -274,7 +274,7 @@ def append_data(records, period):
 def archive_old_periods():
     """将主文件中超过KEEP_PERIODS个周期的旧数据移到archive_data目录"""
     content = DASHBOARD_DATA.read_text(encoding="utf-8")
-    match = re.search(r'var\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    match = re.search(r'(?:var|const|let)\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
     if not match:
         return
 
@@ -344,7 +344,7 @@ def format_report_content(rows, total_rev, label):
 def backfill_empty_advertisers(token):
     """查询postback表获取campaign→advertiser映射，补全JS数据中空的advertiser字段"""
     content = DASHBOARD_DATA.read_text(encoding="utf-8")
-    match = re.search(r'var\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    match = re.search(r'(?:var|const|let)\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
     if not match:
         log.warning("Cannot parse DATA, skipping backfill")
         return
@@ -394,7 +394,7 @@ def send_high_fraud_report(period):
     from collections import defaultdict
 
     content = DASHBOARD_DATA.read_text(encoding="utf-8")
-    match = re.search(r'var\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    match = re.search(r'(?:var|const|let)\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
     if not match:
         log.warning("Cannot parse DATA from JS file, skipping report")
         return
@@ -466,7 +466,7 @@ def send_optimize_channel_report(period):
     from collections import defaultdict
 
     content = DASHBOARD_DATA.read_text(encoding="utf-8")
-    match = re.search(r'var\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
+    match = re.search(r'(?:var|const|let)\s+DATA\s*=\s*(\[.*?\]);', content, re.DOTALL)
     if not match:
         log.warning("Cannot parse DATA from JS file, skipping optimize report")
         return

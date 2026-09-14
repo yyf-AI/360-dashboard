@@ -1131,3 +1131,286 @@ remove the file manually to continue.
 2026-08-21 11:00:53,876 [INFO] Bumped cache version in 360_dashboard.html to v=202608211100
 2026-08-21 11:00:53,886 [INFO] Bumped cache version in index.html to v=202608211100
 2026-08-21 11:01:01,121 [INFO] Pushed to GitHub successfully
+2026-08-25 15:11:46,287 [INFO] === Update started: T-2 = 20260823, period = 0823 ===
+2026-08-25 15:11:47,557 [INFO] Existing periods: ['0806', '0807', '0808', '0809', '0810', '0811', '0812', '0813', '0814', '0815', '0816', '0817', '0818', '0819', '0820', '0821', '0822']
+2026-08-25 15:11:47,557 [INFO] === Found 1 missing periods: ['0823'] ===
+2026-08-25 15:11:47,559 [INFO] === Backfilling 20260823 (period=0823) ===
+2026-08-25 15:11:47,559 [INFO] Submitting SQL for date=20260823...
+2026-08-25 15:11:47,968 [INFO] Query submitted, id=a55d811c-bee0-4545-9dcf-eaf98e787d9e:657f9c06-52fb-41fe-87fc-6652526ae4aa;11422131302e35312e3133392e373a3130303033;0;1000;false:1787641907600:1787641907824:false:INTERIM:RUNNING:0d37ba15db63f056a9a39e594c3ac7a9:8f3b7a4034b4ecc5
+2026-08-25 15:11:54,675 [INFO] Query finished, fetching results...
+2026-08-25 15:11:57,166 [INFO] Fetched 9256 rows
+2026-08-25 15:11:57,190 [INFO] Processed 1341 campaigns for 0823
+2026-08-25 15:11:57,375 [INFO] Appended 1341 records, period=0823
+2026-08-25 15:11:57,392 [INFO] === Backfill complete: 1341 records for 0823 ===
+2026-08-25 15:11:58,455 [INFO] Period 0823 already exists in data file, skipping query.
+2026-08-25 15:11:58,615 [WARNING] Cannot parse DATA, skipping backfill
+2026-08-25 15:11:58,692 [WARNING] Cannot parse DATA from JS file, skipping report
+2026-08-25 15:11:58,765 [WARNING] Cannot parse DATA from JS file, skipping optimize report
+2026-08-25 15:11:58,792 [INFO] Bumped cache version in 360_dashboard.html to v=202608251511
+2026-08-25 15:11:58,801 [INFO] Bumped cache version in index.html to v=202608251511
+2026-08-25 15:12:05,678 [INFO] Pushed to GitHub successfully
+2026-08-26 11:00:03,255 [INFO] === Update started: T-2 = 20260824, period = 0824 ===
+2026-08-26 11:00:04,735 [INFO] Existing periods: ['0806', '0807', '0808', '0809', '0810', '0811', '0812', '0813', '0814', '0815', '0816', '0817', '0818', '0819', '0820', '0821', '0822', '0823']
+2026-08-26 11:00:04,736 [INFO] === Found 1 missing periods: ['0824'] ===
+2026-08-26 11:00:04,738 [INFO] === Backfilling 20260824 (period=0824) ===
+2026-08-26 11:00:04,738 [INFO] Submitting SQL for date=20260824...
+2026-08-26 11:00:05,178 [INFO] Query submitted, id=397a723d-cda9-45f8-b7bc-e261e14443d6:ff97a43e-233b-4693-869b-cede40439655;93524131302e35312e3134332e32363a3130303033;0;1000;false:1787713204537:1787713204772:false:INTERIM:RUNNING:f6d534b101a8b3d5ee18aa4fb574987f:7cace644c243535a
+2026-08-26 11:00:09,727 [INFO] Query finished, fetching results...
+2026-08-26 11:00:12,295 [INFO] Fetched 9415 rows
+2026-08-26 11:00:12,327 [INFO] Processed 1346 campaigns for 0824
+2026-08-26 11:00:12,770 [INFO] Appended 1346 records, period=0824
+2026-08-26 11:00:12,782 [INFO] === Backfill complete: 1346 records for 0824 ===
+2026-08-26 11:00:13,950 [INFO] Period 0824 already exists in data file, skipping query.
+2026-08-26 11:00:14,177 [WARNING] Cannot parse DATA, skipping backfill
+2026-08-26 11:00:14,285 [WARNING] Cannot parse DATA from JS file, skipping report
+2026-08-26 11:00:14,387 [WARNING] Cannot parse DATA from JS file, skipping optimize report
+2026-08-26 11:00:14,397 [INFO] Bumped cache version in 360_dashboard.html to v=202608261100
+2026-08-26 11:00:14,403 [INFO] Bumped cache version in index.html to v=202608261100
+2026-08-26 11:00:22,499 [INFO] Pushed to GitHub successfully
+2026-08-26 16:31:08,455 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-08-26 16:31:09,700 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-08-27 11:00:03,698 [INFO] === Update started: T-2 = 20260825, period = 0825 ===
+2026-08-27 11:00:05,117 [INFO] Existing periods: ['0806', '0807', '0808', '0809', '0810', '0811', '0812', '0813', '0814', '0815', '0816', '0817', '0818', '0819', '0820', '0821', '0822', '0823', '0824']
+2026-08-27 11:00:05,118 [INFO] === Found 1 missing periods: ['0825'] ===
+2026-08-27 11:00:05,121 [INFO] === Backfilling 20260825 (period=0825) ===
+2026-08-27 11:00:05,121 [INFO] Submitting SQL for date=20260825...
+2026-08-27 11:00:05,567 [INFO] Query submitted, id=4097705f-6959-482f-81c8-9544f033ad0e:fbca2125-d1de-481f-a78a-4b72f37b134b;61026131302e35382e3138342e3136363a3130303033;0;1000;false:1787799604595:1787799604836:false:INTERIM:RUNNING:b7ce2e89d9735352c4ac7cd7c3f6ef2e:29171eca770a58b9
+2026-08-27 11:00:14,382 [INFO] Query finished, fetching results...
+2026-08-27 11:00:16,924 [INFO] Fetched 10260 rows
+2026-08-27 11:00:16,953 [INFO] Processed 1360 campaigns for 0825
+2026-08-27 11:00:17,315 [INFO] Appended 1360 records, period=0825
+2026-08-27 11:00:17,334 [INFO] === Backfill complete: 1360 records for 0825 ===
+2026-08-27 11:00:18,691 [INFO] Period 0825 already exists in data file, skipping query.
+2026-08-27 11:00:19,842 [INFO] Archived period 0806: 1386 records → 0806.json
+2026-08-27 11:00:19,980 [INFO] Archived period 0809: 1376 records → 0809.json
+2026-08-27 11:00:20,116 [INFO] Archived period 0811: 1390 records → 0811.json
+2026-08-27 11:00:20,250 [INFO] Archived period 0810: 1380 records → 0810.json
+2026-08-27 11:00:20,394 [INFO] Archived period 0807: 1399 records → 0807.json
+2026-08-27 11:00:20,521 [INFO] Archived period 0808: 1382 records → 0808.json
+2026-08-27 11:00:20,956 [INFO] Main file trimmed: 27311 → 18998 records (14 periods)
+2026-08-27 11:00:22,527 [INFO] Found 1361 records with empty advertiser, querying mapping...
+2026-08-27 11:00:52,554 [INFO] Backfilled 625 records with advertiser from postback table
+2026-08-27 11:00:54,484 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-08-27 11:00:55,747 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-08-27 11:00:55,827 [INFO] Bumped cache version in 360_dashboard.html to v=202608271100
+2026-08-27 11:00:55,839 [INFO] Bumped cache version in index.html to v=202608271100
+2026-08-27 11:01:04,056 [INFO] Pushed to GitHub successfully
+2026-08-28 11:00:03,885 [INFO] === Update started: T-2 = 20260826, period = 0826 ===
+2026-08-28 11:00:05,076 [INFO] Existing periods: ['0812', '0813', '0814', '0815', '0816', '0817', '0818', '0819', '0820', '0821', '0822', '0823', '0824', '0825']
+2026-08-28 11:00:05,076 [INFO] === Found 1 missing periods: ['0826'] ===
+2026-08-28 11:00:05,078 [INFO] === Backfilling 20260826 (period=0826) ===
+2026-08-28 11:00:05,078 [INFO] Submitting SQL for date=20260826...
+2026-08-28 11:00:05,688 [INFO] Query submitted, id=71739d26-d5b4-4037-bcd5-a2ede7d24ae9:67dc272a-90ef-4b79-ad21-c9c789f56874;55826131302e35312e3132392e3233303a3130303033;0;1000;false:1787886004321:1787886004639:false:INTERIM:RUNNING:7f1fc9bd2220d8a91795c2334b514be8:2d7e8d3d13bd2c72
+2026-08-28 11:00:14,639 [INFO] Query finished, fetching results...
+2026-08-28 11:00:17,586 [INFO] Fetched 10188 rows
+2026-08-28 11:00:17,617 [INFO] Processed 1349 campaigns for 0826
+2026-08-28 11:00:17,973 [INFO] Appended 1349 records, period=0826
+2026-08-28 11:00:17,990 [INFO] === Backfill complete: 1349 records for 0826 ===
+2026-08-28 11:00:18,871 [INFO] Period 0826 already exists in data file, skipping query.
+2026-08-28 11:00:19,857 [INFO] Archived period 0812: 1382 records → 0812.json
+2026-08-28 11:00:20,359 [INFO] Main file trimmed: 20347 → 18965 records (14 periods)
+2026-08-28 11:00:21,945 [INFO] Found 831 records with empty advertiser, querying mapping...
+2026-08-28 11:02:29,603 [INFO] Backfilled 97 records with advertiser from postback table
+2026-08-28 11:02:31,801 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-08-28 11:02:33,033 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-08-28 11:02:33,097 [INFO] Bumped cache version in 360_dashboard.html to v=202608281102
+2026-08-28 11:02:33,107 [INFO] Bumped cache version in index.html to v=202608281102
+2026-08-28 11:02:40,710 [INFO] Pushed to GitHub successfully
+2026-08-31 10:17:12,702 [INFO] Submitting SQL for date=20260827...
+2026-08-31 10:17:13,086 [INFO] Query submitted, id=6a7ec928-58d5-4880-81cc-f8d9ce960c82:a06adb51-3858-4086-8793-3fca2bdd8c11;63324131302e35312e3134332e32363a3130303033;0;1000;false:1788142631474:1788142631685:false:INTERIM:RUNNING:fd00214845a07f9d5ae6ca3605e6bd52:214f721c9b91c98d
+2026-08-31 10:17:21,930 [INFO] Query finished, fetching results...
+2026-08-31 10:17:24,685 [INFO] Fetched 10216 rows
+2026-08-31 10:17:24,708 [INFO] Processed 1347 campaigns for 0827
+2026-08-31 10:17:24,925 [INFO] Appended 1347 records, period=0827
+2026-08-31 10:17:24,938 [INFO] Submitting SQL for date=20260828...
+2026-08-31 10:17:25,362 [INFO] Query submitted, id=22cf3dca-5271-45ef-b8b2-564484995f85:3ab947e8-3bbe-4da7-bcfc-0234bf156886;34624131302e35312e3134332e32363a3130303033;0;1000;false:1788142643744:1788142643955:false:INTERIM:RUNNING:0188259a0531b696a8623842c0f58718:297a60b3d136e6ad
+2026-08-31 10:17:32,029 [INFO] Query finished, fetching results...
+2026-08-31 10:17:34,576 [INFO] Fetched 10017 rows
+2026-08-31 10:17:34,598 [INFO] Processed 1317 campaigns for 0828
+2026-08-31 10:17:34,851 [INFO] Appended 1317 records, period=0828
+2026-08-31 10:17:34,864 [INFO] Submitting SQL for date=20260829...
+2026-08-31 10:17:35,237 [INFO] Query submitted, id=10542dc9-e4fc-4024-98be-298cb2e1692a:84659e0c-cca8-4711-a452-3a83014e50b8;28724131302e35312e3134332e32363a3130303033;0;1000;false:1788142653629:1788142653837:false:INTERIM:RUNNING:c1c86583ed85ba9799b6964164828c66:35d15637fe340efe
+2026-08-31 10:17:39,764 [INFO] Query finished, fetching results...
+2026-08-31 10:17:42,119 [INFO] Fetched 8235 rows
+2026-08-31 10:17:42,138 [INFO] Processed 1304 campaigns for 0829
+2026-08-31 10:17:42,352 [INFO] Appended 1304 records, period=0829
+2026-08-31 10:17:43,982 [INFO] Archived period 0813: 1371 records → 0813.json
+2026-08-31 10:17:44,091 [INFO] Archived period 0814: 1358 records → 0814.json
+2026-08-31 10:17:44,201 [INFO] Archived period 0815: 1355 records → 0815.json
+2026-08-31 10:17:44,540 [INFO] Main file trimmed: 22933 → 18849 records (14 periods)
+2026-08-31 10:17:45,642 [INFO] Found 1028 records with empty advertiser, querying mapping...
+2026-08-31 10:18:24,294 [INFO] Backfilled 298 records with advertiser from postback table
+2026-08-31 10:18:25,979 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-08-31 10:18:27,044 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-08-31 10:18:27,068 [INFO] Bumped cache version in 360_dashboard.html to v=202608311018
+2026-08-31 10:18:27,069 [INFO] Bumped cache version in index.html to v=202608311018
+2026-08-31 10:18:33,868 [INFO] Pushed to GitHub successfully
+2026-08-31 11:00:02,610 [INFO] === Update started: T-2 = 20260829, period = 0829 ===
+2026-08-31 11:00:02,756 [INFO] Existing periods: ['0816', '0817', '0818', '0819', '0820', '0821', '0822', '0823', '0824', '0825', '0826', '0827', '0828', '0829']
+2026-08-31 11:00:02,844 [INFO] Period 0829 already exists in data file, skipping query.
+2026-08-31 11:00:03,333 [INFO] Only 14 periods, no archiving needed
+2026-08-31 11:00:03,836 [INFO] Found 730 records with empty advertiser, querying mapping...
+2026-08-31 11:02:24,533 [INFO] No records could be patched (no mapping found)
+2026-09-02 11:40:25,047 [WARNING] Another update is running (lock file exists), skipping.
+2026-09-03 11:00:04,922 [WARNING] Another update is running (lock file exists), skipping.
+2026-09-03 12:00:14,658 [INFO] === Update started: T-2 = 20260901, period = 0901 ===
+2026-09-03 12:00:14,740 [INFO] Existing periods: ['0816', '0817', '0818', '0819', '0820', '0821', '0822', '0823', '0824', '0825', '0826', '0827', '0828', '0829', '0830', '0831']
+2026-09-03 12:00:14,827 [INFO] Submitting SQL for date=20260901...
+2026-09-03 12:00:15,252 [INFO] Query submitted, id=52a65801-d973-47ac-b867-c6524427ada7:6f121d71-004b-432b-afbc-4889cb0c92b9;53826131302e35312e3137382e3133333a3130303033;0;1000;false:1788408014022:1788408014239:false:INTERIM:RUNNING:0b1c53cae7ed0e3de19f27f81c0b9d7b:275c001d37b2fec6
+2026-09-03 12:00:21,904 [INFO] Query finished, fetching results...
+2026-09-03 12:00:25,707 [INFO] Fetched 10150 rows
+2026-09-03 12:00:25,732 [INFO] Processed 1330 campaigns
+2026-09-03 12:00:25,992 [INFO] Appended 1330 records, period=0901
+2026-09-03 12:00:26,002 [INFO] === Update complete: 1330 records added for 0901 ===
+2026-09-03 12:00:27,511 [INFO] Archived period 0817: 1350 records → 0817.json
+2026-09-03 12:00:27,621 [INFO] Archived period 0818: 1345 records → 0818.json
+2026-09-03 12:00:27,728 [INFO] Archived period 0816: 1354 records → 0816.json
+2026-09-03 12:00:28,015 [INFO] Main file trimmed: 22793 → 18744 records (14 periods)
+2026-09-03 12:00:29,024 [INFO] Found 1080 records with empty advertiser, querying mapping...
+2026-09-03 12:01:23,019 [INFO] Backfilled 376 records with advertiser from postback table
+2026-09-03 12:01:24,681 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-03 12:01:25,601 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-03 12:01:25,650 [INFO] Bumped cache version in 360_dashboard.html to v=202609031201
+2026-09-03 12:01:25,660 [INFO] Bumped cache version in index.html to v=202609031201
+2026-09-03 12:01:31,844 [INFO] Pushed to GitHub successfully
+2026-09-04 11:00:02,914 [INFO] === Update started: T-2 = 20260902, period = 0902 ===
+2026-09-04 11:00:03,787 [INFO] Existing periods: ['0819', '0820', '0821', '0822', '0823', '0824', '0825', '0826', '0827', '0828', '0829', '0830', '0831', '0901']
+2026-09-04 11:00:03,863 [INFO] Submitting SQL for date=20260902...
+2026-09-04 11:00:04,424 [INFO] Query submitted, id=2b975867-4dd2-479d-9db6-374b484e2b6e:09907f01-2554-4aba-ba2a-fd71dc588f1b;18526131302e35312e3133382e3134323a3130303033;0;1000;false:1788490803751:1788490804116:false:INTERIM:RUNNING:40c68f42475e89ccc2ab0ce155f9c04f:9b41e011c2f62b73
+2026-09-04 11:00:11,114 [INFO] Query finished, fetching results...
+2026-09-04 11:00:13,596 [INFO] Fetched 9827 rows
+2026-09-04 11:00:13,639 [INFO] Processed 1333 campaigns
+2026-09-04 11:00:13,825 [INFO] Appended 1333 records, period=0902
+2026-09-04 11:00:13,834 [INFO] === Update complete: 1333 records added for 0902 ===
+2026-09-04 11:00:14,925 [ERROR] Failed to archive old periods: Expecting value: line 2 column 1 (char 19678395)
+2026-09-04 11:00:15,389 [ERROR] Failed to backfill advertisers: Expecting value: line 2 column 1 (char 19678395)
+2026-09-04 11:00:15,864 [ERROR] Failed to send high-fraud report: Expecting value: line 2 column 1 (char 19678395)
+2026-09-04 11:00:16,372 [ERROR] Failed to send optimize channel report: Expecting value: line 2 column 1 (char 19678395)
+2026-09-04 11:00:16,445 [INFO] Bumped cache version in 360_dashboard.html to v=202609041100
+2026-09-04 11:00:16,457 [INFO] Bumped cache version in index.html to v=202609041100
+2026-09-04 11:00:23,588 [INFO] Pushed to GitHub successfully
+2026-09-07 11:00:03,107 [INFO] === Update started: T-2 = 20260905, period = 0905 ===
+2026-09-07 11:00:04,097 [INFO] Existing periods: ['0819', '0820', '0821', '0822', '0823', '0824', '0825', '0826', '0827', '0828', '0829', '0830', '0831', '0901', '0902']
+2026-09-07 11:00:04,218 [INFO] Submitting SQL for date=20260905...
+2026-09-07 11:00:04,749 [INFO] Query submitted, id=651da13c-2bf3-41f5-a577-fbd1e9743501:9d6c80b4-105d-4cc5-b123-f3a75377aa7d;14424131302e35312e3133312e33323a3130303033;0;1000;false:1788750002786:1788750003076:false:INTERIM:RUNNING:2d69af2c618ddeabaac42c9bfb5f4ddc:f9c3cdd9539f05df
+2026-09-07 11:00:11,428 [INFO] Query finished, fetching results...
+2026-09-07 11:00:13,922 [INFO] Fetched 9305 rows
+2026-09-07 11:00:13,965 [INFO] Processed 1330 campaigns
+2026-09-07 11:00:14,326 [INFO] Appended 1330 records, period=0905
+2026-09-07 11:00:14,339 [INFO] === Update complete: 1330 records added for 0905 ===
+2026-09-07 11:00:15,921 [ERROR] Failed to archive old periods: Expecting value: line 2 column 1 (char 19678395)
+2026-09-07 11:00:16,656 [ERROR] Failed to backfill advertisers: Expecting value: line 2 column 1 (char 19678395)
+2026-09-07 11:00:17,516 [ERROR] Failed to send high-fraud report: Expecting value: line 2 column 1 (char 19678395)
+2026-09-07 11:00:18,331 [ERROR] Failed to send optimize channel report: Expecting value: line 2 column 1 (char 19678395)
+2026-09-07 11:00:18,365 [INFO] Bumped cache version in 360_dashboard.html to v=202609071100
+2026-09-07 11:00:18,375 [INFO] Bumped cache version in index.html to v=202609071100
+2026-09-07 11:00:27,674 [INFO] Pushed to GitHub successfully
+2026-09-08 19:28:28,908 [INFO] Submitting SQL for date=20260903...
+2026-09-08 19:28:29,670 [INFO] Query submitted, id=69e44709-dfd9-4df8-9d0d-fd8556acf767:18116952-1712-491b-b973-b6f9ab706b5e;29626131302e35382e3136372e3137333a3130303033;0;1000;false:1788866909390:1788866909605:false:INTERIM:RUNNING:b66caf64c604ffddbfe48d49c3486a24:9719018f6f790455
+2026-09-08 19:28:34,180 [INFO] Query finished, fetching results...
+2026-09-08 19:28:36,641 [INFO] Fetched 9797 rows
+2026-09-08 19:28:36,900 [INFO] Appended 1335 records, period=0903
+2026-09-08 19:28:36,909 [INFO] Submitting SQL for date=20260904...
+2026-09-08 19:28:37,274 [INFO] Query submitted, id=0074eee9-7466-494b-a108-57e350245643:2ce10cda-028f-43ef-a282-567448196b00;73426131302e35312e3133382e3134323a3130303033;0;1000;false:1788866917020:1788866917231:false:INTERIM:RUNNING:a29b493b49839e1f4560d1bf1602a3c9:cf3f822e8091da39
+2026-09-08 19:28:41,788 [INFO] Query finished, fetching results...
+2026-09-08 19:28:44,462 [INFO] Fetched 9769 rows
+2026-09-08 19:28:44,738 [INFO] Appended 1347 records, period=0904
+2026-09-08 19:31:09,068 [INFO] Submitting SQL for date=20260906...
+2026-09-08 19:31:09,443 [INFO] Query submitted, id=4274e6b9-90ac-4249-9277-d3551120d54c:7fd311ea-d875-48a3-8ef2-3fe1a530ec96;87924131302e35312e3133312e33323a3130303033;0;1000;false:1788867069192:1788867069401:false:INTERIM:RUNNING:1db771ddbda917d48a5b1902e545bec5:4e8a5fb817faff74
+2026-09-08 19:31:16,117 [INFO] Query finished, fetching results...
+2026-09-08 19:31:18,514 [INFO] Fetched 9195 rows
+2026-09-08 19:31:18,764 [INFO] Appended 1321 records, period=0906
+2026-09-10 11:00:04,521 [INFO] === Update started: T-2 = 20260908, period = 0908 ===
+2026-09-10 11:00:05,913 [INFO] Existing periods: ['0819', '0820', '0821', '0822', '0823', '0824', '0825', '0826', '0827', '0828', '0829', '0830', '0831', '0901', '0902', '0903', '0904', '0905', '0906']
+2026-09-10 11:00:06,027 [INFO] Submitting SQL for date=20260908...
+2026-09-10 11:00:06,533 [INFO] Query submitted, id=208555aa-b028-4599-b531-055316099168:9283bfb8-98ed-4062-8503-764dc7f8e6df;64626131302e35312e3133382e3134323a3130303033;0;1000;false:1789009205579:1789009205881:false:INTERIM:RUNNING:481b6b44c3f8cfbdb07db04174785906:16919c642bf443be
+2026-09-10 11:00:19,708 [INFO] Query finished, fetching results...
+2026-09-10 11:00:23,600 [INFO] Fetched 10444 rows
+2026-09-10 11:00:23,635 [INFO] Processed 1347 campaigns
+2026-09-10 11:00:24,039 [INFO] Appended 1347 records, period=0908
+2026-09-10 11:00:24,053 [INFO] === Update complete: 1347 records added for 0908 ===
+2026-09-10 11:00:26,048 [INFO] Archived period 0824: 1346 records → 0824.json
+2026-09-10 11:00:26,212 [INFO] Archived period 0819: 1358 records → 0819.json
+2026-09-10 11:00:26,371 [INFO] Archived period 0823: 1341 records → 0823.json
+2026-09-10 11:00:26,428 [INFO] Archived period 0820: 1368 records → 0820.json
+2026-09-10 11:00:26,481 [INFO] Archived period 0822: 1345 records → 0822.json
+2026-09-10 11:00:26,535 [INFO] Archived period 0821: 1365 records → 0821.json
+2026-09-10 11:00:27,038 [INFO] Main file trimmed: 26757 → 18634 records (14 periods)
+2026-09-10 11:00:28,458 [INFO] Found 1415 records with empty advertiser, querying mapping...
+2026-09-10 11:01:59,166 [INFO] Backfilled 780 records with advertiser from postback table
+2026-09-10 11:02:01,640 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-10 11:02:03,031 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-10 11:02:03,143 [INFO] Bumped cache version in 360_dashboard.html to v=202609101102
+2026-09-10 11:02:03,153 [INFO] Bumped cache version in index.html to v=202609101102
+2026-09-10 11:02:12,207 [INFO] Pushed to GitHub successfully
+2026-09-10 12:00:14,109 [INFO] Submitting SQL for date=20260907...
+2026-09-10 12:00:14,587 [INFO] Query submitted, id=f7855a6c-cd35-4b87-b2c4-59562f5aec26:60ad9b39-9708-4e44-8771-ba64dcb31375;15326131302e35382e3136372e3137333a3130303033;0;1000;false:1789012813641:1789012813938:false:INTERIM:RUNNING:9a9bd52733720c9e386fab8d8cc3222a:3e7bbcde421c2310
+2026-09-10 12:00:21,326 [INFO] Query finished, fetching results...
+2026-09-10 12:00:23,696 [INFO] Fetched 9539 rows
+2026-09-10 12:00:41,776 [INFO] Submitting SQL for date=20260907...
+2026-09-10 12:00:42,227 [INFO] Query submitted, id=ec97affa-53da-48d6-b23c-9949a9a5ce06:b751d43e-ced7-4677-bcbf-79188146f12e;07024131302e35312e3133312e33323a3130303033;0;1000;false:1789012841305:1789012841579:false:INTERIM:RUNNING:728be945b729bd2a57c317061b3883e6:1764302151e589ef
+2026-09-10 12:00:53,214 [INFO] Query finished, fetching results...
+2026-09-10 12:00:55,582 [INFO] Fetched 9539 rows
+2026-09-10 12:02:08,026 [INFO] Submitting SQL for date=20260907...
+2026-09-10 12:02:08,505 [INFO] Query submitted, id=97eab96d-f184-49e2-9d9a-af58a54088e9:34daccf0-362c-49b7-badf-02c9e2d80191;60424131302e35312e3133312e33323a3130303033;0;1000;false:1789012927652:1789012927847:false:INTERIM:RUNNING:7bf2d09c15ef9615c5310c93045ea103:6348cb8e2f5105d1
+2026-09-10 12:02:13,021 [INFO] Query finished, fetching results...
+2026-09-10 12:02:15,425 [INFO] Fetched 9539 rows
+2026-09-10 12:02:15,696 [INFO] Appended 1341 records, period=0907
+2026-09-11 11:00:11,257 [INFO] === Update started: T-2 = 20260909, period = 0909 ===
+2026-09-11 11:00:12,352 [INFO] Existing periods: ['0825', '0826', '0827', '0828', '0829', '0830', '0831', '0901', '0902', '0903', '0904', '0905', '0906', '0907', '0908']
+2026-09-11 11:00:12,428 [INFO] Submitting SQL for date=20260909...
+2026-09-11 11:00:12,810 [INFO] Query submitted, id=eb654e9e-85f5-4a22-9b95-d1288f9aac75:70643572-a4b9-47e6-85a8-675f095ed0f5;94724131302e35312e3133312e37343a3130303033;0;1000;false:1789095611189:1789095611396:false:INTERIM:RUNNING:a30c750b4737cc4fa393ee0e589018da:7189ffdfd24faf70
+2026-09-11 11:00:17,315 [INFO] Query finished, fetching results...
+2026-09-11 11:00:19,925 [INFO] Fetched 10565 rows
+2026-09-11 11:00:19,951 [INFO] Processed 1374 campaigns
+2026-09-11 11:00:20,272 [INFO] Appended 1374 records, period=0909
+2026-09-11 11:00:20,276 [INFO] === Update complete: 1374 records added for 0909 ===
+2026-09-11 11:00:22,346 [INFO] Archived period 0826: 1349 records → 0826.json
+2026-09-11 11:00:22,478 [INFO] Archived period 0825: 1360 records → 0825.json
+2026-09-11 11:00:22,799 [INFO] Main file trimmed: 21349 → 18640 records (14 periods)
+2026-09-11 11:00:24,298 [INFO] Found 875 records with empty advertiser, querying mapping...
+2026-09-11 11:00:41,059 [INFO] Backfilled 237 records with advertiser from postback table
+2026-09-11 11:00:42,907 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-11 11:00:43,977 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-11 11:00:44,033 [INFO] Bumped cache version in 360_dashboard.html to v=202609111100
+2026-09-11 11:00:44,041 [INFO] Bumped cache version in index.html to v=202609111100
+2026-09-11 11:00:51,431 [INFO] Pushed to GitHub successfully
+2026-09-14 14:05:35,995 [INFO] === Update started: T-2 = 20260912, period = 0912 ===
+2026-09-14 14:05:36,776 [INFO] Existing periods: ['0827', '0828', '0829', '0830', '0831', '0901', '0902', '0903', '0904', '0905', '0906', '0907', '0908', '0909']
+2026-09-14 14:05:36,856 [INFO] Submitting SQL for date=20260912...
+2026-09-14 14:05:37,221 [INFO] Query submitted, id=58513780-333b-4ffa-a9b1-cd415e1cbb98:64e54da5-28e2-436b-b8e2-de80592c3769;35224131302e35312e3133312e37343a3130303033;0;1000;false:1789365935651:1789365935846:false:INTERIM:RUNNING:e787f00699dbd34dbec37fd1e4db75d1:91ad4e468caad393
+2026-09-14 14:05:50,395 [INFO] Query finished, fetching results...
+2026-09-14 14:05:52,801 [INFO] Fetched 9809 rows
+2026-09-14 14:05:52,826 [INFO] Processed 1385 campaigns
+2026-09-14 14:05:53,042 [INFO] Appended 1385 records, period=0912
+2026-09-14 14:05:53,052 [INFO] === Update complete: 1385 records added for 0912 ===
+2026-09-14 14:05:54,411 [INFO] Archived period 0827: 1347 records → 0827.json
+2026-09-14 14:05:54,720 [INFO] Main file trimmed: 20025 → 18678 records (14 periods)
+2026-09-14 14:05:55,958 [INFO] Found 767 records with empty advertiser, querying mapping...
+2026-09-14 14:06:51,777 [INFO] Backfilled 147 records with advertiser from postback table
+2026-09-14 14:06:53,656 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-14 14:06:54,760 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-14 14:06:54,815 [INFO] Bumped cache version in 360_dashboard.html to v=202609141406
+2026-09-14 14:06:54,822 [INFO] Bumped cache version in index.html to v=202609141406
+2026-09-14 14:07:04,124 [INFO] Pushed to GitHub successfully
+2026-09-14 14:07:23,043 [INFO] === Update started: T-2 = 20260912, period = 0912 ===
+2026-09-14 14:07:23,199 [INFO] Existing periods: ['0828', '0829', '0830', '0831', '0901', '0902', '0903', '0904', '0905', '0906', '0907', '0908', '0909', '0912']
+2026-09-14 14:07:23,292 [INFO] Period 0912 already exists in data file, skipping query.
+2026-09-14 14:07:23,891 [INFO] Only 14 periods, no archiving needed
+2026-09-14 14:07:24,382 [INFO] Found 620 records with empty advertiser, querying mapping...
+2026-09-14 14:07:51,716 [INFO] No records could be patched (no mapping found)
+2026-09-14 14:07:52,695 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-14 14:07:53,750 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-14 14:07:53,777 [INFO] Bumped cache version in 360_dashboard.html to v=202609141407
+2026-09-14 14:07:53,778 [INFO] Bumped cache version in index.html to v=202609141407
+2026-09-14 14:07:56,892 [INFO] Pushed to GitHub successfully
+2026-09-14 14:08:25,783 [INFO] Submitting SQL for date=20260910...
+2026-09-14 14:08:26,174 [INFO] Query submitted, id=4e6906cd-0dfc-4e86-8326-7f651496f1c5:39631851-8786-4f30-a4f2-316d6d73d0ae;44726131302e35312e3133382e3134323a3130303033;0;1000;false:1789366104591:1789366104798:false:INTERIM:RUNNING:3d70f5d8516e9d0de3db211c904eac07:a5065f9bd0e42f8e
+2026-09-14 14:08:30,674 [INFO] Query finished, fetching results...
+2026-09-14 14:08:33,469 [INFO] Fetched 10522 rows
+2026-09-14 14:08:33,675 [INFO] Appended 1362 records, period=0910
+2026-09-14 14:08:33,682 [INFO] Submitting SQL for date=20260911...
+2026-09-14 14:08:34,071 [INFO] Query submitted, id=aaef9244-1ce0-4922-8f51-18b022b4d3fb:73a3524c-7087-4356-bf8f-7aa0270d47bc;81826131302e35382e3136372e3137333a3130303033;0;1000;false:1789366112464:1789366112700:false:INTERIM:RUNNING:c819ab6d16f73d1cadb6d5f2c3051b72:20159e6ea266ae7f
+2026-09-14 14:08:38,562 [INFO] Query finished, fetching results...
+2026-09-14 14:08:41,098 [INFO] Fetched 10528 rows
+2026-09-14 14:08:41,348 [INFO] Appended 1397 records, period=0911
