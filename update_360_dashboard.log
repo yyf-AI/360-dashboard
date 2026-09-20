@@ -1487,3 +1487,20 @@ remove the file manually to continue.
 2026-09-18 11:18:08,377 [INFO] Pushed to GitHub successfully
 2026-09-18 17:17:49,094 [INFO] Bumped cache version in 360_dashboard.html to v=202609181717
 2026-09-18 17:17:49,105 [INFO] Bumped cache version in index.html to v=202609181717
+2026-09-20 10:44:58,929 [INFO] Submitting SQL for date=20260917...
+2026-09-20 10:44:59,331 [INFO] Query submitted, id=83b8120d-75ab-44f8-a1db-5f345a22485c:73a62d8d-fef2-489c-a68e-4549b1ad18b6;40124131302e35312e3133312e37343a3130303033;0;1000;false:1789872298044:1789872298264:false:INTERIM:RUNNING:9e63707ab8db391db005a5aa783d88de:a43b498dc9521660
+2026-09-20 10:45:05,969 [INFO] Query finished, fetching results...
+2026-09-20 10:45:08,550 [INFO] Fetched 10348 rows
+2026-09-20 10:45:08,783 [INFO] Appended 1413 records, period=0917
+2026-09-20 10:45:08,792 [INFO] Submitting SQL for date=20260918...
+2026-09-20 10:45:09,158 [INFO] Query submitted, id=fa97bf34-4ccc-45c9-a81b-bf2ae24b058d:e43e9dc0-874d-42cb-981b-2e97feac0b04;70324131302e35312e3133312e37343a3130303033;0;1000;false:1789872307892:1789872308097:false:INTERIM:RUNNING:5fe15daffb79edddd0857004961b52eb:36605b1acfe1b987
+2026-09-20 10:45:33,298 [INFO] Query finished, fetching results...
+2026-09-20 10:45:35,781 [INFO] Fetched 10444 rows
+2026-09-20 10:45:36,053 [INFO] Appended 1422 records, period=0918
+2026-09-20 11:00:02,641 [INFO] === Update started: T-2 = 20260918, period = 0918 ===
+2026-09-20 11:00:02,732 [INFO] Existing periods: ['0910', '0911', '0912', '0913', '0914', '0915', '0916', '0917', '0918']
+2026-09-20 11:00:02,806 [INFO] Period 0918 already exists in data file, skipping query.
+2026-09-20 11:00:03,229 [INFO] Only 9 periods, no archiving needed
+2026-09-20 11:00:03,654 [INFO] Found 639 records with empty advertiser, querying mapping...
+2026-09-20 11:02:43,164 [INFO] Bumped cache version in 360_dashboard.html to v=202609201102
+2026-09-20 11:02:43,172 [INFO] Bumped cache version in index.html to v=202609201102
