@@ -1504,3 +1504,47 @@ remove the file manually to continue.
 2026-09-20 11:00:03,654 [INFO] Found 639 records with empty advertiser, querying mapping...
 2026-09-20 11:02:43,164 [INFO] Bumped cache version in 360_dashboard.html to v=202609201102
 2026-09-20 11:02:43,172 [INFO] Bumped cache version in index.html to v=202609201102
+2026-09-20 11:03:06,746 [INFO] Backfilled 235 records with advertiser from postback table
+2026-09-20 11:03:08,552 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-20 11:03:09,697 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-20 11:03:09,725 [INFO] Bumped cache version in 360_dashboard.html to v=202609201103
+2026-09-20 11:03:09,728 [INFO] Bumped cache version in index.html to v=202609201103
+2026-09-20 11:03:15,034 [INFO] Pushed to GitHub successfully
+2026-09-22 11:00:06,188 [INFO] === Update started: T-2 = 20260920, period = 0920 ===
+2026-09-22 11:00:07,463 [INFO] Existing periods: ['0910', '0911', '0912', '0913', '0914', '0915', '0916', '0917', '0918']
+2026-09-22 11:00:07,464 [INFO] === Found 2 missing periods: ['0919', '0920'] ===
+2026-09-22 11:00:07,466 [INFO] === Backfilling 20260919 (period=0919) ===
+2026-09-22 11:00:07,466 [INFO] Submitting SQL for date=20260919...
+2026-09-22 11:00:07,887 [INFO] Query submitted, id=0a166cb8-80ca-48c3-ae5e-c21478914bcc:9dd13a9a-e1be-42c8-baa7-d7e86fffda74;76426131302e35382e3136372e3137333a3130303033;0;1000;false:1790046006874:1790046007081:false:INTERIM:RUNNING:31a32b3c610f7fe41ec12321529e96db:b52e5ab2ed11bdfb
+2026-09-22 11:00:12,383 [INFO] Query finished, fetching results...
+2026-09-22 11:00:14,856 [INFO] Fetched 9983 rows
+2026-09-22 11:00:14,882 [INFO] Processed 1413 campaigns for 0919
+2026-09-22 11:00:15,036 [INFO] Appended 1413 records, period=0919
+2026-09-22 11:00:15,048 [INFO] === Backfill complete: 1413 records for 0919 ===
+2026-09-22 11:00:15,048 [INFO] === Backfilling 20260920 (period=0920) ===
+2026-09-22 11:00:15,049 [INFO] Submitting SQL for date=20260920...
+2026-09-22 11:00:15,451 [INFO] Query submitted, id=16ec5cad-9af3-487b-922c-4351508baf10:012eaef6-0306-4cc1-bfe3-c9e83a33f6b2;19024131302e35312e3133312e37343a3130303033;0;1000;false:1790046014451:1790046014648:false:INTERIM:RUNNING:4337164f7d928fd41c7a211407074cad:dff4322cccfa9cfc
+2026-09-22 11:00:19,953 [INFO] Query finished, fetching results...
+2026-09-22 11:00:22,482 [INFO] Fetched 10190 rows
+2026-09-22 11:00:22,506 [INFO] Processed 1410 campaigns for 0920
+2026-09-22 11:00:22,669 [INFO] Appended 1410 records, period=0920
+2026-09-22 11:00:22,682 [INFO] === Backfill complete: 1410 records for 0920 ===
+2026-09-22 11:00:23,443 [INFO] Period 0920 already exists in data file, skipping query.
+2026-09-22 11:00:23,923 [INFO] Only 11 periods, no archiving needed
+2026-09-22 11:00:24,440 [INFO] Found 715 records with empty advertiser, querying mapping...
+2026-09-22 11:01:15,805 [INFO] Backfilled 221 records with advertiser from postback table
+2026-09-22 11:01:17,594 [INFO] Webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-22 11:01:18,636 [INFO] Optimize channel webhook sent: 200 {"StatusCode":0,"StatusMessage":"success","code":0,"data":{},"msg":"success"}
+2026-09-22 11:01:18,698 [INFO] Bumped cache version in 360_dashboard.html to v=202609221101
+2026-09-22 11:01:18,738 [INFO] Bumped cache version in index.html to v=202609221101
+2026-09-22 11:01:27,067 [INFO] Pushed to GitHub successfully
+2026-09-23 11:00:04,353 [INFO] === Update started: T-2 = 20260921, period = 0921 ===
+2026-09-23 11:00:05,354 [INFO] Existing periods: ['0910', '0911', '0912', '0913', '0914', '0915', '0916', '0917', '0918', '0919', '0920']
+2026-09-23 11:00:05,354 [INFO] === Found 1 missing periods: ['0921'] ===
+2026-09-23 11:00:05,356 [INFO] === Backfilling 20260921 (period=0921) ===
+2026-09-23 11:00:05,356 [INFO] Submitting SQL for date=20260921...
+2026-09-23 11:00:07,466 [INFO] Query submitted, id=76a3344e-84cd-472e-b59c-125e175cbf7d:2151b4d6-04e3-4196-b37d-2ac3121dfeed;08524131302e35312e3136362e36343a3130303033;0;1000;false:1790132405765:1790132405990:false:INTERIM:RUNNING:ab2ce484e6d1f909e758010597e78edb:b7864ea2af7e7dbb
+2026-09-23 11:00:12,412 [INFO] Query finished, fetching results...
+2026-09-24 11:00:03,552 [WARNING] Another update is running (lock file exists), skipping.
+2026-09-28 11:00:02,988 [WARNING] Another update is running (lock file exists), skipping.
+2026-09-29 11:00:03,125 [WARNING] Another update is running (lock file exists), skipping.
